@@ -68,18 +68,18 @@ export default function Navbar() {
   return (
     <div className={`fixed left-0 right-0 z-50 flex w-full items-center transition-all duration-300 ${
       isScrolled 
-        ? 'top-4 px-6 md:px-12 lg:px-16' 
-        : 'top-6 px-6 md:px-12 lg:px-16'
+        ? 'top-4 px-4 md:px-12 lg:px-16' 
+        : 'top-6 px-4 md:px-12 lg:px-16'
     }`}>
       <div className={`flex w-full items-center justify-between transition-all duration-300 ${
         isScrolled 
-          ? 'rounded-2xl border border-gray-200 bg-white/95 shadow-lg backdrop-blur-md px-6 py-3' 
-          : ''
+          ? 'rounded-2xl border border-gray-200 bg-white/95 shadow-lg backdrop-blur-md px-4 md:px-6 py-3' 
+          : 'px-0 py-0'
       }`}>
         <div className="flex items-center">
           <Link 
             href="/" 
-            className={`flex items-center px-2 pb-1 overflow-hidden ${
+            className={`flex items-center px-2 pb-1 overflow-hidden transition-all duration-300 ${
               isContactPage 
                 ? '' 
                 : isScrolled
@@ -93,7 +93,7 @@ export default function Navbar() {
               alt="Ontriq Logo"
               width={150}
               height={64}
-              className="h-16 w-auto object-contain -mt-1"
+              className="h-12 md:h-16 w-auto object-contain -mt-1"
               priority
             />
           </Link>
