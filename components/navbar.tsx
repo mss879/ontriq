@@ -5,6 +5,14 @@ import Image from 'next/image';
 import { useRef, useState, useEffect, useCallback } from 'react';
 import { usePathname } from 'next/navigation';
 
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+
 import StaggeredMenu, { StaggeredMenuHandle } from './staggered-menu';
 
 const menuItems = [
@@ -49,6 +57,25 @@ export default function Navbar() {
   const pathname = usePathname();
   const isContactPage = pathname === '/contact';
   const [isScrolled, setIsScrolled] = useState(false);
+  const isHomePage = pathname === '/';
+  const useWhiteLinks = isHomePage && !isScrolled;
+
+  const servicesDropdownItems = [
+    { label: 'BGV Services', href: '/services/bgv' },
+    { label: 'HR Services', href: '/services/hr' },
+    { label: 'Recruitment', href: '/services/recruitment' },
+    { label: 'Payroll', href: '/services/payroll' },
+    { label: 'Company Formation', href: '/services/company-formation' },
+  ];
+
+  const isNavActive = useCallback(
+    (href: string) => {
+      if (!pathname) return false;
+      if (href === '/') return pathname === '/';
+      return pathname === href || pathname.startsWith(href + '/');
+    },
+    [pathname]
+  );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -96,6 +123,82 @@ export default function Navbar() {
               className="h-12 md:h-16 w-auto object-contain -mt-1"
               priority
             />
+          </Link>
+        </div>
+
+        <div
+          className={`hidden lg:flex items-center gap-20 xl:gap-24 px-5 py-2 transition-all duration-300 ${
+            useWhiteLinks
+              ? ''
+              : isContactPage
+              ? ''
+              : isScrolled
+              ? ''
+              : 'rounded-xl border border-gray-200 bg-white/80 shadow-sm backdrop-blur-md'
+          }`}
+          aria-label="Primary links"
+        >
+          <Link
+            href="/about"
+            className={`text-xl font-semibold uppercase tracking-tighter leading-none transition-colors ${
+              useWhiteLinks
+                ? isNavActive('/about')
+                  ? 'text-white underline underline-offset-4'
+                  : 'text-white/90 hover:text-white'
+                : isNavActive('/about')
+                ? 'text-black underline underline-offset-4'
+                : 'text-gray-900/90 hover:text-black'
+            }`}
+          >
+            About
+          </Link>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button
+                type="button"
+                className={`text-xl font-semibold uppercase tracking-tighter leading-none transition-colors ${
+                  useWhiteLinks
+                    ? isNavActive('/services')
+                      ? 'text-white underline underline-offset-4'
+                      : 'text-white/90 hover:text-white'
+                    : isNavActive('/services')
+                    ? 'text-black underline underline-offset-4'
+                    : 'text-gray-900/90 hover:text-black'
+                }`}
+                aria-label="Services"
+              >
+                Services
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent
+              align="start"
+              sideOffset={10}
+              className="min-w-[220px]"
+            >
+              {servicesDropdownItems.map((item) => (
+                <div key={item.href}>
+                  <DropdownMenuItem asChild>
+                    <Link href={item.href} className="w-full cursor-pointer">
+                      {item.label}
+                    </Link>
+                  </DropdownMenuItem>
+                </div>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+          <Link
+            href="/contact"
+            className={`text-xl font-semibold uppercase tracking-tighter leading-none transition-colors ${
+              useWhiteLinks
+                ? isNavActive('/contact')
+                  ? 'text-white underline underline-offset-4'
+                  : 'text-white/90 hover:text-white'
+                : isNavActive('/contact')
+                ? 'text-black underline underline-offset-4'
+                : 'text-gray-900/90 hover:text-black'
+            }`}
+          >
+            Contact
           </Link>
         </div>
 

@@ -68,7 +68,7 @@ const services = [
 const ServicesSection = () => {
   return (
     <section id="services" className="bg-white py-10 px-4 md:px-6" aria-labelledby="services-heading">
-      <div className="mx-auto w-full max-w-[1800px] rounded-[40px] bg-[#0a0a0a] p-8 md:p-12 lg:p-20 text-white overflow-hidden relative">
+      <div className="mx-auto w-full max-w-[1800px] rounded-[40px] bg-blue-950 p-8 md:p-12 lg:p-20 text-white overflow-hidden relative">
         {/* Background Image/Texture */}
         <div className="absolute inset-0 z-0 opacity-40 pointer-events-none" aria-hidden="true">
              <Image 
