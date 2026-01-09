@@ -9,6 +9,7 @@ import Preloader from '@/components/preloader';
 export default function SiteChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isAdminRoute = pathname === '/admin' || pathname.startsWith('/admin/');
+  const isHomePage = pathname === '/';
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
@@ -22,7 +23,7 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
 
   return (
     <>
-      <Preloader />
+      {isHomePage && <Preloader />}
       <Navbar />
       {children}
       <Footer />
