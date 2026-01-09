@@ -16,46 +16,13 @@ export default function Preloader() {
   const [minTimeElapsed, setMinTimeElapsed] = useState(false);
 
   useEffect(() => {
-    // 1. Minimum animation time (typing + hold)
+    // 1. Minimum animation time (reduced for performance)
     const timer = setTimeout(() => {
       setMinTimeElapsed(true);
-    }, 3500);
-
-    // 2. Preload the video
-    const params = {
-      videoSrc: HERO_VIDEO_URL,
-    };
-    
-    // Create a hidden video element to force preload
-    const video = document.createElement('video');
-    video.src = params.videoSrc;
-    video.preload = 'metadata'; // Changed from 'auto' to reduce initial load
-    
-    // "canplaythrough" or "canplay" is usually enough for smooth playback start
-    const onVideoReady = () => {
       setVideoLoaded(true);
-    };
-    
-    // Sometimes 'canplaythrough' doesn't fire on mobile if data saver is on, 
-    // or if the browser decides not to buffer.  
-    video.addEventListener('canplaythrough', onVideoReady);
-    video.addEventListener('canplay', onVideoReady);
-    
-    // Start loading
-    video.load();
+    }, 800);
 
-    // Fallback: If video takes too long, just proceed after 5 seconds max (reduced from 7)
-    const maxWait = setTimeout(() => {
-      setVideoLoaded(true);
-    }, 5000);
-
-    return () => {
-      clearTimeout(timer);
-      clearTimeout(maxWait);
-      video.removeEventListener('canplaythrough', onVideoReady);
-      video.removeEventListener('canplay', onVideoReady);
-      video.remove(); // Cleanup
-    };
+    return () => clearTimeout(timer);
   }, []);
 
   // When both conditions are met, dismiss

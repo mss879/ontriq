@@ -1,6 +1,5 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 
 // Dynamically import non-critical hero components
@@ -11,12 +10,6 @@ const HeroPromptBar = dynamic(() => import('./hero-prompt-bar'), {
 });
 
 export default function Hero() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <header className="relative min-h-screen w-full overflow-hidden bg-black" role="banner">
       <div className="absolute inset-0 z-0">
@@ -28,7 +21,6 @@ export default function Hero() {
           playsInline
           preload="metadata"
           className="h-full w-full object-cover lg:blur-none blur-sm"
-          style={{ opacity: mounted ? 1 : 0, transition: 'opacity 0.3s ease-in-out' }}
           aria-hidden="true"
         />
       </div>
@@ -36,7 +28,7 @@ export default function Hero() {
       <div className="relative z-10 flex w-full px-6 md:px-12 lg:px-16 pt-52 pb-20 lg:pt-72 lg:pb-32">
         <div className="w-full">
           <div className="flex flex-col items-center text-center md:items-start md:text-left">
-            <div className="mb-6 animate-fade-in" style={{ animationDelay: '0.2s', opacity: 0, animationFillMode: 'forwards' }}>
+            <div className="mb-6 animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
               <h1 className="font-heading text-5xl font-bold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl xl:text-7xl">
                 <span className="inline-block animate-word-fade" style={{ animationDelay: '0.3s' }}>Your</span>{' '}
                 <span className="inline-block animate-word-fade" style={{ animationDelay: '0.4s' }}>Complete</span>{' '}
@@ -48,17 +40,17 @@ export default function Hero() {
               </h1>
             </div>
 
-            <div className="mb-10 max-w-3xl animate-fade-in" style={{ animationDelay: '1s', opacity: 0, animationFillMode: 'forwards' }}>
+            <div className="mb-10 max-w-3xl animate-fade-in" style={{ animationDelay: '1s', animationFillMode: 'forwards' }}>
               <p className="text-lg leading-relaxed text-white/80 md:text-xl lg:text-2xl">
                 Streamline operations with expert Background Verification, HR, Recruitment, Payroll, and Business Setup solutions.
               </p>
             </div>
 
-            <div className="mb-16 animate-fade-in" style={{ animationDelay: '1.1s', opacity: 0, animationFillMode: 'forwards' }}>
+            <div className="mb-16 animate-fade-in" style={{ animationDelay: '1.1s', animationFillMode: 'forwards' }}>
               <HeroCTA />
             </div>
 
-            <div className="mx-auto w-full max-w-4xl animate-fade-in" style={{ animationDelay: '1.2s', opacity: 0, animationFillMode: 'forwards' }}>
+            <div className="mx-auto w-full max-w-4xl animate-fade-in" style={{ animationDelay: '1.2s', animationFillMode: 'forwards' }}>
               <HeroPromptBar />
             </div>
           </div>

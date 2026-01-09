@@ -146,12 +146,6 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <link rel="preconnect" href="https://framerusercontent.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://framerusercontent.com" />
-        {/* Preload service images for faster navigation */}
-        <link rel="preload" href="/bgv-service.png" as="image" />
-        <link rel="preload" href="/Hr services.png" as="image" />
-        <link rel="preload" href="/Recruitment.png" as="image" />
-        <link rel="preload" href="/payroll.png" as="image" />
-        <link rel="preload" href="/company formation.png" as="image" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
