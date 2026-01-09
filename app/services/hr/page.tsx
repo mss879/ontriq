@@ -12,6 +12,20 @@ export const metadata: Metadata = {
     title: 'HR Management Services & Solutions Sri Lanka | Ontriq',
     description: 'End-to-end HR solutions that align with your business goals.',
     url: 'https://ontriq.com/services/hr',
+    images: [
+      {
+        url: 'https://ontriq.com/ontriq%20favicon.png',
+        width: 512,
+        height: 512,
+        alt: 'Ontriq',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'HR Management Services & Solutions Sri Lanka | Ontriq',
+    description: 'End-to-end HR solutions that align with your business goals.',
+    images: ['https://ontriq.com/ontriq%20favicon.png'],
   },
 };
 

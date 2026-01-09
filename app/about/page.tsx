@@ -32,10 +32,10 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'About Ontriq - Background Verification Services',
+        url: '/ontriq%20favicon.png',
+        width: 512,
+        height: 512,
+        alt: 'Ontriq',
       },
     ],
   },
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'About Ontriq | Background Verification Experts',
     description: 'Sri Lanka\'s trusted BGV company. Education, employment, identity verification with consent-first approach.',
-    images: ['/og-image.png'],
+    images: ['/ontriq%20favicon.png'],
   },
   alternates: {
     canonical: 'https://ontriq.com/about',

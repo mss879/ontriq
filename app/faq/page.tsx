@@ -20,10 +20,10 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://ontriq.com/og-faq.png',
-        width: 1200,
-        height: 630,
-        alt: 'Ontriq FAQ - Background Verification Questions',
+        url: 'https://ontriq.com/ontriq%20favicon.png',
+        width: 512,
+        height: 512,
+        alt: 'Ontriq',
       },
     ],
   },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'FAQ - Frequently Asked Questions | Ontriq',
     description: 'Find answers to frequently asked questions about background verification, BGV processes, timelines, and compliance.',
-    images: ['https://ontriq.com/og-faq.png'],
+    images: ['https://ontriq.com/ontriq%20favicon.png'],
   },
   alternates: {
     canonical: 'https://ontriq.com/faq',

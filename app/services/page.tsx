@@ -10,7 +10,21 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Our Services | Ontriq',
     description: 'Comprehensive workforce and business solutions designed to help your organization thrive.',
-    url: 'https://ontriq.com/services',
+    url: 'https://www.ontriq.com/services',
+    images: [
+      {
+        url: 'https://www.ontriq.com/ontriq-logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Ontriq',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Our Services | Ontriq',
+    description: 'Comprehensive workforce and business solutions designed to help your organization thrive.',
+    images: ['https://www.ontriq.com/ontriq-logo.png'],
   },
 };
 

@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://ontriq.com/og-contact.png',
-        width: 1200,
-        height: 630,
-        alt: 'Contact Ontriq - Background Verification Services',
+        url: 'https://ontriq.com/ontriq%20favicon.png',
+        width: 512,
+        height: 512,
+        alt: 'Ontriq',
       },
     ],
   },
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Contact Us - Ontriq',
     description: 'Get in touch with Ontriq for background verification, HR services, payroll, and recruitment solutions.',
-    images: ['https://ontriq.com/og-contact.png'],
+    images: ['https://ontriq.com/ontriq%20favicon.png'],
   },
   alternates: {
     canonical: 'https://ontriq.com/contact',

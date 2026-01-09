@@ -612,7 +612,7 @@ export default function AdminDashboard() {
                           <div className="space-y-2">
                             <div className="mb-6">
                               <Image
-                                src="/ontriq logo1.png"
+                                src="/ontriq-logo.png"
                                 alt="Ontriq Logo"
                                 width={180}
                                 height={72}

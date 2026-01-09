@@ -17,7 +17,7 @@ const stackSans = localFont({
   preload: true,
 });
 
-const siteUrl = 'https://ontriq.com';
+const siteUrl = 'https://www.ontriq.com';
 const siteName = 'Ontriq';
 const siteDescription = 'Sri Lanka\'s leading Background Verification, HR Solutions, Recruitment, Payroll Management, and Business Formation services. Complete workforce and business partner delivering results in 7 working days.';
 
@@ -59,13 +59,16 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/ontriq favicon.png', sizes: '32x32', type: 'image/png' },
-      { url: '/ontriq favicon.png', sizes: '16x16', type: 'image/png' },
+      { url: '/ontriq-favicon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/ontriq-favicon.png', sizes: '16x16', type: 'image/png' },
     ],
-    apple: '/ontriq favicon.png',
-    shortcut: '/ontriq favicon.png',
+    apple: '/ontriq-favicon.png',
+    shortcut: '/ontriq-favicon.png',
   },
   manifest: '/manifest.json',
+  verification: {
+    google: 'RCUaE3IZIwi-RJrI4jNO6VhLIEXWxd_denItvb4J9r8',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -75,10 +78,10 @@ export const metadata: Metadata = {
     description: siteDescription,
     images: [
       {
-        url: '/og-image.png',
+        url: '/ontriq-logo.png', // Using the main logo for better visibility on social media
         width: 1200,
         height: 630,
-        alt: 'Ontriq - Background Verification & HR Solutions',
+        alt: 'Ontriq',
       },
     ],
   },
@@ -86,7 +89,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ontriq | Sri Lanka\'s Premier Background Verification & HR Solutions',
     description: siteDescription,
-    images: ['/og-image.png'],
+    images: ['/ontriq-logo.png'],
     creator: '@ontriq',
   },
   alternates: {
@@ -101,7 +104,7 @@ const jsonLd = {
   '@type': 'Organization',
   name: 'Ontriq',
   alternateName: 'Ontriq (PVT) LTD',
-  url: siteUrl,
+  url: siteUrl,-logo
   logo: `${siteUrl}/ontriq logo1.png`,
   description: siteDescription,
   foundingDate: '2025',

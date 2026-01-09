@@ -11,6 +11,20 @@ export const metadata: Metadata = {
     title: 'Payroll Processing & Administration Services Sri Lanka | Ontriq',
     description: 'Accurate, timely, and fully compliant payroll services.',
     url: 'https://ontriq.com/services/payroll',
+    images: [
+      {
+        url: 'https://ontriq.com/ontriq%20favicon.png',
+        width: 512,
+        height: 512,
+        alt: 'Ontriq',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Payroll Processing & Administration Services Sri Lanka | Ontriq',
+    description: 'Accurate, timely, and fully compliant payroll services.',
+    images: ['https://ontriq.com/ontriq%20favicon.png'],
   },
 };
 

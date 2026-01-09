@@ -15,7 +15,7 @@ export function Footer() {
               aria-label="Ontriq - Go to homepage"
             >
               <Image
-                src="/ontriq logo1.png"
+                src="/ontriq-logo.png"
                 alt="Ontriq Logo"
                 width={150}
                 height={64}

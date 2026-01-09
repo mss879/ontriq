@@ -31,11 +31,11 @@ const homePageJsonLd = {
   '@type': 'WebPage',
   name: 'Ontriq - Your Complete Workforce and Business Partner',
   description: 'Sri Lanka\'s leading Background Verification, HR Solutions, Recruitment, Payroll Management, and Business Formation services.',
-  url: 'https://ontriq.com',
+  url: 'https://www.ontriq.com',
   mainEntity: {
     '@type': 'LocalBusiness',
     name: 'Ontriq',
-    image: 'https://ontriq.com/ontriq logo1.png',
+    image: 'https://www.ontriq.com/ontriq-logo.png',
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',

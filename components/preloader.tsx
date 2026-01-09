@@ -1,180 +1,115 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-
-const VIDEO_SRC = '/Logo_Animation_Generation_For_Ontriq.mp4';
-const EXIT_FADE_MS = 150;
-const EARLY_EXIT_REMAINING_S = 0.06;
-const MIN_VISIBLE_MS = 450;
-const AUTOPLAY_GRACE_MS = 2500;
-
-function prefersReducedMotion(): boolean {
-  if (typeof window === 'undefined') return false;
-  return window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches ?? false;
-}
+import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 type PreloaderProps = {
   onDone?: () => void;
 };
 
-export default function Preloader({ onDone }: PreloaderProps) {
-  const [videoEl, setVideoEl] = useState<HTMLVideoElement | null>(null);
-  // Render on first paint (prevents website flashing behind).
+const text = "Welcome to Your Complete Workforce and Business Partner";
+const HERO_VIDEO_URL = "https://framerusercontent.com/assets/Bax1SXv4b9QI33bMvkicABKnI.mp4";
+
+export default function Preloader() {
   const [isVisible, setIsVisible] = useState(true);
-  const [isExiting, setIsExiting] = useState(false);
-  const isExitingRef = useRef(false);
-  const hasCompletedRef = useRef(false);
-  const hasStartedRef = useRef(false);
-  const visibleAtRef = useRef<number>(0);
-
-  const complete = useCallback(() => {
-    if (hasCompletedRef.current) return;
-    hasCompletedRef.current = true;
-    onDone?.();
-  }, [onDone]);
-
-  const beginExit = useCallback(() => {
-    if (isExitingRef.current) return;
-    // Don't allow an instant dismiss before the user even sees it.
-    const now = typeof performance !== 'undefined' ? performance.now() : Date.now();
-    const elapsed = visibleAtRef.current ? now - visibleAtRef.current : MIN_VISIBLE_MS;
-    if (elapsed < MIN_VISIBLE_MS) {
-      window.setTimeout(() => beginExit(), MIN_VISIBLE_MS - elapsed);
-      return;
-    }
-    isExitingRef.current = true;
-    setIsExiting(true);
-    window.setTimeout(() => {
-      setIsVisible(false);
-      complete();
-    }, EXIT_FADE_MS);
-  }, [complete]);
-
-  const videoRef = useCallback((node: HTMLVideoElement | null) => {
-    setVideoEl(node);
-  }, []);
-
-  // Decide whether to show the preloader (client-side only).
-  useEffect(() => {
-    try {
-      const skip = prefersReducedMotion();
-      if (skip) {
-        setIsVisible(false);
-        complete();
-        return;
-      }
-    } catch {
-      // If anything odd happens, keep the preloader visible.
-    }
-  }, [complete]);
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const [minTimeElapsed, setMinTimeElapsed] = useState(false);
 
   useEffect(() => {
-    if (isVisible) {
-      visibleAtRef.current = typeof performance !== 'undefined' ? performance.now() : Date.now();
-    }
-  }, [isVisible]);
+    // 1. Minimum animation time (typing + hold)
+    const timer = setTimeout(() => {
+      setMinTimeElapsed(true);
+    }, 3500);
 
-  // Once visible and the video element is mounted, wire up playback + exit.
-  useEffect(() => {
-    if (!isVisible || !videoEl) return;
-
-    let fallbackTimer: number | undefined;
-    let maxTimer: number | undefined;
-    let graceTimer: number | undefined;
-
-    const tryPlay = async () => {
-      try {
-        await videoEl.play();
-      } catch {
-        // Autoplay can be blocked; don't immediately exit (that looks like a flash).
-        // We'll keep the preloader visible, and still have a maxTimer as a safety net.
-      }
+    // 2. Preload the video
+    const params = {
+      videoSrc: HERO_VIDEO_URL,
     };
-
-    const onEnded = () => beginExit();
-    const onError = () => beginExit();
-    const onCanPlay = () => void tryPlay();
-    const onPlaying = () => {
-      hasStartedRef.current = true;
-      if (graceTimer) {
-        window.clearTimeout(graceTimer);
-        graceTimer = undefined;
-      }
+    
+    // Create a hidden video element to force preload
+    const video = document.createElement('video');
+    video.src = params.videoSrc;
+    video.preload = 'auto'; // Important for preloading
+    
+    // "canplaythrough" or "canplay" is usually enough for smooth playback start
+    const onVideoReady = () => {
+      setVideoLoaded(true);
     };
-    const onTimeUpdate = () => {
-      if (!hasStartedRef.current) return;
-      if (!Number.isFinite(videoEl.duration) || videoEl.duration <= 0) return;
-      const remaining = videoEl.duration - videoEl.currentTime;
-      if (remaining <= EARLY_EXIT_REMAINING_S) beginExit();
-    };
+    
+    // Sometimes 'canplaythrough' doesn't fire on mobile if data saver is on, 
+    // or if the browser decides not to buffer.  
+    video.addEventListener('canplaythrough', onVideoReady);
+    video.addEventListener('canplay', onVideoReady);
+    
+    // Start loading
+    video.load();
 
-    videoEl.addEventListener('ended', onEnded);
-    videoEl.addEventListener('error', onError);
-    videoEl.addEventListener('canplay', onCanPlay);
-    videoEl.addEventListener('playing', onPlaying);
-    videoEl.addEventListener('timeupdate', onTimeUpdate);
-
-    // If metadata is already available, kick off play immediately.
-    if (videoEl.readyState >= 2) {
-      void tryPlay();
-    }
-
-    // If autoplay doesn't start within a grace window, allow click-to-play.
-    graceTimer = window.setTimeout(() => {
-      // no-op: just ends the grace period; click handler below can start playback.
-    }, AUTOPLAY_GRACE_MS);
-
-    // Absolute max time so we never trap the user.
-    maxTimer = window.setTimeout(beginExit, 12000);
+    // Fallback: If video takes too long, just proceed after 7 seconds max
+    const maxWait = setTimeout(() => {
+      setVideoLoaded(true);
+    }, 7000);
 
     return () => {
-      videoEl.removeEventListener('ended', onEnded);
-      videoEl.removeEventListener('error', onError);
-      videoEl.removeEventListener('canplay', onCanPlay);
-      videoEl.removeEventListener('playing', onPlaying);
-      videoEl.removeEventListener('timeupdate', onTimeUpdate);
-      if (fallbackTimer) window.clearTimeout(fallbackTimer);
-      if (graceTimer) window.clearTimeout(graceTimer);
-      if (maxTimer) window.clearTimeout(maxTimer);
+      clearTimeout(timer);
+      clearTimeout(maxWait);
+      video.removeEventListener('canplaythrough', onVideoReady);
+      video.removeEventListener('canplay', onVideoReady);
+      video.remove(); // Cleanup
     };
-  }, [beginExit, isVisible, videoEl]);
+  }, []);
 
-  if (!isVisible) return null;
+  // When both conditions are met, dismiss
+  useEffect(() => {
+    if (minTimeElapsed && videoLoaded) {
+       setIsVisible(false);
+    }
+  }, [minTimeElapsed, videoLoaded]);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.04,
+      },
+    },
+  };
+
+  const letterVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   return (
-    <div
-      className={
-        'fixed inset-0 z-[9999] flex items-center justify-center bg-white transition-opacity duration-300 ' +
-        (isExiting ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto')
-      }
-      aria-label="Loading"
-      role="status"
-      onClick={() => {
-        // Helps when autoplay is blocked: clicking anywhere will attempt playback.
-        if (!videoEl || hasStartedRef.current) return;
-        void videoEl.play();
-      }}
-    >
-      <div className="flex w-full flex-col items-center px-6">
-        <div className="mb-5 text-center">
-          <div className="text-5xl font-semibold leading-tight text-gray-900 md:text-6xl">Welcome</div>
-          <div className="mt-2 text-base text-gray-600 md:text-lg">We’re getting things ready</div>
-          <div className="mt-3 flex items-center justify-center gap-2" aria-hidden="true">
-            <span className="h-2 w-2 rounded-full bg-gray-900 animate-bounce" style={{ animationDelay: '0ms' }} />
-            <span className="h-2 w-2 rounded-full bg-gray-900 animate-bounce" style={{ animationDelay: '120ms' }} />
-            <span className="h-2 w-2 rounded-full bg-gray-900 animate-bounce" style={{ animationDelay: '240ms' }} />
+    <AnimatePresence>
+      {isVisible && (
+        <motion.div
+          key="preloader"
+          initial={{ clipPath: "circle(150% at 50% 50%)" }}
+          exit={{ 
+            clipPath: "circle(0% at 50% 50%)",
+            transition: { duration: 1.2, ease: [0.76, 0, 0.24, 1] } 
+          }}
+          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-background text-foreground px-4"
+        >
+          <div className="flex flex-col items-center gap-8 text-center">
+            <motion.h1
+              className="text-3xl md:text-5xl font-bold tracking-tighter max-w-5xl leading-tight"
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.3 } }}
+            >
+              {text.split("").map((char, index) => (
+                <motion.span key={index} variants={letterVariants}>
+                  {char}
+                </motion.span>
+              ))}
+            </motion.h1>
+            
           </div>
-        </div>
-        <video
-          ref={videoRef}
-          className="h-auto w-[360px] max-w-[85vw] object-contain md:w-[460px]"
-          src={VIDEO_SRC}
-          autoPlay
-          muted
-          playsInline
-          preload="auto"
-        />
-      </div>
-    </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 }

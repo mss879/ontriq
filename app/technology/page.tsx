@@ -22,6 +22,20 @@ export const metadata: Metadata = {
     siteName: 'Ontriq',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: 'https://ontriq.com/ontriq%20favicon.png',
+        width: 512,
+        height: 512,
+        alt: 'Ontriq',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Technology & Infrastructure | Ontriq',
+    description: 'Discover Ontriq\'s advanced technology infrastructure, including ATS, automated verification platforms, and secure HR management systems.',
+    images: ['https://ontriq.com/ontriq%20favicon.png'],
   },
 };
 
@@ -40,7 +54,7 @@ export default function TechnologyPage() {
       name: 'Ontriq',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://ontriq.com/ontriq favicon.png'
+        url: 'https://ontriq.com/ontriq%20favicon.png'
       }
     }
   };

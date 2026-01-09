@@ -6,6 +6,25 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Director Services | Ontriq',
   description: 'Professional Director Services to help businesses meet legal requirements, strengthen governance, and make confident strategic decisions.',
+  openGraph: {
+    title: 'Director Services | Ontriq',
+    description: 'Professional Director Services to help businesses meet legal requirements, strengthen governance, and make confident strategic decisions.',
+    url: 'https://ontriq.com/services/director-services',
+    images: [
+      {
+        url: 'https://ontriq.com/ontriq%20favicon.png',
+        width: 512,
+        height: 512,
+        alt: 'Ontriq',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Director Services | Ontriq',
+    description: 'Professional Director Services to help businesses meet legal requirements, strengthen governance, and make confident strategic decisions.',
+    images: ['https://ontriq.com/ontriq%20favicon.png'],
+  },
 };
 
 export default function DirectorServicesPage() {

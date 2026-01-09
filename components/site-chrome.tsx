@@ -22,14 +22,10 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
 
   return (
     <>
-      <Preloader onDone={() => setIsReady(true)} />
-      {isReady ? (
-        <>
-          <Navbar />
-          {children}
-          <Footer />
-        </>
-      ) : null}
+      <Preloader />
+      <Navbar />
+      {children}
+      <Footer />
     </>
   );
 }

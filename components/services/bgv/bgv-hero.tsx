@@ -46,8 +46,8 @@ export function BgvHero({ serviceNumber, title, subtitle, description }: BgvHero
           <div className="grid md:grid-cols-12 gap-12">
             <div className="md:col-span-4 lg:col-span-5 overflow-hidden rounded-2xl">
               <Image 
-                src="/BGV Sservice.png" 
-                alt="BGV Services" 
+                src="/bgv-service.png" 
+                alt="BGV Services"  
                 width={600}
                 height={400}
                 className="w-full h-auto scale-105"
