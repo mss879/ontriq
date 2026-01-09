@@ -9,7 +9,6 @@ const inter = Inter({
   display: 'swap',
   preload: true,
   variable: '--font-inter',
-  adjustFontFallback: true,
 });
 
 const stackSans = localFont({
@@ -17,7 +16,7 @@ const stackSans = localFont({
   variable: '--font-stack-sans',
   display: 'swap',
   preload: true,
-  adjustFontFallback: true,
+  adjustFontFallback: false,
 });
 
 const siteUrl = 'https://www.ontriq.com';
