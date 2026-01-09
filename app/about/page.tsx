@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About Ontriq | Sri Lanka\'s Trusted Background Verification Company',
     description: 'Ontriq specializes in Background Verification (BGV) as part of Konnect BPO Technologies. We verify education, employment, identity, and references with consent-first approach.',
-    url: 'https://ontriq.com/about',
+    url: 'https://www.ontriq.com/about',
     type: 'website',
     images: [
       {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     images: ['/ontriq%20favicon.png'],
   },
   alternates: {
-    canonical: 'https://ontriq.com/about',
+    canonical: 'https://www.ontriq.com/about',
   },
 };
 
@@ -56,7 +56,7 @@ const aboutPageJsonLd = {
   '@type': 'AboutPage',
   name: 'About Ontriq',
   description: 'Learn about Ontriq - Sri Lanka\'s trusted Background Verification company',
-  url: 'https://ontriq.com/about',
+  url: 'https://www.ontriq.com/about',
   mainEntity: {
     '@type': 'Organization',
     name: 'Ontriq',

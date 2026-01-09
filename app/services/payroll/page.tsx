@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Payroll Processing & Administration Services Sri Lanka | Ontriq',
     description: 'Accurate, timely, and fully compliant payroll services.',
-    url: 'https://ontriq.com/services/payroll',
+    url: 'https://www.ontriq.com/services/payroll',
     images: [
       {
-        url: 'https://ontriq.com/ontriq%20favicon.png',
+        url: 'https://www.ontriq.com/ontriq%20favicon.png',
         width: 512,
         height: 512,
         alt: 'Ontriq',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Payroll Processing & Administration Services Sri Lanka | Ontriq',
     description: 'Accurate, timely, and fully compliant payroll services.',
-    images: ['https://ontriq.com/ontriq%20favicon.png'],
+    images: ['https://www.ontriq.com/ontriq%20favicon.png'],
   },
 };
 

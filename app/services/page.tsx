@@ -81,7 +81,7 @@ export default function ServicesPage() {
     "provider": {
       "@type": "Organization",
       "name": "Ontriq",
-      "url": "https://ontriq.com"
+      "url": "https://www.ontriq.com"
     },
     "areaServed": "Sri Lanka",
     "hasOfferCatalog": {

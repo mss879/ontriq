@@ -14,13 +14,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'FAQ - Frequently Asked Questions | Ontriq',
     description: 'Find answers to frequently asked questions about background verification, BGV processes, timelines, and compliance.',
-    url: 'https://ontriq.com/faq',
+    url: 'https://www.ontriq.com/faq',
     siteName: 'Ontriq',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://ontriq.com/ontriq%20favicon.png',
+        url: 'https://www.ontriq.com/ontriq%20favicon.png',
         width: 512,
         height: 512,
         alt: 'Ontriq',
@@ -31,10 +31,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'FAQ - Frequently Asked Questions | Ontriq',
     description: 'Find answers to frequently asked questions about background verification, BGV processes, timelines, and compliance.',
-    images: ['https://ontriq.com/ontriq%20favicon.png'],
+    images: ['https://www.ontriq.com/ontriq%20favicon.png'],
   },
   alternates: {
-    canonical: 'https://ontriq.com/faq',
+    canonical: 'https://www.ontriq.com/faq',
   },
 };
 
@@ -83,17 +83,17 @@ const webPageJsonLd = {
   '@type': 'WebPage',
   name: 'FAQ - Frequently Asked Questions',
   description: 'Find answers to frequently asked questions about background verification services.',
-  url: 'https://ontriq.com/faq',
+  url: 'https://www.ontriq.com/faq',
   isPartOf: {
     '@type': 'WebSite',
     name: 'Ontriq',
-    url: 'https://ontriq.com',
+    url: 'https://www.ontriq.com',
   },
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ontriq.com' },
-      { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://ontriq.com/faq' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.ontriq.com' },
+      { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://www.ontriq.com/faq' },
     ],
   },
 };

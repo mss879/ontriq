@@ -18,13 +18,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Our Process | Background Verification Workflow | Ontriq',
     description: 'Understand Ontriq\'s comprehensive background verification process. From data collection to final reporting, we ensure accuracy, compliance, and speed.',
-    url: 'https://ontriq.com/process',
+    url: 'https://www.ontriq.com/process',
     siteName: 'Ontriq',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://ontriq.com/ontriq%20favicon.png',
+        url: 'https://www.ontriq.com/ontriq%20favicon.png',
         width: 512,
         height: 512,
         alt: 'Ontriq',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Our Process | Background Verification Workflow | Ontriq',
     description: 'Understand Ontriq\'s comprehensive background verification process. From data collection to final reporting, we ensure accuracy, compliance, and speed.',
-    images: ['https://ontriq.com/ontriq%20favicon.png'],
+    images: ['https://www.ontriq.com/ontriq%20favicon.png'],
   },
 };
 

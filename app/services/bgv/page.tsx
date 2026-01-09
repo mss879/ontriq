@@ -13,10 +13,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Background Verification (BGV) Services | Ontriq',
     description: 'Sri Lanka\'s fastest BGV provider. 7-day turnaround for employment, education, and criminal record checks.',
-    url: 'https://ontriq.com/services/bgv',
+    url: 'https://www.ontriq.com/services/bgv',
     images: [
       {
-        url: 'https://ontriq.com/ontriq%20favicon.png',
+        url: 'https://www.ontriq.com/ontriq%20favicon.png',
         width: 512,
         height: 512,
         alt: 'Ontriq',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Background Verification (BGV) Services | Ontriq',
     description: 'Sri Lanka\'s fastest BGV provider. 7-day turnaround for employment, education, and criminal record checks.',
-    images: ['https://ontriq.com/ontriq%20favicon.png'],
+    images: ['https://www.ontriq.com/ontriq%20favicon.png'],
   },
 };
 

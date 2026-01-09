@@ -17,13 +17,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Contact Us - Ontriq',
     description: 'Get in touch with Ontriq for background verification, HR services, payroll, and recruitment solutions.',
-    url: 'https://ontriq.com/contact',
+    url: 'https://www.ontriq.com/contact',
     siteName: 'Ontriq',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://ontriq.com/ontriq%20favicon.png',
+        url: 'https://www.ontriq.com/ontriq%20favicon.png',
         width: 512,
         height: 512,
         alt: 'Ontriq',
@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Contact Us - Ontriq',
     description: 'Get in touch with Ontriq for background verification, HR services, payroll, and recruitment solutions.',
-    images: ['https://ontriq.com/ontriq%20favicon.png'],
+    images: ['https://www.ontriq.com/ontriq%20favicon.png'],
   },
   alternates: {
-    canonical: 'https://ontriq.com/contact',
+    canonical: 'https://www.ontriq.com/contact',
   },
 };
 
@@ -47,7 +47,7 @@ const contactPageJsonLd = {
   '@type': 'ContactPage',
   name: 'Contact Ontriq',
   description: 'Get in touch with Ontriq for background verification, HR services, payroll, and recruitment solutions.',
-  url: 'https://ontriq.com/contact',
+  url: 'https://www.ontriq.com/contact',
   mainEntity: {
     '@type': 'Organization',
     name: 'Ontriq',

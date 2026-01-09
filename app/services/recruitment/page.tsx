@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Recruitment & Talent Acquisition Services Sri Lanka | Ontriq',
     description: 'Attract, identify, and hire top-tier talent aligned with your goals.',
-    url: 'https://ontriq.com/services/recruitment',
+    url: 'https://www.ontriq.com/services/recruitment',
     images: [
       {
-        url: 'https://ontriq.com/ontriq%20favicon.png',
+        url: 'https://www.ontriq.com/ontriq%20favicon.png',
         width: 512,
         height: 512,
         alt: 'Ontriq',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Recruitment & Talent Acquisition Services Sri Lanka | Ontriq',
     description: 'Attract, identify, and hire top-tier talent aligned with your goals.',
-    images: ['https://ontriq.com/ontriq%20favicon.png'],
+    images: ['https://www.ontriq.com/ontriq%20favicon.png'],
   },
 };
 

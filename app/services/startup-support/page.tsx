@@ -9,10 +9,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Startup Support Services | Ontriq',
     description: 'We help entrepreneurs and early-stage founders launch, grow, and scale their businesses with confidence.',
-    url: 'https://ontriq.com/services/startup-support',
+    url: 'https://www.ontriq.com/services/startup-support',
     images: [
       {
-        url: 'https://ontriq.com/ontriq%20favicon.png',
+        url: 'https://www.ontriq.com/ontriq%20favicon.png',
         width: 512,
         height: 512,
         alt: 'Ontriq',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Startup Support Services | Ontriq',
     description: 'We help entrepreneurs and early-stage founders launch, grow, and scale their businesses with confidence.',
-    images: ['https://ontriq.com/ontriq%20favicon.png'],
+    images: ['https://www.ontriq.com/ontriq%20favicon.png'],
   },
 };
 
