@@ -104,8 +104,8 @@ const jsonLd = {
   '@type': 'Organization',
   name: 'Ontriq',
   alternateName: 'Ontriq (PVT) LTD',
-  url: siteUrl,-logo
-  logo: `${siteUrl}/ontriq logo1.png`,
+  url: siteUrl,
+  logo: `${siteUrl}/ontriq-logo.png`,
   description: siteDescription,
   foundingDate: '2025',
   parentOrganization: {
