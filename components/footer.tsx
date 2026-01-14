@@ -87,14 +87,16 @@ export function Footer() {
           
           <div className="flex items-center gap-2">
             <span>Made by</span>
-            <Image 
-              src="/arcai-logo.png" 
-              alt="ARC AI" 
-              width={44} 
-              height={44} 
-              className="h-11 w-auto opacity-80 hover:opacity-100 transition-opacity"
-              loading="lazy"
-            />
+            <Link href="https://www.arcai.agency" target="_blank" rel="noopener noreferrer">
+              <Image 
+                src="/arcai-logo.png" 
+                alt="ARC AI" 
+                width={44} 
+                height={44} 
+                className="h-11 w-auto"
+                loading="lazy"
+              />
+            </Link>
           </div>
 
           <p>

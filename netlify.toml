@@ -1,0 +1,34 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# Netlify's Next.js Runtime
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Canonical host + HTTPS enforcement
+# Redirect apex domain to www (permanent)
+[[redirects]]
+  from = "https://ontriq.com/*"
+  to = "https://www.ontriq.com/:splat"
+  status = 301
+  force = true
+
+# If any HTTP traffic reaches Netlify, push it to HTTPS + www
+[[redirects]]
+  from = "http://ontriq.com/*"
+  to = "https://www.ontriq.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.ontriq.com/*"
+  to = "https://www.ontriq.com/:splat"
+  status = 301
+  force = true
+
+[dev]
+  command = "npm run dev"
+  port = 3000
+  targetPort = 3000
+  framework = "next"

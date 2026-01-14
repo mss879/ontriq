@@ -8,6 +8,8 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
+
+Sitemap: https://www.ontriq.com/sitemap.xml
 Disallow: /static/
 
 # Sitemap location
