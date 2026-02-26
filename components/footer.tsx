@@ -84,19 +84,22 @@ export function Footer() {
             © {new Date().getFullYear()} Ontriq. All rights reserved.
           </p>
 
-          <div className="flex items-center gap-2">
-            <span>Made by</span>
-            <Link href="https://www.arcai.agency" target="_blank" rel="noopener noreferrer">
-              <Image
-                src="/arcai-logo.png"
-                alt="ARC AI"
-                width={44}
-                height={44}
-                className="h-11 w-auto"
-                loading="lazy"
-              />
-            </Link>
-          </div>
+          <Link
+            href="https://www.arcai.agency"
+            target="_blank"
+            rel="noopener"
+            title="ARC AI - Web Design & Digital Solutions"
+            className="flex items-center gap-2 hover:text-white transition-colors"
+          >
+            Designed & Developed by
+            <Image
+              src="/arc-logo.png"
+              alt="ARC AI - Web Design & Digital Solutions"
+              width={120}
+              height={40}
+              className="h-10 w-auto translate-y-0.5"
+            />
+          </Link>
 
           <p>
             Powered by Next.js

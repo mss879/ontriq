@@ -322,21 +322,26 @@ export function AiChatWidget() {
 
             <div className="relative w-14 h-14">
                 {!isOpen && (
-                    <span className="absolute inset-0 rounded-full bg-[#F75834] opacity-75 animate-ping" />
+                    <span className="absolute inset-0 rounded-full bg-[#F75834]/50 opacity-75 animate-ping" />
                 )}
                 <motion.button
                     onClick={() => setIsOpen(!isOpen)}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="w-14 h-14 bg-[#0A1A2F] border border-[#F75834]/40 rounded-full shadow-2xl flex items-center justify-center overflow-hidden hover:border-[#F75834]/60 transition-all z-50 group relative"
+                    whileHover={{ scale: 1.05, translateY: -2 }}
+                    whileTap={{ scale: 0.95, translateY: 2, boxShadow: "inset 0 4px 8px rgba(0,0,0,0.3)" }}
+                    className="w-14 h-14 rounded-full flex items-center justify-center z-50 group relative bg-gradient-to-b from-[#ff7a59] to-[#e04522] border border-[#ff9b82]"
                     style={{
-                        boxShadow: "0 4px 20px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 215, 0, 0.15)",
+                        boxShadow: `
+                            0 8px 15px rgba(247, 88, 52, 0.4),
+                            0 4px 6px rgba(0, 0, 0, 0.2),
+                            inset 0 2px 4px rgba(255, 255, 255, 0.5),
+                            inset 0 -4px 8px rgba(0, 0, 0, 0.2)
+                        `,
                     }}
                 >
                     {isOpen ? (
-                        <X className="w-6 h-6 text-[#F75834]" />
+                        <X className="w-6 h-6 text-white relative z-10 drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]" />
                     ) : (
-                        <MessageCircle className="w-6 h-6 text-[#F75834]" />
+                        <MessageCircle className="w-6 h-6 text-white relative z-10 drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]" />
                     )}
                 </motion.button>
             </div>
