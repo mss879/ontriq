@@ -1,0 +1,152 @@
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
+import Hero from '@/components/hero';
+
+// Dynamically import below-fold components for better initial load
+const BentoGrid = dynamic(() => import('@/components/bento-grid'), {
+  loading: () => <div className="min-h-screen" aria-label="Loading content..." />,
+});
+
+const ServicesSection = dynamic(() => import('@/components/services-section'), {
+  loading: () => <div className="min-h-[600px]" aria-label="Loading services..." />,
+});
+
+const WhyChooseUs = dynamic(
+  () => import('@/components/why-choose-us').then((mod) => ({ default: mod.WhyChooseUs })),
+  { loading: () => <div className="min-h-[600px]" aria-label="Loading content..." /> }
+);
+
+const ProcessSection = dynamic(
+  () => import('@/components/process-section').then((mod) => ({ default: mod.ProcessSection })),
+  { loading: () => <div className="min-h-[600px]" aria-label="Loading process..." /> }
+);
+
+const FaqSection = dynamic(
+  () => import('@/components/faq-section').then((mod) => ({ default: mod.FaqSection })),
+  { loading: () => <div className="min-h-[400px]" aria-label="Loading FAQ..." /> }
+);
+
+export const metadata: Metadata = {
+  title: 'Ontriq | HR, Recruitment, Payroll & BGV Services Sri Lanka',
+  description: 'Sri Lanka\'s leading BGV, HR, Recruitment, Payroll, and Company Formation provider. Expert workforce solutions delivering results in 7 days.',
+  openGraph: {
+    title: 'Ontriq | HR, Recruitment, Payroll & BGV Services Sri Lanka',
+    description: 'Sri Lanka\'s leading workforce solutions provider. Expert BGV, HR, Recruitment, Payroll, and Company Formation services.',
+    url: 'https://www.ontriq.com',
+    images: [{ url: 'https://www.ontriq.com/share-img.png', width: 1200, height: 630, alt: 'Ontriq - Workforce & Business Solutions Sri Lanka' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ontriq | HR, Recruitment, Payroll & BGV Services Sri Lanka',
+    description: 'Sri Lanka\'s leading workforce solutions provider.',
+    images: ['https://www.ontriq.com/share-img.png'],
+  },
+};
+
+// JSON-LD for homepage
+const homePageJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Ontriq - Your Complete Workforce and Business Partner',
+  description: 'Sri Lanka\'s leading Background Verification, HR Solutions, Recruitment, Payroll Management, and Business Formation services.',
+  url: 'https://www.ontriq.com',
+  mainEntity: {
+    '@type': 'LocalBusiness',
+    name: 'Ontriq',
+    image: 'https://www.ontriq.com/ontriq-logo.png',
+    priceRange: '$$',
+    telephone: '+94-77-999-6940',
+    email: 'info@ontriq.com',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '107 Colombo - Galle Main Rd',
+      addressLocality: 'Dehiwala-Mount Lavinia',
+      addressCountry: 'LK',
+    },
+  },
+  mainContentOfPage: {
+    '@type': 'WebPageElement',
+    cssSelector: '#main-content',
+  },
+};
+
+const servicesJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Ontriq Services',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      item: {
+        '@type': 'Service',
+        name: 'Background Verification (BGV) Services',
+        description: 'Complete background verification within 7 working days - fastest in Sri Lanka.',
+        provider: { '@type': 'Organization', name: 'Ontriq' },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      item: {
+        '@type': 'Service',
+        name: 'Human Resource Solutions',
+        description: 'End-to-end HR solutions for building and maintaining a productive workforce.',
+        provider: { '@type': 'Organization', name: 'Ontriq' },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      item: {
+        '@type': 'Service',
+        name: 'Talent Recruitment',
+        description: 'Customized recruitment strategies for finding top-tier talent.',
+        provider: { '@type': 'Organization', name: 'Ontriq' },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 4,
+      item: {
+        '@type': 'Service',
+        name: 'Payroll Management',
+        description: 'Accurate, timely, and fully compliant payroll processing services.',
+        provider: { '@type': 'Organization', name: 'Ontriq' },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 5,
+      item: {
+        '@type': 'Service',
+        name: 'Business Formation and Setup',
+        description: 'End-to-end support for business incorporation in Sri Lanka.',
+        provider: { '@type': 'Organization', name: 'Ontriq' },
+      },
+    },
+  ],
+};
+
+export default function Home() {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+      />
+      <main id="main-content" className="min-h-screen" role="main">
+        <Hero />
+        <BentoGrid />
+        <ServicesSection />
+        <WhyChooseUs />
+        <ProcessSection />
+        <FaqSection />
+      </main>
+    </>
+  );
+}
