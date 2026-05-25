@@ -46,6 +46,7 @@ export function Footer() {
                 <FooterLink href="/process">Process</FooterLink>
                 <FooterLink href="/faq">FAQ</FooterLink>
                 <FooterLink href="/contact">Contact</FooterLink>
+                <FooterLink href="/privacy">Privacy Policy</FooterLink>
               </ul>
             </nav>
 

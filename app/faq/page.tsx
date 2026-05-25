@@ -110,7 +110,7 @@ export default function FaqPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
       />
       <main className="min-h-screen bg-white pt-20" id="main-content">
-        <FaqSection />
+        <FaqSection titleAs="h1" />
         <CTASection />
       </main>
     </>

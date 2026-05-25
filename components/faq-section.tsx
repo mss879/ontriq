@@ -54,7 +54,8 @@ const faqs = [
   }
 ];
 
-export const FaqSection = memo(function FaqSection() {
+export const FaqSection = memo(function FaqSection({ titleAs = 'h2' }: { titleAs?: 'h1' | 'h2' }) {
+  const HeadingTag = titleAs;
   return (
     <section className="w-full bg-white py-24 text-gray-900" aria-labelledby="faq-heading">
       <div className="container mx-auto px-4">
@@ -67,9 +68,9 @@ export const FaqSection = memo(function FaqSection() {
                 <span className="text-slate-900">005</span>
                 <span>FAQ</span>
               </div>
-              <h2 id="faq-heading" className="text-4xl font-bold tracking-tight sm:text-5xl text-gray-900">
+              <HeadingTag id="faq-heading" className="text-4xl font-bold tracking-tight sm:text-5xl text-gray-900">
                 Frequently asked questions
-              </h2>
+              </HeadingTag>
             </div>
 
             <div className="rounded-2xl border border-gray-200 bg-gray-50 p-8">

@@ -63,6 +63,8 @@ export const metadata: Metadata = {
     icon: [
       { url: '/ontriq-favicon.png', sizes: '32x32', type: 'image/png' },
       { url: '/ontriq-favicon.png', sizes: '16x16', type: 'image/png' },
+      { url: '/ontriq-favicon.png', sizes: '192x192', type: 'image/png' },
+      { url: '/ontriq-favicon.png', sizes: '512x512', type: 'image/png' },
     ],
     apple: '/ontriq-favicon.png',
     shortcut: '/ontriq-favicon.png',

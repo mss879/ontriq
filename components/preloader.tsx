@@ -69,7 +69,7 @@ export default function Preloader() {
         >
 
           <div className="flex flex-col items-center gap-12 text-center relative z-10 w-full max-w-5xl">
-            <motion.h1
+            <motion.p
               className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tighter leading-tight"
               variants={containerVariants}
               initial="hidden"
@@ -81,7 +81,7 @@ export default function Preloader() {
                   {char}
                 </motion.span>
               ))}
-            </motion.h1>
+            </motion.p>
             
             <motion.div 
               className="flex flex-wrap justify-center gap-3 md:gap-4 w-full"

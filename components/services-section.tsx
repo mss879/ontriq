@@ -78,7 +78,7 @@ const ServicesSection = () => {
         <div className="absolute inset-0 z-0 opacity-40 pointer-events-none" aria-hidden="true">
              <Image 
                 src="https://framerusercontent.com/images/vrhxHFTuxnCduP4nljUulqZcuQ.jpg" 
-                alt=""
+                alt="Ontriq services overview decorative background abstract texture"
                 fill
                 className="object-cover"
                 priority

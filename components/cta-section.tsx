@@ -27,7 +27,7 @@ export const CTASection = memo(function CTASection() {
               <div className="absolute inset-0 animate-[spin_10s_linear_infinite]">
                 <Image
                   src="https://framerusercontent.com/images/VNxTg4trlyPkvi55POCdKXQ04kY.png?width=320&height=320"
-                  alt=""
+                  alt="Decorative spinning abstract bubble"
                   width={96}
                   height={96}
                   className="h-full w-full object-contain"

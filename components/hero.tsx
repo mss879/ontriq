@@ -32,9 +32,9 @@ export default function Hero() {
               <h1 className="font-heading text-5xl font-bold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl xl:text-7xl">
                 <span className="inline-block animate-word-fade" style={{ animationDelay: '0.3s' }}>Your</span>{' '}
                 <span className="inline-block animate-word-fade" style={{ animationDelay: '0.4s' }}>Complete</span>{' '}
-                <span className="inline-block animate-word-fade" style={{ animationDelay: '0.5s' }}>Workforce</span>{' '}
-                <span className="inline-block animate-word-fade" style={{ animationDelay: '0.6s' }}>and</span>
+                <span className="inline-block animate-word-fade" style={{ animationDelay: '0.5s' }}>Workforce</span>
                 <br />
+                <span className="inline-block animate-word-fade" style={{ animationDelay: '0.6s' }}>and</span>{' '}
                 <span className="inline-block animate-word-fade" style={{ animationDelay: '0.7s' }}>Business</span>{' '}
                 <span className="inline-block animate-word-fade" style={{ animationDelay: '0.8s' }}>Partner</span>
               </h1>

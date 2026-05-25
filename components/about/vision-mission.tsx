@@ -12,7 +12,7 @@ export function VisionMission() {
         <div className="absolute inset-0 z-0 opacity-30 pointer-events-none">
              <Image 
                 src="https://framerusercontent.com/images/vrhxHFTuxnCduP4nljUulqZcuQ.jpg" 
-                alt="Background" 
+                alt="Ontriq office environment abstract texture background" 
                 fill
                 className="object-cover"
              />
