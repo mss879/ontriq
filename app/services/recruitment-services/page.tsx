@@ -253,20 +253,53 @@ export default function RecruitmentServicesPage() {
         </div>
       </section>
 
+      {/* Detailed Recruitment Services */}
+      <section className="py-16 bg-slate-50 border-t border-slate-200">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <h2 className="text-2xl font-semibold text-slate-900 mb-6">Detailed Recruitment Services</h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <Link href="/services/recruitment-services/executive-search" className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <h3 className="font-bold text-slate-900 mb-1">Executive Search</h3>
+              <p className="text-xs text-slate-500">C-suite & headhunting services</p>
+            </Link>
+            <Link href="/services/recruitment-services/volume-hiring" className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <h3 className="font-bold text-slate-900 mb-1">Volume Hiring</h3>
+              <p className="text-xs text-slate-500">Mass recruitment solutions</p>
+            </Link>
+            <Link href="/services/recruitment-services/candidate-screening" className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <h3 className="font-bold text-slate-900 mb-1">Candidate Screening</h3>
+              <p className="text-xs text-slate-500">Vetting & assessment process</p>
+            </Link>
+            <Link href="/services/recruitment-services/contract-staffing" className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <h3 className="font-bold text-slate-900 mb-1">Contract Staffing</h3>
+              <p className="text-xs text-slate-500">Flexible temporary staffing</p>
+            </Link>
+            <Link href="/services/recruitment-services/it-recruitment" className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <h3 className="font-bold text-slate-900 mb-1">IT Recruitment</h3>
+              <p className="text-xs text-slate-500">Tech & engineering placement</p>
+            </Link>
+            <Link href="/services/recruitment-services/employer-branding" className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <h3 className="font-bold text-slate-900 mb-1">Employer Branding</h3>
+              <p className="text-xs text-slate-500">Promote your employer value</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Related Services */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <h2 className="text-2xl font-semibold text-slate-900 mb-6">Related Services</h2>
           <div className="grid sm:grid-cols-3 gap-4">
-            <Link href="/services/background-verification-services" className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <Link href="/services/background-verification-services" className="p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
               <h3 className="font-bold text-slate-900 mb-2">Background Verification</h3>
               <p className="text-sm text-slate-500">Verify candidates before hiring</p>
             </Link>
-            <Link href="/services/hr-management-services" className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <Link href="/services/hr-management-services" className="p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
               <h3 className="font-bold text-slate-900 mb-2">HR Management</h3>
               <p className="text-sm text-slate-500">End-to-end HR solutions</p>
             </Link>
-            <Link href="/services/payroll-processing-services" className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <Link href="/services/payroll-processing-services" className="p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
               <h3 className="font-bold text-slate-900 mb-2">Payroll Processing</h3>
               <p className="text-sm text-slate-500">Compliant payroll services</p>
             </Link>
@@ -275,7 +308,7 @@ export default function RecruitmentServicesPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <ServiceSectionHeader
             number="05"
@@ -285,7 +318,7 @@ export default function RecruitmentServicesPage() {
           />
           <div className="space-y-6">
             {recruitmentFaqItems.map((faq, index) => (
-              <details key={index} className="group border border-slate-200 rounded-2xl overflow-hidden">
+              <details key={index} className="group border border-slate-200 rounded-2xl overflow-hidden bg-white">
                 <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-slate-50 transition-colors">
                   <h3 className="text-lg font-semibold text-slate-900 pr-4">{faq.question}</h3>
                   <span className="text-2xl text-slate-400 group-open:rotate-45 transition-transform duration-300 shrink-0">+</span>

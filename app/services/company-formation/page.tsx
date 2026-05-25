@@ -135,6 +135,34 @@ export default function CompanyFormationPage() {
         </div>
       </section>
 
+      <section className="py-16 bg-slate-50 border-t border-slate-200">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <h2 className="text-2xl font-semibold text-slate-900 mb-6">Detailed Formation Services</h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <Link href="/services/company-formation/private-limited-company" className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <h3 className="font-bold text-slate-900 mb-1">Private Limited Company</h3>
+              <p className="text-xs text-slate-500">Incorporate Pvt Ltd business</p>
+            </Link>
+            <Link href="/services/company-formation/partnership-registration" className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <h3 className="font-bold text-slate-900 mb-1">Partnership Registration</h3>
+              <p className="text-xs text-slate-500">Register business partnership</p>
+            </Link>
+            <Link href="/services/company-formation/foreign-company-registration" className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <h3 className="font-bold text-slate-900 mb-1">Foreign Company Setup</h3>
+              <p className="text-xs text-slate-500">Subsidiaries & branch offices</p>
+            </Link>
+            <Link href="/services/company-formation/annual-returns-filing" className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <h3 className="font-bold text-slate-900 mb-1">Annual Returns Filing</h3>
+              <p className="text-xs text-slate-500">Statutory return compliance</p>
+            </Link>
+            <Link href="/services/company-formation/tax-registration" className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <h3 className="font-bold text-slate-900 mb-1">Tax Registration</h3>
+              <p className="text-xs text-slate-500">TIN, VAT & SVAT registration</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <h2 className="text-2xl font-semibold text-slate-900 mb-6">Related Services</h2>
