@@ -1,5 +1,15 @@
 import { TechHero } from '@/components/technology/tech-hero';
 import { CTASection } from '@/components/cta-section';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Technology Infrastructure & Automated HR Platforms | Ontriq',
+  description: 'Discover Ontriq\'s robust technology infrastructure. We leverage advanced ATS, automated BGV platforms, and secure systems for premium business operations.',
+  keywords: ['technology infrastructure', 'applicant tracking systems', 'ATS software', 'automated BGV platform', 'secure HR database', 'system scaling'],
+  alternates: {
+    canonical: 'https://www.ontriq.com/technology/infrastructure',
+  },
+};
 
 export default function InfrastructurePage() {
   return (

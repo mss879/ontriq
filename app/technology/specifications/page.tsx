@@ -1,6 +1,16 @@
 import { TechHero } from '@/components/technology/tech-hero';
 import { TechSpecList } from '@/components/technology/tech-spec-list';
 import { CTASection } from '@/components/cta-section';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Technology We Use & System Specifications | Ontriq',
+  description: 'View our technology tools and system specifications. We leverage AI screening, automated BGV engines, and advanced payroll platforms for maximum efficiency.',
+  keywords: ['automated BGV engines', 'AI screening tools', 'video interviewing', 'EPF ETF payroll software', 'digital compliance systems'],
+  alternates: {
+    canonical: 'https://www.ontriq.com/technology/specifications',
+  },
+};
 
 const specs = [
   {

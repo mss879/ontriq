@@ -1,6 +1,16 @@
 import { TechHero } from '@/components/technology/tech-hero';
 import { TechContent } from '@/components/technology/tech-content';
 import { CTASection } from '@/components/cta-section';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Confidentiality & Data Discretion Policy | Ontriq',
+  description: 'Learn about Ontriq\'s strict confidentiality policy. Discover how we protect sensitive candidate, client, and company data with strict internal controls.',
+  keywords: ['confidentiality policy', 'data discretion', 'information privacy', 'secure data systems', 'corporate compliance', 'data protection'],
+  alternates: {
+    canonical: 'https://www.ontriq.com/technology/confidentiality',
+  },
+};
 
 const confidentialityPoints = [
   'Ensuring that all client and candidate data is handled with the utmost discretion and in full compliance with applicable privacy regulations.',

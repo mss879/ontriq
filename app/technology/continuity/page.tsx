@@ -1,5 +1,15 @@
 import { TechHero } from '@/components/technology/tech-hero';
 import { CTASection } from '@/components/cta-section';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Business Continuity Plan & Operational Resilience | Ontriq',
+  description: 'Discover Ontriq\'s robust business continuity plan. Learn how we guarantee uninterrupted HR, payroll, BGV, and recruitment services during any disruption.',
+  keywords: ['business continuity', 'operational resilience', 'disaster recovery', 'service redundancy', 'workforce contingency plan', 'risk mitigation'],
+  alternates: {
+    canonical: 'https://www.ontriq.com/technology/continuity',
+  },
+};
 
 export default function ContinuityPage() {
   return (
