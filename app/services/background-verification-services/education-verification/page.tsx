@@ -5,18 +5,18 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Educational Background Verification Services | Ontriq Sri Lanka',
+  title: 'Educational Background Verification Services',
   description: 'Verify academic credentials in Sri Lanka. Ontriq confirms degrees, diplomas, certifications, and institutional authenticity for employers.',
   keywords: ['education verification Sri Lanka', 'academic credential check', 'degree verification', 'certificate verification', 'educational background check'],
   openGraph: {
-    title: 'Educational Background Verification Services | Ontriq Sri Lanka',
+    title: 'Educational Background Verification Services',
     description: 'Verify academic credentials with accuracy and speed.',
     url: 'https://www.ontriq.com/services/background-verification-services/education-verification',
     images: [{ url: 'https://www.ontriq.com/share-img.png', width: 1200, height: 630, alt: 'Ontriq Education Verification' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Educational Background Verification Services | Ontriq Sri Lanka',
+    title: 'Educational Background Verification Services',
     description: 'Verify academic credentials with accuracy and speed.',
     images: ['https://www.ontriq.com/share-img.png'],
   },

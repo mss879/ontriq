@@ -5,11 +5,11 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Professional Reference Check Services | Ontriq Sri Lanka',
+  title: 'Professional Reference Check Services',
   description: 'Professional reference checks in Sri Lanka. Ontriq contacts previous supervisors and colleagues to verify work ethic, performance, and professional conduct.',
   keywords: ['reference check Sri Lanka', 'professional reference verification', 'employment reference check', 'character reference verification', 'supervisor reference check'],
   openGraph: {
-    title: 'Professional Reference Check Services | Ontriq Sri Lanka',
+    title: 'Professional Reference Check Services',
     description: 'Professional reference verification for informed hiring decisions.',
     url: 'https://www.ontriq.com/services/background-verification-services/reference-checks',
     images: [{ url: 'https://www.ontriq.com/share-img.png', width: 1200, height: 630, alt: 'Ontriq Reference Checks' }],

@@ -26,7 +26,7 @@ const bgvFaqItems = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Background Verification Services in Sri Lanka | Ontriq',
+  title: 'Background Verification Services in Sri Lanka',
   description: 'Background verification services in Sri Lanka. Ontriq delivers employment, education, criminal and identity checks in just 7 working days.',
   keywords: [
     'background verification services',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     'employee screening services Sri Lanka',
   ],
   openGraph: {
-    title: 'Background Verification Services in Sri Lanka | Ontriq',
+    title: 'Background Verification Services in Sri Lanka',
     description: 'Sri Lanka\'s fastest BGV provider. Employment, education, criminal & identity checks in 7 working days.',
     url: 'https://www.ontriq.com/services/background-verification-services',
     images: [
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Background Verification Services in Sri Lanka | Ontriq',
+    title: 'Background Verification Services in Sri Lanka',
     description: 'Sri Lanka\'s fastest BGV provider. Employment, education, criminal & identity checks in 7 working days.',
     images: ['https://www.ontriq.com/share-img.png'],
   },

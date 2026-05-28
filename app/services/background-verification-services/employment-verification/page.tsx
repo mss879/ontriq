@@ -5,18 +5,18 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Employment History Verification Services | Ontriq Sri Lanka',
+  title: 'Employment History Verification Services',
   description: 'Verify candidate employment history in Sri Lanka. Ontriq confirms past job roles, tenure, designations, and reasons for leaving with accuracy and speed.',
   keywords: ['employment verification Sri Lanka', 'employment history check', 'job verification services', 'work history verification', 'pre-employment screening'],
   openGraph: {
-    title: 'Employment History Verification Services | Ontriq Sri Lanka',
+    title: 'Employment History Verification Services',
     description: 'Verify candidate employment history with accuracy and speed.',
     url: 'https://www.ontriq.com/services/background-verification-services/employment-verification',
     images: [{ url: 'https://www.ontriq.com/share-img.png', width: 1200, height: 630, alt: 'Ontriq Employment Verification' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Employment History Verification Services | Ontriq Sri Lanka',
+    title: 'Employment History Verification Services',
     description: 'Verify candidate employment history with accuracy and speed.',
     images: ['https://www.ontriq.com/share-img.png'],
   },

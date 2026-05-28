@@ -5,11 +5,11 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Criminal Record Check Services Sri Lanka | Ontriq',
+  title: 'Criminal Record Check Services Sri Lanka',
   description: 'Comprehensive criminal record checks and legal screening in Sri Lanka. Ontriq examines police databases, court records, and legal registries for safe hiring.',
   keywords: ['criminal record check Sri Lanka', 'criminal background check', 'police clearance certificate', 'legal screening', 'criminal history verification'],
   openGraph: {
-    title: 'Criminal Record Check Services Sri Lanka | Ontriq',
+    title: 'Criminal Record Check Services Sri Lanka',
     description: 'Comprehensive criminal record checks and legal screening.',
     url: 'https://www.ontriq.com/services/background-verification-services/criminal-record-check',
     images: [{ url: 'https://www.ontriq.com/share-img.png', width: 1200, height: 630, alt: 'Ontriq Criminal Record Check' }],

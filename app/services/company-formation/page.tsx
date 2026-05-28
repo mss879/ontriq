@@ -16,7 +16,7 @@ const companyFormationFaqItems = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Company Registration & Formation Services Sri Lanka | Ontriq',
+  title: 'Company Registration & Formation Services Sri Lanka',
   description: 'Register your company in Sri Lanka with Ontriq. Business incorporation, tax registration, and regulatory compliance. Fast 3-5 day setup.',
   keywords: [
     'company registration Sri Lanka', 'company formation Sri Lanka', 'register company Sri Lanka',
@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     'company secretary Sri Lanka', 'annual returns filing Sri Lanka', 'tax registration Sri Lanka',
   ],
   openGraph: {
-    title: 'Company Registration & Formation Services Sri Lanka | Ontriq',
+    title: 'Company Registration & Formation Services Sri Lanka',
     description: 'Expert company formation and business registration in Sri Lanka. Fast 3-5 day registration with full compliance support.',
     url: 'https://www.ontriq.com/services/company-formation',
     images: [{ url: 'https://www.ontriq.com/share-img.png', width: 1200, height: 630, alt: 'Ontriq Company Formation' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Company Registration & Formation Services Sri Lanka | Ontriq',
+    title: 'Company Registration & Formation Services Sri Lanka',
     description: 'Expert company formation and business registration in Sri Lanka.',
     images: ['https://www.ontriq.com/share-img.png'],
   },

@@ -5,11 +5,11 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Identity & Address Verification Services | Ontriq Sri Lanka',
+  title: 'Identity & Address Verification Services',
   description: 'Verify candidate identity and residential address in Sri Lanka. Ontriq authenticates government IDs, NICs, passports, and confirms address details.',
   keywords: ['identity verification Sri Lanka', 'address verification', 'NIC verification', 'passport verification', 'identity authentication'],
   openGraph: {
-    title: 'Identity & Address Verification Services | Ontriq Sri Lanka',
+    title: 'Identity & Address Verification Services',
     description: 'Authenticate government IDs and verify residential addresses.',
     url: 'https://www.ontriq.com/services/background-verification-services/identity-address-verification',
     images: [{ url: 'https://www.ontriq.com/share-img.png', width: 1200, height: 630, alt: 'Ontriq Identity Verification' }],
