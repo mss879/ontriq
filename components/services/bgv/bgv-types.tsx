@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { ScrollAnimate } from '@/components/scroll-animate';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
@@ -60,12 +60,9 @@ export function BgvTypes() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {checkTypes.map((check, index) => (
-            <motion.div
+            <ScrollAnimate
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.08 }}
+              delay={index * 0.08}
               className="group p-8 rounded-[24px] border border-slate-200 bg-white hover:shadow-lg hover:shadow-orange-500/5 transition-all duration-500"
             >
               <div className="flex items-baseline gap-3 mb-4">
@@ -85,7 +82,7 @@ export function BgvTypes() {
                   Learn More <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               )}
-            </motion.div>
+            </ScrollAnimate>
           ))}
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { ScrollAnimate } from '@/components/scroll-animate';
 
 interface BgvHeroProps {
   serviceNumber: string;
@@ -19,27 +19,17 @@ export function BgvHero({ serviceNumber, title, subtitle, description }: BgvHero
           
           {/* Top Row: Number & Title */}
           <div className="grid md:grid-cols-12 gap-8 border-b border-slate-200 pb-12">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="md:col-span-1 text-sm font-medium text-slate-500 font-mono pt-2"
-            >
+            <ScrollAnimate className="md:col-span-1 text-sm font-medium text-slate-500 font-mono pt-2">
               /{serviceNumber}
-            </motion.div>
+            </ScrollAnimate>
             
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="md:col-span-11"
-            >
+            <ScrollAnimate delay={0.1} className="md:col-span-11">
               <h1 className="text-6xl md:text-8xl font-semibold tracking-tighter text-slate-900 leading-[0.9]">
                 {title}
                 <br />
                 <span className="text-slate-300">{subtitle}</span>
               </h1>
-            </motion.div>
+            </ScrollAnimate>
           </div>
 
           {/* Bottom Row: Description & Stats/Tags */}
@@ -57,12 +47,7 @@ export function BgvHero({ serviceNumber, title, subtitle, description }: BgvHero
               />
             </div>
             
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="md:col-span-8 lg:col-span-7 flex flex-col justify-between gap-8"
-            >
+            <ScrollAnimate delay={0.2} className="md:col-span-8 lg:col-span-7 flex flex-col justify-between gap-8">
               <p className="text-xl md:text-2xl text-slate-600 leading-relaxed font-light">
                 {description}
               </p>
@@ -74,7 +59,7 @@ export function BgvHero({ serviceNumber, title, subtitle, description }: BgvHero
                   </span>
                 ))}
               </div>
-            </motion.div>
+            </ScrollAnimate>
           </div>
 
         </div>

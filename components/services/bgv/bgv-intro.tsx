@@ -1,19 +1,13 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { ScrollAnimate } from '@/components/scroll-animate';
 
 export function BgvIntro() {
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-12 gap-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-5"
-          >
+          <ScrollAnimate className="lg:col-span-5">
             <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.4em] text-slate-500 mb-6">
               <span className="h-1 w-8 rounded-full bg-[#F75834]" />
               <span className="text-slate-900">01</span>
@@ -22,15 +16,9 @@ export function BgvIntro() {
             <h2 className="text-4xl md:text-5xl font-semibold tracking-tighter text-slate-900 leading-tight">
               What Are Background Verification Services?
             </h2>
-          </motion.div>
+          </ScrollAnimate>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="lg:col-span-7 flex flex-col gap-6"
-          >
+          <ScrollAnimate delay={0.1} className="lg:col-span-7 flex flex-col gap-6">
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed text-justify">
               Background verification services are a systematic process of validating the personal, educational, professional, and legal history of an individual&mdash;most commonly conducted before employment. These services protect employers from the risks of hiring unverified candidates by confirming that the information a candidate provides is accurate, complete, and truthful.
             </p>
@@ -54,7 +42,7 @@ export function BgvIntro() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </ScrollAnimate>
         </div>
       </div>
     </section>

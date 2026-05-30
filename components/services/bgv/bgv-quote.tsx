@@ -1,19 +1,13 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { ScrollAnimate } from '@/components/scroll-animate';
 import Link from 'next/link';
 
 export function BgvQuote() {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4 md:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="relative overflow-hidden rounded-[32px] bg-slate-900 p-10 md:p-16 text-center"
-        >
+        <ScrollAnimate className="relative overflow-hidden rounded-[32px] bg-slate-900 p-10 md:p-16 text-center">
           {/* Background Glow */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[400px] w-[600px] rounded-full bg-[#0098F3]/15 blur-[100px]" aria-hidden="true" />
 
@@ -31,7 +25,7 @@ export function BgvQuote() {
               Request a Quote
             </Link>
           </div>
-        </motion.div>
+        </ScrollAnimate>
       </div>
     </section>
   );

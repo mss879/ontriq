@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { ScrollAnimate } from '@/components/scroll-animate';
 
 const workflowSteps = [
   {
@@ -48,11 +48,8 @@ export function BgvWorkflow() {
 
           <div className="space-y-12">
             {workflowSteps.map((step, index) => (
-              <motion.div
+              <ScrollAnimate
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
                 className={`flex flex-col md:flex-row gap-8 items-center ${
                   index % 2 === 0 ? 'md:flex-row-reverse' : ''
                 }`}
@@ -71,7 +68,7 @@ export function BgvWorkflow() {
                 </div>
 
                 <div className="flex-1 w-full hidden md:block" />
-              </motion.div>
+              </ScrollAnimate>
             ))}
           </div>
         </div>

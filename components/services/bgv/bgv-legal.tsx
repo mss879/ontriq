@@ -1,19 +1,13 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { ScrollAnimate } from '@/components/scroll-animate';
 
 export function BgvLegal() {
   return (
     <section className="py-24 bg-slate-50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-12 gap-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-5"
-          >
+          <ScrollAnimate className="lg:col-span-5">
             <div className="lg:sticky lg:top-48">
               <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.4em] text-slate-500 mb-6">
                 <span className="h-1 w-8 rounded-full bg-[#F75834]" />
@@ -24,15 +18,9 @@ export function BgvLegal() {
                 Background Verification<br />Laws in Sri Lanka
               </h2>
             </div>
-          </motion.div>
+          </ScrollAnimate>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="lg:col-span-7 flex flex-col gap-6"
-          >
+          <ScrollAnimate delay={0.1} className="lg:col-span-7 flex flex-col gap-6">
             <p className="text-lg text-slate-600 leading-relaxed">
               Background verification in Sri Lanka is a lawful and widely accepted practice for pre-employment screening. While there is no single dedicated &ldquo;background check&rdquo; law, the process is governed by several overlapping regulations that employers and verification providers must adhere to.
             </p>
@@ -74,7 +62,7 @@ export function BgvLegal() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </ScrollAnimate>
         </div>
       </div>
     </section>

@@ -1,43 +1,15 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { ScrollAnimate } from '@/components/scroll-animate';
 
 const processSteps = [
-  {
-    title: 'Employment History',
-    description: 'Verification of past job roles, tenure, and reporting structure.',
-    stat: '100%'
-  },
-  {
-    title: 'Education Check',
-    description: 'Validation of academic and professional credentials.',
-    stat: 'Verified'
-  },
-  {
-    title: 'Criminal Record',
-    description: 'Checks for criminal history using legal and police databases.',
-    stat: 'Safe'
-  },
-  {
-    title: 'Identity & Address',
-    description: 'Authentication of government IDs and residential addresses.',
-    stat: 'Valid'
-  },
-  {
-    title: 'Reference Checks',
-    description: 'Professional feedback from previous supervisors or colleagues.',
-    stat: 'Insight'
-  },
-  {
-    title: 'Global Sanction',
-    description: 'Screening against international sanction and watchlist databases.',
-    stat: 'Global'
-  },
-  {
-    title: 'Drug Test',
-    description: 'Pre-employment and random drug screenings through certified labs.',
-    stat: 'Clean'
-  }
+  { title: 'Employment History', description: 'Verification of past job roles, tenure, and reporting structure.' },
+  { title: 'Education Check', description: 'Validation of academic and professional credentials.' },
+  { title: 'Criminal Record', description: 'Checks for criminal history using legal and police databases.' },
+  { title: 'Identity & Address', description: 'Authentication of government IDs and residential addresses.' },
+  { title: 'Reference Checks', description: 'Professional feedback from previous supervisors or colleagues.' },
+  { title: 'Global Sanction', description: 'Screening against international sanction and watchlist databases.' },
+  { title: 'Drug Test', description: 'Pre-employment and random drug screenings through certified labs.' }
 ];
 
 export function BgvProcess() {
@@ -60,12 +32,9 @@ export function BgvProcess() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
           {processSteps.map((step, index) => (
-            <motion.div
+            <ScrollAnimate
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              delay={index * 0.1}
               className="group flex flex-col gap-6"
             >
               <div className="flex items-baseline gap-2 border-b border-slate-200 pb-6 group-hover:border-[#F75834] transition-colors duration-500">
@@ -83,11 +52,10 @@ export function BgvProcess() {
                   {step.description}
                 </p>
               </div>
-            </motion.div>
+            </ScrollAnimate>
           ))}
         </div>
       </div>
     </section>
   );
 }
-

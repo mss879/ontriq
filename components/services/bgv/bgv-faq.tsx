@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { ScrollAnimate } from '@/components/scroll-animate';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const bgvFaqs = [
@@ -10,7 +10,7 @@ const bgvFaqs = [
   },
   {
     question: 'How long does a background check take in Sri Lanka?',
-    answer: 'At Ontriq, we complete comprehensive background verification cases within 7 working days&mdash;the fastest turnaround in Sri Lanka. The exact duration may vary based on the complexity of checks, the number of verifications required, and the responsiveness of third-party sources such as previous employers and educational institutions.',
+    answer: 'At Ontriq, we complete comprehensive background verification cases within 7 working days\u0026mdash;the fastest turnaround in Sri Lanka. The exact duration may vary based on the complexity of checks, the number of verifications required, and the responsiveness of third-party sources such as previous employers and educational institutions.',
   },
   {
     question: 'What documents are needed for background verification?',
@@ -43,13 +43,7 @@ export function BgvFaq() {
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-12 gap-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-4"
-          >
+          <ScrollAnimate className="lg:col-span-4">
             <div className="lg:sticky lg:top-24">
               <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.4em] text-slate-500 mb-6">
                 <span className="h-1 w-8 rounded-full bg-[#F75834]" />
@@ -63,17 +57,14 @@ export function BgvFaq() {
                 Common questions about our background verification services in Sri Lanka.
               </p>
             </div>
-          </motion.div>
+          </ScrollAnimate>
 
           <div className="lg:col-span-8">
             <Accordion type="single" collapsible className="w-full">
               {bgvFaqs.map((faq, index) => (
-                <motion.div
+                <ScrollAnimate
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
+                  delay={index * 0.05}
                 >
                   <AccordionItem value={`faq-${index}`} className="border-slate-200">
                     <AccordionTrigger className="text-left text-lg font-medium text-slate-900 hover:text-[#F75834] hover:no-underline py-6">
@@ -83,7 +74,7 @@ export function BgvFaq() {
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
-                </motion.div>
+                </ScrollAnimate>
               ))}
             </Accordion>
           </div>

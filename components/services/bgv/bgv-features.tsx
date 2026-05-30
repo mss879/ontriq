@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { ScrollAnimate } from '@/components/scroll-animate';
 import { Plus } from 'lucide-react';
 
 const features = [
@@ -43,12 +43,9 @@ export function BgvFeatures() {
         
         <div className="flex flex-col">
           {features.map((feature, index) => (
-            <motion.div
+            <ScrollAnimate
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              delay={index * 0.1}
               className="group border-t border-slate-200 py-12 md:py-16 transition-colors hover:bg-slate-50/50"
             >
               <div className="grid md:grid-cols-12 gap-8 items-start">
@@ -70,7 +67,7 @@ export function BgvFeatures() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </ScrollAnimate>
           ))}
           <div className="border-t border-slate-200" />
         </div>
@@ -78,4 +75,3 @@ export function BgvFeatures() {
     </section>
   );
 }
-

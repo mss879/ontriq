@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { ScrollAnimate } from '@/components/scroll-animate';
 
 const industries = [
   {
@@ -55,12 +55,9 @@ export function BgvIndustries() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {industries.map((industry, index) => (
-            <motion.div
+            <ScrollAnimate
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.08 }}
+              delay={index * 0.08}
               className="group p-8 rounded-[24px] border border-slate-200 bg-slate-50 hover:bg-white hover:shadow-lg hover:shadow-orange-500/5 transition-all duration-500"
             >
               <h3 className="text-xl font-semibold text-slate-900 mb-3 group-hover:text-[#F75834] transition-colors">
@@ -76,7 +73,7 @@ export function BgvIndustries() {
                   </span>
                 ))}
               </div>
-            </motion.div>
+            </ScrollAnimate>
           ))}
         </div>
       </div>

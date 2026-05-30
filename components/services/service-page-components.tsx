@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Plus, CheckCircle2, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { ScrollAnimate } from '@/components/scroll-animate';
 
 interface ServiceSectionHeaderProps {
   number: string;
@@ -59,12 +59,9 @@ export function ServiceCardGrid({ items, columns = 3 }: ServiceCardGridProps) {
   return (
     <div className={`grid gap-6 ${gridCols[columns]}`}>
       {items.map((item, index) => (
-        <motion.div
+        <ScrollAnimate
           key={index}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
+          delay={index * 0.1}
           className="group flex flex-col p-8 rounded-[32px] border border-zinc-200 bg-white hover:bg-zinc-50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-500/10"
         >
           <div className="mb-6 flex items-center justify-between">
@@ -82,7 +79,7 @@ export function ServiceCardGrid({ items, columns = 3 }: ServiceCardGridProps) {
               {item.description}
             </p>
           </div>
-        </motion.div>
+        </ScrollAnimate>
       ))}
     </div>
   );
@@ -102,12 +99,9 @@ export function ServiceHorizontalList({ items }: ServiceHorizontalListProps) {
   return (
     <div className="flex flex-col">
       {items.map((item, index) => (
-        <motion.div
+        <ScrollAnimate
           key={index}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
+          delay={index * 0.1}
           className="group border-t border-slate-200 py-10 md:py-14 transition-colors hover:bg-slate-50/50"
         >
           <div className="grid md:grid-cols-12 gap-8 items-start">
@@ -129,7 +123,7 @@ export function ServiceHorizontalList({ items }: ServiceHorizontalListProps) {
               </div>
             </div>
           </div>
-        </motion.div>
+        </ScrollAnimate>
       ))}
       <div className="border-t border-slate-200" />
     </div>
