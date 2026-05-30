@@ -7,7 +7,18 @@ export const metadata: Metadata = {
 }
 
 export default function SitemapPage() {
-  const sections = [
+  interface SitemapLink {
+    name: string;
+    href: string;
+    subLinks?: SitemapLink[];
+  }
+
+  interface SitemapSection {
+    title: string;
+    links: SitemapLink[];
+  }
+
+  const sections: SitemapSection[] = [
     {
       title: 'Company',
       links: [
@@ -23,49 +34,94 @@ export default function SitemapPage() {
       title: 'Services',
       links: [
         { name: 'Services Overview', href: '/services' },
-        { name: 'Background Verification', href: '/services/background-verification-services' },
-        { name: 'Company Formation', href: '/services/company-formation' },
-        { name: 'Director Services', href: '/services/director-services' },
-        { name: 'HR Solutions', href: '/services/hr-management-services' },
-        { name: 'Payroll Management', href: '/services/payroll-processing-services' },
-        { name: 'Recruitment', href: '/services/recruitment-services' },
-        { name: 'Startup Support', href: '/services/startup-support-services' },
+        {
+          name: 'Background Verification',
+          href: '/services/background-verification-services',
+          subLinks: [
+            { name: 'Employment History', href: '/services/background-verification-services/employment-verification' },
+            { name: 'Educational Background', href: '/services/background-verification-services/education-verification' },
+            { name: 'Criminal Record & Legal', href: '/services/background-verification-services/criminal-record-check' },
+            { name: 'Identity & Address', href: '/services/background-verification-services/identity-address-verification' },
+            { name: 'Professional References', href: '/services/background-verification-services/reference-checks' },
+          ]
+        },
+        {
+          name: 'Company Formation',
+          href: '/services/company-formation',
+          subLinks: [
+            { name: 'Private Limited Company', href: '/services/company-formation/private-limited-company' },
+            { name: 'Partnership Registration', href: '/services/company-formation/partnership-registration' },
+            { name: 'Foreign Company Setup', href: '/services/company-formation/foreign-company-registration' },
+            { name: 'Annual Returns Filing', href: '/services/company-formation/annual-returns-filing' },
+            { name: 'Tax & Regulatory Registration', href: '/services/company-formation/tax-registration' },
+          ]
+        },
+        { name: 'Director Nominee Services', href: '/services/director-services' },
+        { name: 'HR Management Solutions', href: '/services/hr-management-services' },
+        { name: 'Payroll Processing Services', href: '/services/payroll-processing-services' },
+        {
+          name: 'Talent Recruitment',
+          href: '/services/recruitment-services',
+          subLinks: [
+            { name: 'Executive Search', href: '/services/recruitment-services/executive-search' },
+            { name: 'Volume Hiring & RPO', href: '/services/recruitment-services/volume-hiring' },
+            { name: 'Candidate Screening', href: '/services/recruitment-services/candidate-screening' },
+            { name: 'Contract Staffing', href: '/services/recruitment-services/contract-staffing' },
+            { name: 'IT Recruitment Specialists', href: '/services/recruitment-services/it-recruitment' },
+            { name: 'Employer Branding', href: '/services/recruitment-services/employer-branding' },
+          ]
+        },
+        { name: 'Startup Support Services', href: '/services/startup-support-services' },
       ],
     },
     {
       title: 'Technology & Standards',
       links: [
         { name: 'Technology Overview', href: '/technology' },
-        { name: 'Confidentiality', href: '/technology/confidentiality' },
-        { name: 'Business Continuity', href: '/technology/continuity' },
-        { name: 'Infrastructure', href: '/technology/infrastructure' },
-        { name: 'Security', href: '/technology/security' },
-        { name: 'Specifications', href: '/technology/specifications' },
+        { name: 'Confidentiality Protection', href: '/technology/confidentiality' },
+        { name: 'Business Continuity & BCP', href: '/technology/continuity' },
+        { name: 'Infrastructure Resilience', href: '/technology/infrastructure' },
+        { name: 'Security & Compliance', href: '/technology/security' },
+        { name: 'Technical Specifications', href: '/technology/specifications' },
       ],
     },
   ]
 
   return (
-    <main className="container mx-auto px-4 py-16 md:py-24">
+    <main className="container mx-auto px-4 py-32 md:py-40">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-4xl font-bold tracking-tight mb-4">Sitemap</h1>
-        <p className="text-muted-foreground mb-12">
+        <h1 className="text-5xl font-bold tracking-tight mb-4 text-slate-900 font-sans">Sitemap</h1>
+        <p className="text-lg text-slate-500 mb-16 max-w-2xl leading-relaxed">
           Explore the complete structure of our website and find exactly what you are looking for.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
           {sections.map((section) => (
             <div key={section.title} className="space-y-6">
-              <h2 className="text-xl font-bold border-b border-border pb-2 text-primary">{section.title}</h2>
-              <ul className="space-y-3">
+              <h2 className="text-xl font-bold border-b border-slate-200 pb-3 text-slate-900">{section.title}</h2>
+              <ul className="space-y-4">
                 {section.links.map((link) => (
-                  <li key={link.href}>
+                  <li key={link.href} className="space-y-2">
                     <Link 
                       href={link.href}
-                      className="text-muted-foreground hover:text-primary transition-colors hover:translate-x-1 inline-block duration-200"
+                      className="text-slate-600 hover:text-[#0098F3] font-medium transition-colors hover:translate-x-1 inline-block duration-200"
                     >
                       {link.name}
                     </Link>
+                    {link.subLinks && (
+                      <ul className="pl-4 space-y-2 border-l border-slate-200 mt-2">
+                        {link.subLinks.map((subLink) => (
+                          <li key={subLink.href}>
+                            <Link 
+                              href={subLink.href}
+                              className="text-sm text-slate-500 hover:text-[#F75834] transition-colors hover:translate-x-1 inline-block duration-200"
+                            >
+                              • {subLink.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -76,3 +132,4 @@ export default function SitemapPage() {
     </main>
   )
 }
+

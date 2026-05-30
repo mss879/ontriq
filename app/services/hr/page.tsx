@@ -1,6 +1,7 @@
-import { redirect } from 'next/navigation';
+import { permanentRedirect } from 'next/navigation';
 
-// 301 redirect from old /services/hr URL to new full-keyword URL
+// 308 permanent redirect from old /services/hr URL to new full-keyword URL
 export default function HrRedirectPage() {
-  redirect('/services/hr-management-services');
+  permanentRedirect('/services/hr-management-services');
 }
+

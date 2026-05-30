@@ -10,7 +10,7 @@ const bgvFaqs = [
   },
   {
     question: 'How long does a background check take in Sri Lanka?',
-    answer: 'At Ontriq, we complete comprehensive background verification cases within 7 working days\u0026mdash;the fastest turnaround in Sri Lanka. The exact duration may vary based on the complexity of checks, the number of verifications required, and the responsiveness of third-party sources such as previous employers and educational institutions.',
+    answer: 'At Ontriq, we complete comprehensive background verification cases within 7 working days\u2014the fastest turnaround in Sri Lanka. The exact duration may vary based on the complexity of checks, the number of verifications required, and the responsiveness of third-party sources such as previous employers and educational institutions.',
   },
   {
     question: 'What documents are needed for background verification?',
