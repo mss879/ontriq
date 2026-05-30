@@ -68,6 +68,28 @@ export default function TaxRegistrationPage() {
           <div className="mt-12 p-6 rounded-2xl bg-slate-50 border border-slate-200">
             <p className="text-slate-600">Tax registration is part of our <Link href="/services/company-formation" className="text-[#0098F3] font-semibold hover:underline">company formation services</Link>. We also offer <Link href="/services/payroll-processing-services" className="text-[#0098F3] font-semibold hover:underline">payroll processing</Link> for ongoing EPF/ETF compliance.</p>
           </div>
+
+          <div className="mt-12">
+            <h2 className="text-2xl font-semibold text-slate-900 mb-6">Other Formation Services</h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <Link href="/services/company-formation/private-limited-company" className="p-5 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <h3 className="font-bold text-slate-900 mb-1">Private Limited Company</h3>
+                <p className="text-xs text-slate-500">Pvt Ltd registration in Sri Lanka</p>
+              </Link>
+              <Link href="/services/company-formation/foreign-company-registration" className="p-5 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <h3 className="font-bold text-slate-900 mb-1">Foreign Company Registration</h3>
+                <p className="text-xs text-slate-500">BOI setup & international business</p>
+              </Link>
+              <Link href="/services/company-formation/partnership-registration" className="p-5 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <h3 className="font-bold text-slate-900 mb-1">Partnership Registration</h3>
+                <p className="text-xs text-slate-500">General & limited partnerships</p>
+              </Link>
+              <Link href="/services/company-formation/annual-returns-filing" className="p-5 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <h3 className="font-bold text-slate-900 mb-1">Annual Returns Filing</h3>
+                <p className="text-xs text-slate-500">ROC compliance & statutory filings</p>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
       <CTASection />

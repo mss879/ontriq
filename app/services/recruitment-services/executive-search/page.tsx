@@ -113,6 +113,32 @@ export default function ExecutiveSearchPage() {
               Executive search is part of our comprehensive <Link href="/services/recruitment-services" className="text-[#0098F3] font-semibold hover:underline">recruitment services</Link>. Contact us to discuss your leadership hiring needs.
             </p>
           </div>
+
+          <div className="mt-12">
+            <h2 className="text-2xl font-semibold text-slate-900 mb-6">Other Recruitment Services</h2>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+              <Link href="/services/recruitment-services/volume-hiring" className="p-5 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <h3 className="font-bold text-slate-900 mb-1">Volume Hiring</h3>
+                <p className="text-xs text-slate-500">Large-scale recruitment drives</p>
+              </Link>
+              <Link href="/services/recruitment-services/candidate-screening" className="p-5 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <h3 className="font-bold text-slate-900 mb-1">Candidate Screening</h3>
+                <p className="text-xs text-slate-500">Skills & culture assessment</p>
+              </Link>
+              <Link href="/services/recruitment-services/contract-staffing" className="p-5 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <h3 className="font-bold text-slate-900 mb-1">Contract Staffing</h3>
+                <p className="text-xs text-slate-500">Flexible workforce solutions</p>
+              </Link>
+              <Link href="/services/recruitment-services/it-recruitment" className="p-5 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <h3 className="font-bold text-slate-900 mb-1">IT Recruitment</h3>
+                <p className="text-xs text-slate-500">Tech talent sourcing</p>
+              </Link>
+              <Link href="/services/recruitment-services/employer-branding" className="p-5 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <h3 className="font-bold text-slate-900 mb-1">Employer Branding</h3>
+                <p className="text-xs text-slate-500">Attract top talent</p>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 

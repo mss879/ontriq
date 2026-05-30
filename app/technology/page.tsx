@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { TechnologyContent } from './technology-content';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Technology & Infrastructure | Ontriq',
@@ -69,7 +70,35 @@ export default function TechnologyPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <TechnologyContent />
+      <section className="py-16 bg-slate-50 border-t border-slate-200">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <h2 className="text-2xl font-semibold text-slate-900 mb-6">Explore Our Technology</h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <Link href="/technology/infrastructure" className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <h3 className="font-bold text-slate-900 mb-1">Infrastructure</h3>
+              <p className="text-xs text-slate-500">Robust systems & platforms</p>
+            </Link>
+            <Link href="/technology/specifications" className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <h3 className="font-bold text-slate-900 mb-1">Specifications</h3>
+              <p className="text-xs text-slate-500">Tools we use for each service</p>
+            </Link>
+            <Link href="/technology/security" className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <h3 className="font-bold text-slate-900 mb-1">Information Security</h3>
+              <p className="text-xs text-slate-500">ISO 27001 ISMS framework</p>
+            </Link>
+            <Link href="/technology/continuity" className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <h3 className="font-bold text-slate-900 mb-1">Business Continuity</h3>
+              <p className="text-xs text-slate-500">Resilience & recovery plans</p>
+            </Link>
+            <Link href="/technology/confidentiality" className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <h3 className="font-bold text-slate-900 mb-1">Confidentiality</h3>
+              <p className="text-xs text-slate-500">Data protection & privacy</p>
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
+
 

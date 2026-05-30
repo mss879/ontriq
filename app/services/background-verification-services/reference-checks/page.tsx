@@ -90,6 +90,28 @@ export default function ReferenceChecksPage() {
           <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200">
             <p className="text-slate-600">Reference checks are part of our <Link href="/services/background-verification-services" className="text-[#0098F3] font-semibold hover:underline">background verification services</Link>.</p>
           </div>
+
+          <div className="mt-12">
+            <h2 className="text-2xl font-semibold text-slate-900 mb-6">Other Verification Services</h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <Link href="/services/background-verification-services/employment-verification" className="p-5 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <h3 className="font-bold text-slate-900 mb-1">Employment Verification</h3>
+                <p className="text-xs text-slate-500">Verify past job roles & tenure</p>
+              </Link>
+              <Link href="/services/background-verification-services/education-verification" className="p-5 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <h3 className="font-bold text-slate-900 mb-1">Education Verification</h3>
+                <p className="text-xs text-slate-500">Validate academic credentials</p>
+              </Link>
+              <Link href="/services/background-verification-services/criminal-record-check" className="p-5 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <h3 className="font-bold text-slate-900 mb-1">Criminal Record Check</h3>
+                <p className="text-xs text-slate-500">Police & court record screening</p>
+              </Link>
+              <Link href="/services/background-verification-services/identity-address-verification" className="p-5 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <h3 className="font-bold text-slate-900 mb-1">Identity & Address Verification</h3>
+                <p className="text-xs text-slate-500">Authenticate IDs & addresses</p>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
       <BgvQuote />
