@@ -36,13 +36,13 @@ export default function SitemapPage() {
         { name: 'Services Overview', href: '/services' },
         {
           name: 'Background Verification',
-          href: '/services/background-verification-services',
+          href: '/services/bgv',
           subLinks: [
-            { name: 'Employment History', href: '/services/background-verification-services/employment-verification' },
-            { name: 'Educational Background', href: '/services/background-verification-services/education-verification' },
-            { name: 'Criminal Record & Legal', href: '/services/background-verification-services/criminal-record-check' },
-            { name: 'Identity & Address', href: '/services/background-verification-services/identity-address-verification' },
-            { name: 'Professional References', href: '/services/background-verification-services/reference-checks' },
+            { name: 'Employment History', href: '/services/bgv/employment-verification' },
+            { name: 'Educational Background', href: '/services/bgv/education-verification' },
+            { name: 'Criminal Record & Legal', href: '/services/bgv/criminal-record-check' },
+            { name: 'Identity & Address', href: '/services/bgv/identity-address-verification' },
+            { name: 'Professional References', href: '/services/bgv/reference-checks' },
           ]
         },
         {

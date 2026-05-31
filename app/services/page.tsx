@@ -35,7 +35,7 @@ const services = [
   {
     title: 'Background Verification (BGV)',
     description: 'Sri Lanka’s most trusted and fastest-growing BGV provider.',
-    link: '/services/background-verification-services',
+    link: '/services/bgv',
     number: '01'
   },
   {

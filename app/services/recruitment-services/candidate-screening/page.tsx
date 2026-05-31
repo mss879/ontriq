@@ -60,7 +60,7 @@ export default function CandidateScreeningPage() {
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 mb-8">What Is Candidate Screening?</h2>
           <p className="text-lg text-slate-600 leading-relaxed mb-6">Candidate screening is the systematic evaluation of job applicants to determine their suitability for a role. It goes beyond reviewing CVs, involving structured interviews, competency assessments, personality profiling, and thorough verification of claimed qualifications and work history.</p>
-          <p className="text-lg text-slate-600 leading-relaxed mb-6">At Ontriq, our screening integrates with our in-house <Link href="/services/background-verification-services" className="text-[#0098F3] font-semibold hover:underline">background verification services</Link>. Every candidate undergoes employment history verification, educational checks, criminal record screening, and reference validation.</p>
+          <p className="text-lg text-slate-600 leading-relaxed mb-6">At Ontriq, our screening integrates with our in-house <Link href="/services/bgv" className="text-[#0098F3] font-semibold hover:underline">background verification services</Link>. Every candidate undergoes employment history verification, educational checks, criminal record screening, and reference validation.</p>
 
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 mb-8 mt-16">Our Screening Methods</h2>
           <div className="grid sm:grid-cols-2 gap-4 mb-12">

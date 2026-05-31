@@ -27,7 +27,7 @@ const menuItems = [
     ariaLabel: 'View our services',
     link: '#',
     children: [
-      { label: 'Background Verification', ariaLabel: 'Background Verification', link: '/services/background-verification-services' },
+      { label: 'Background Verification', ariaLabel: 'Background Verification', link: '/services/bgv' },
       { label: 'HR Management', ariaLabel: 'HR Management', link: '/services/hr-management-services' },
       { label: 'Recruitment', ariaLabel: 'Recruitment', link: '/services/recruitment-services' },
       { label: 'Payroll', ariaLabel: 'Payroll', link: '/services/payroll-processing-services' },
@@ -62,7 +62,7 @@ export default function Navbar() {
   const useWhiteLinks = isHomePage && !isScrolled;
 
   const servicesDropdownItems = [
-    { label: 'Background Verification', href: '/services/background-verification-services', desc: 'Fastest BGV in Sri Lanka' },
+    { label: 'Background Verification', href: '/services/bgv', desc: 'Fastest BGV in Sri Lanka' },
     { label: 'HR Management', href: '/services/hr-management-services', desc: 'End-to-end HR solutions' },
     { label: 'Recruitment', href: '/services/recruitment-services', desc: 'Talent acquisition & hiring' },
     { label: 'Payroll', href: '/services/payroll-processing-services', desc: 'Compliant payroll processing' },

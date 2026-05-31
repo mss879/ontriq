@@ -22,7 +22,7 @@ const services = [
     label: 'BGV',
     title: 'Background Verification',
     description: 'Sri Lanka\'s fastest BGV provider. Full cases completed in just 7 working days.',
-    href: '/services/background-verification-services',
+    href: '/services/bgv',
     icon: ShieldCheck,
   },
   {

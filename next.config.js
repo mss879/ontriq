@@ -29,6 +29,20 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
+  async redirects() {
+    return [
+      {
+        source: '/services/background-verification-services',
+        destination: '/services/bgv',
+        permanent: true,
+      },
+      {
+        source: '/services/background-verification-services/:slug*',
+        destination: '/services/bgv/:slug*',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

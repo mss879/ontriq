@@ -8,27 +8,27 @@ const checkTypes = [
   {
     title: 'Employment History Verification',
     description: 'We verify past job roles, tenure, reporting structures, designations, and reasons for leaving by directly contacting previous employers. This confirms a candidate\'s professional track record and identifies any inconsistencies in their stated work experience.',
-    link: '/services/background-verification-services/employment-verification',
+    link: '/services/bgv/employment-verification',
   },
   {
     title: 'Educational Background Verification',
     description: 'Our team validates academic credentials including degrees, diplomas, certifications, and the authenticity of educational institutions attended. We contact universities and certification bodies directly to confirm qualifications.',
-    link: '/services/background-verification-services/education-verification',
+    link: '/services/bgv/education-verification',
   },
   {
     title: 'Criminal Record & Legal Checks',
     description: 'We examine an individual\'s criminal history and legal standing through police databases, court records, and legal registries. These checks are essential for creating a secure workplace and fulfilling regulatory obligations.',
-    link: '/services/background-verification-services/criminal-record-check',
+    link: '/services/bgv/criminal-record-check',
   },
   {
     title: 'Identity & Address Verification',
     description: 'We authenticate government-issued identification documents such as NICs, passports, and driving licenses, and verify current and past residential addresses through field visits and database cross-referencing.',
-    link: '/services/background-verification-services/identity-address-verification',
+    link: '/services/bgv/identity-address-verification',
   },
   {
     title: 'Professional Reference Checks',
     description: 'We contact previous supervisors, colleagues, and professional contacts provided by the candidate to gather insights into their work ethic, performance, interpersonal skills, and overall professional conduct.',
-    link: '/services/background-verification-services/reference-checks',
+    link: '/services/bgv/reference-checks',
   },
   {
     title: 'Global Sanction & Watchlist Screening',

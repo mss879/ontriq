@@ -193,7 +193,7 @@ export default function RecruitmentServicesPage() {
             Finding the right talent is the foundation of every successful organization. In Sri Lanka&apos;s competitive job market, businesses need a recruitment partner who understands the local talent landscape, industry-specific skill requirements, and the nuances of candidate expectations. At Ontriq, we provide comprehensive recruitment and talent acquisition services that go beyond simply filling positions. We help you build high-performing teams.
           </p>
           <p className="text-lg text-slate-600 leading-relaxed mb-6">
-            Whether you need to hire a single senior executive or scale your workforce rapidly with volume hiring, our recruitment team combines strategic sourcing, rigorous candidate screening, and integrated background verification to deliver results that matter. Every candidate we present has been thoroughly vetted, including employment history verification, educational credential checks, and reference validation through our in-house <Link href="/services/background-verification-services" className="text-[#0098F3] font-semibold hover:underline">background verification services</Link>.
+            Whether you need to hire a single senior executive or scale your workforce rapidly with volume hiring, our recruitment team combines strategic sourcing, rigorous candidate screening, and integrated background verification to deliver results that matter. Every candidate we present has been thoroughly vetted, including employment history verification, educational credential checks, and reference validation through our in-house <Link href="/services/bgv" className="text-[#0098F3] font-semibold hover:underline">background verification services</Link>.
           </p>
           <p className="text-lg text-slate-600 leading-relaxed">
             Our recruitment services span all major industries in Sri Lanka, from IT and banking to manufacturing, healthcare, and hospitality. We serve startups, SMEs, and large enterprises with tailored hiring solutions that align with your budget, timeline, and organizational culture.
@@ -291,7 +291,7 @@ export default function RecruitmentServicesPage() {
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <h2 className="text-2xl font-semibold text-slate-900 mb-6">Related Services</h2>
           <div className="grid sm:grid-cols-3 gap-4">
-            <Link href="/services/background-verification-services" className="p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <Link href="/services/bgv" className="p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
               <h3 className="font-bold text-slate-900 mb-2">Background Verification</h3>
               <p className="text-sm text-slate-500">Verify candidates before hiring</p>
             </Link>

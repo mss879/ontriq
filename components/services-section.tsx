@@ -187,7 +187,7 @@ const ServicesSection = () => {
                                   </span>
                                 ))}
                               </div>
-                              <a href={`/services/${service.id === '001' ? 'background-verification-services' : service.id === '002' ? 'hr-management-services' : service.id === '003' ? 'recruitment-services' : service.id === '004' ? 'payroll-processing-services' : 'company-formation'}`} className="group/btn inline-flex items-center gap-2 text-sm font-semibold text-[#F75834] uppercase tracking-wider mt-2 w-max transition-all hover:text-[#ff7455]">
+                              <a href={`/services/${service.id === '001' ? 'bgv' : service.id === '002' ? 'hr-management-services' : service.id === '003' ? 'recruitment-services' : service.id === '004' ? 'payroll-processing-services' : 'company-formation'}`} className="group/btn inline-flex items-center gap-2 text-sm font-semibold text-[#F75834] uppercase tracking-wider mt-2 w-max transition-all hover:text-[#ff7455]">
                                 Explore Service
                                 <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#F75834]/30 bg-[#F75834]/10 transition-all group-hover/btn:bg-[#F75834] group-hover/btn:text-white">
                                   <ArrowRight className="h-4 w-4" />

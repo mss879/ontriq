@@ -50,37 +50,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // ===== BACKGROUND VERIFICATION SERVICES (Pillar + Cluster) =====
     {
-      url: `${baseUrl}/services/background-verification-services`,
+      url: `${baseUrl}/services/bgv`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.95,
     },
     {
-      url: `${baseUrl}/services/background-verification-services/employment-verification`,
+      url: `${baseUrl}/services/bgv/employment-verification`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/services/background-verification-services/education-verification`,
+      url: `${baseUrl}/services/bgv/education-verification`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/services/background-verification-services/criminal-record-check`,
+      url: `${baseUrl}/services/bgv/criminal-record-check`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/services/background-verification-services/identity-address-verification`,
+      url: `${baseUrl}/services/bgv/identity-address-verification`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/services/background-verification-services/reference-checks`,
+      url: `${baseUrl}/services/bgv/reference-checks`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.85,

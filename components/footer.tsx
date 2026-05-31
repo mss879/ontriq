@@ -54,7 +54,7 @@ export function Footer() {
             <nav aria-label="Services links">
               <h3 className="text-white font-semibold mb-6 text-lg">Services</h3>
               <ul className="space-y-4">
-                <FooterLink href="/services/background-verification-services">BGV Services</FooterLink>
+                <FooterLink href="/services/bgv">BGV Services</FooterLink>
                 <FooterLink href="/services/hr-management-services">HR Services</FooterLink>
                 <FooterLink href="/services/recruitment-services">Recruitment</FooterLink>
                 <FooterLink href="/services/payroll-processing-services">Payroll</FooterLink>
