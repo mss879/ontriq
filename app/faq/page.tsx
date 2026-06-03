@@ -8,12 +8,12 @@ const CTASection = dynamic(() => import('@/components/cta-section').then(mod => 
 });
 
 export const metadata: Metadata = {
-  title: 'FAQ - Frequently Asked Questions',
-  description: 'Answers to common questions about background verification, BGV processes, timelines, candidate concerns, and legal compliance at Ontriq.',
-  keywords: ['FAQ', 'background verification FAQ', 'BGV questions', 'employee verification', 'criminal record check', 'address verification', 'reference checks', 'Ontriq FAQ'],
+  title: 'FAQ - Frequently Asked Questions | Ontriq',
+  description: 'Answers to common questions about Ontriq services including verification, HR management, recruitment, payroll, and company formation in Sri Lanka.',
+  keywords: ['FAQ', 'Ontriq FAQ', 'Ontriq questions', 'workforce solutions FAQ', 'verification FAQ', 'HR services FAQ'],
   openGraph: {
     title: 'FAQ - Frequently Asked Questions | Ontriq',
-    description: 'Find answers to frequently asked questions about background verification, BGV processes, timelines, and compliance.',
+    description: 'Find answers to frequently asked questions about Ontriq services — verification, HR, recruitment, payroll, and company formation.',
     url: 'https://www.ontriq.com/faq',
     siteName: 'Ontriq',
     locale: 'en_US',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'FAQ - Frequently Asked Questions | Ontriq',
-    description: 'Find answers to frequently asked questions about background verification, BGV processes, timelines, and compliance.',
+    description: 'Find answers to frequently asked questions about Ontriq services — verification, HR, recruitment, payroll, and company formation.',
     images: ['https://www.ontriq.com/share-img.png'],
   },
   alternates: {
@@ -38,30 +38,32 @@ export const metadata: Metadata = {
   },
 };
 
-// FAQ items for JSON-LD structured data
+// FAQ items for JSON-LD structured data (diversified across all services)
 const faqItems = [
-  // General Questions
-  { question: "What is a background verification (BGV)?", answer: "Background verification is the process of verifying an individual's personal, educational, and professional details to ensure authenticity before employment or engagement." },
-  { question: "Why is background verification important?", answer: "It helps organizations reduce hiring risks, ensure workplace safety, and maintain trust by confirming that the information provided by candidates is accurate." },
-  { question: "Who needs a background verification?", answer: "Employers typically conduct BGV for prospective employees. Some clients may also require verifications for contractors, consultants, or business partners." },
-  // Services Offered
-  { question: "What types of background checks do you provide?", answer: "We provide Employment history verification, Educational qualification verification, Criminal record check, Address verification, Reference checks, Professional license and certificate verification, and Credit checks (if applicable)." },
-  { question: "Do you provide customized BGV services?", answer: "Yes, we tailor our verification packages according to industry, role, and client requirements." },
-  { question: "Can you verify candidates internationally?", answer: "Yes, we conduct international verifications depending on the country and available data sources." },
-  // Process & Timelines
-  { question: "How long does a background verification take?", answer: "Typically, verifications take 7-10 business days, depending on the complexity of checks and responsiveness of third parties." },
-  { question: "What is the process for conducting a BGV?", answer: "1. Candidate consent is collected. 2. Data is verified through reliable sources. 3. Discrepancies, if any, are reported to the client. 4. A final report is shared with the client." },
-  { question: "How do you ensure accuracy?", answer: "Our team uses multiple trusted sources and cross-verifies information to maintain high accuracy standards." },
-  // Candidate Concerns
-  { question: "Do I need to provide consent for a BGV?", answer: "Yes, candidate consent is legally required before any verification can begin." },
-  { question: "Will my personal information be secure?", answer: "Absolutely. We follow strict data privacy policies and comply with relevant laws (e.g., GDPR, local regulations)." },
-  { question: "What happens if there's a discrepancy in my records?", answer: "The discrepancy is reported to the client, and you may have a chance to provide clarifications or supporting documents." },
-  // Legal & Compliance
-  { question: "Are your background checks compliant with local laws?", answer: "Yes, we adhere to all applicable legal and regulatory requirements in the jurisdictions we operate." },
-  { question: "Can a BGV report be used in court?", answer: "Generally, BGV reports are for internal HR purposes, but some verified reports may be used as supporting evidence, depending on local laws." },
-  // Client Support
-  { question: "How can I track the status of a verification?", answer: "Clients can track reports via our secure online portal or by contacting our support team." },
-  { question: "What if I need an urgent verification?", answer: "Expedited services are available for an additional fee, depending on the checks required." },
+  // Verification Services
+  { question: "What verification services does Ontriq offer?", answer: "We offer employment history verification, educational qualification verification, criminal record checks, identity and address verification, professional reference checks, global sanction screening, and drug testing." },
+  { question: "How long does a verification take?", answer: "We complete comprehensive verification cases within 7 working days — the fastest turnaround in Sri Lanka. Timelines may vary based on check complexity and third-party responsiveness." },
+  { question: "Do you verify candidates with international backgrounds?", answer: "Yes, we conduct international verifications depending on the country and available data sources, leveraging our network of global verification partners." },
+  // HR Management
+  { question: "What HR management services do you provide?", answer: "We offer end-to-end HR solutions including employee onboarding and offboarding, HR policy development, performance management systems, employee relations, leave and attendance management, and HR compliance advisory." },
+  { question: "Can you manage HR for a small or mid-sized company?", answer: "Absolutely. Our HR solutions are designed to scale — from startups needing foundational HR support to large enterprises requiring full-cycle HR operations management." },
+  { question: "Do you handle employee grievances and disciplinary processes?", answer: "Yes, we support organisations with structured grievance handling, disciplinary procedures, and workplace investigations in compliance with Sri Lankan employment law." },
+  // Recruitment
+  { question: "What types of recruitment does Ontriq handle?", answer: "We provide executive search, volume hiring, contract staffing, IT recruitment, candidate screening and assessment, and employer branding services across all industries." },
+  { question: "How is Ontriq different from other recruitment agencies?", answer: "Our recruitment process integrates seamlessly with our in-house verification services, meaning every hire is both talent-matched and fully verified — reducing risk and time-to-hire significantly." },
+  { question: "Do you recruit for international positions?", answer: "Our primary focus is the Sri Lankan market, but we can support international hiring needs through our partner network depending on the role and region." },
+  // Payroll & Company Formation
+  { question: "What payroll services do you offer?", answer: "We handle full payroll processing including salary computation, statutory deductions (EPF/ETF), payslip generation, tax filing support, and compliance reporting for businesses of any size." },
+  { question: "Can you help register a new company in Sri Lanka?", answer: "Yes, we provide end-to-end company formation services including private limited company registration, partnership registration, foreign company registration, tax registration, and ongoing annual returns filing." },
+  { question: "Do you offer director services for foreign companies?", answer: "Yes, we provide nominee director and corporate secretary services to help foreign-owned entities meet Sri Lankan legal requirements." },
+  // Process & Compliance
+  { question: "Is candidate consent required before verification?", answer: "Yes, candidate consent is legally required before any verification can begin. We collect consent digitally through our secure portal." },
+  { question: "Are your services compliant with Sri Lankan law?", answer: "Yes, all services are delivered in full compliance with the Sri Lanka Data Protection Act and relevant employment regulations." },
+  { question: "What happens if a discrepancy is found during verification?", answer: "The discrepancy is documented in the report and the employer is notified. The candidate may be given an opportunity to clarify. The final decision rests with the employer." },
+  // Getting Started
+  { question: "How can I get a quote from Ontriq?", answer: "Visit our contact page or reach us at info@ontriq.com. We'll understand your requirements and provide a tailored proposal within 24 hours." },
+  { question: "Do you offer customised service packages?", answer: "Yes, we tailor all our services — verification, HR, recruitment, and payroll — according to your industry, company size, and specific requirements." },
+  { question: "How can I track the status of ongoing work?", answer: "Clients can track verification reports and project status via our secure online portal or by contacting their dedicated account manager." },
 ];
 
 // JSON-LD structured data for FAQ Page
@@ -82,7 +84,7 @@ const webPageJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   name: 'FAQ - Frequently Asked Questions',
-  description: 'Find answers to frequently asked questions about background verification services.',
+  description: 'Find answers to frequently asked questions about Ontriq workforce and business solutions.',
   url: 'https://www.ontriq.com/faq',
   isPartOf: {
     '@type': 'WebSite',

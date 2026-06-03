@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { 
   Briefcase, 
   GraduationCap, 
@@ -59,7 +60,7 @@ export function BgvProcessList() {
             Multi-Layer Verification
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl">
-            We conduct checks across multiple verification layers to ensure comprehensive coverage.
+            We conduct checks across multiple verification layers to ensure comprehensive coverage. <Link href="/services/bgv" className="text-[#0098F3] font-semibold hover:underline">Learn more about our verification services</Link>.
           </p>
         </div>
 

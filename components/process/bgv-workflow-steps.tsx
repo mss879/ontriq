@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const workflowSteps = [
   {
@@ -40,11 +41,14 @@ export function BgvWorkflowSteps() {
             7 Working Days Delivery
           </div>
           <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl md:text-5xl mb-6 max-w-3xl">
-            ONTRIQ BACKGROUND VERIFICATION WORKFLOW
+            HOW ONTRIQ WORKS
           </h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            At Ontriq, our Background Verification (BGV) workflow is meticulously designed to ensure accuracy, speed, and compliance — all while maintaining the highest level of data confidentiality. Our proven process enables us to complete end-to-end verifications within just 7 working days, making us Sri Lanka’s fastest and most efficient BGV provider.
+            Our verification workflow is meticulously designed to ensure accuracy, speed, and compliance — all while maintaining the highest level of data confidentiality. Our proven 6-step process enables us to complete end-to-end verifications within just 7 working days.
           </p>
+          <Link href="/services/bgv" className="mt-4 inline-flex items-center text-sm font-semibold text-[#0098F3] hover:text-[#F75834] transition-colors">
+            View our full verification services →
+          </Link>
         </div>
 
         <div className="relative max-w-4xl mx-auto">

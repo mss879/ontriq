@@ -7,49 +7,51 @@ import { motion } from "framer-motion";
 
 const faqs = [
   {
-    category: "General Questions",
+    category: "Verification Services",
     items: [
-      { q: "What is a background verification (BGV)?", a: "Background verification is the process of verifying an individual’s personal, educational, and professional details to ensure authenticity before employment or engagement." },
-      { q: "Why is background verification important?", a: "It helps organizations reduce hiring risks, ensure workplace safety, and maintain trust by confirming that the information provided by candidates is accurate." },
-      { q: "Who needs a background verification?", a: "Employers typically conduct BGV for prospective employees. Some clients may also require verifications for contractors, consultants, or business partners." }
+      { q: "What verification services does Ontriq offer?", a: "We offer employment history verification, educational qualification verification, criminal record checks, identity and address verification, professional reference checks, global sanction screening, and drug testing." },
+      { q: "How long does a verification take?", a: "We complete comprehensive verification cases within 7 working days — the fastest turnaround in Sri Lanka. Timelines may vary based on check complexity and third-party responsiveness." },
+      { q: "Do you verify candidates with international backgrounds?", a: "Yes, we conduct international verifications depending on the country and available data sources, leveraging our network of global verification partners." }
     ]
   },
   {
-    category: "Services Offered",
+    category: "HR Management",
     items: [
-      { q: "What types of background checks do you provide?", a: "We provide Employment history verification, Educational qualification verification, Criminal record check, Address verification, Reference checks, Professional license and certificate verification, and Credit checks (if applicable)." },
-      { q: "Do you provide customized BGV services?", a: "Yes, we tailor our verification packages according to industry, role, and client requirements." },
-      { q: "Can you verify candidates internationally?", a: "Yes, we conduct international verifications depending on the country and available data sources." }
+      { q: "What HR management services do you provide?", a: "We offer end-to-end HR solutions including employee onboarding and offboarding, HR policy development, performance management systems, employee relations, leave and attendance management, and HR compliance advisory." },
+      { q: "Can you manage HR for a small or mid-sized company?", a: "Absolutely. Our HR solutions are designed to scale — from startups needing foundational HR support to large enterprises requiring full-cycle HR operations management." },
+      { q: "Do you handle employee grievances and disciplinary processes?", a: "Yes, we support organisations with structured grievance handling, disciplinary procedures, and workplace investigations in compliance with Sri Lankan employment law." }
     ]
   },
   {
-    category: "Process & Timelines",
+    category: "Recruitment",
     items: [
-      { q: "How long does a background verification take?", a: "Typically, verifications take 7-10 business days, depending on the complexity of checks and responsiveness of third parties." },
-      { q: "What is the process for conducting a BGV?", a: "1. Candidate consent is collected. 2. Data is verified through reliable sources. 3. Discrepancies, if any, are reported to the client. 4. A final report is shared with the client." },
-      { q: "How do you ensure accuracy?", a: "Our team uses multiple trusted sources and cross-verifies information to maintain high accuracy standards." }
+      { q: "What types of recruitment does Ontriq handle?", a: "We provide executive search, volume hiring, contract staffing, IT recruitment, candidate screening and assessment, and employer branding services across all industries." },
+      { q: "How is Ontriq different from other recruitment agencies?", a: "Our recruitment process integrates seamlessly with our in-house verification services, meaning every hire is both talent-matched and fully verified — reducing risk and time-to-hire significantly." },
+      { q: "Do you recruit for international positions?", a: "Our primary focus is the Sri Lankan market, but we can support international hiring needs through our partner network depending on the role and region." }
     ]
   },
   {
-    category: "Candidate Concerns",
+    category: "Payroll & Company Formation",
     items: [
-      { q: "Do I need to provide consent for a BGV?", a: "Yes, candidate consent is legally required before any verification can begin." },
-      { q: "Will my personal information be secure?", a: "Absolutely. We follow strict data privacy policies and comply with relevant laws (e.g., GDPR, local regulations)." },
-      { q: "What happens if there’s a discrepancy in my records?", a: "The discrepancy is reported to the client, and you may have a chance to provide clarifications or supporting documents." }
+      { q: "What payroll services do you offer?", a: "We handle full payroll processing including salary computation, statutory deductions (EPF/ETF), payslip generation, tax filing support, and compliance reporting for businesses of any size." },
+      { q: "Can you help register a new company in Sri Lanka?", a: "Yes, we provide end-to-end company formation services including private limited company registration, partnership registration, foreign company registration, tax registration, and ongoing annual returns filing." },
+      { q: "Do you offer director services for foreign companies?", a: "Yes, we provide nominee director and corporate secretary services to help foreign-owned entities meet Sri Lankan legal requirements." }
     ]
   },
   {
-    category: "Legal & Compliance",
+    category: "Process & Compliance",
     items: [
-      { q: "Are your background checks compliant with local laws?", a: "Yes, we adhere to all applicable legal and regulatory requirements in the jurisdictions we operate." },
-      { q: "Can a BGV report be used in court?", a: "Generally, BGV reports are for internal HR purposes, but some verified reports may be used as supporting evidence, depending on local laws." }
+      { q: "Is candidate consent required before verification?", a: "Yes, candidate consent is legally required before any verification can begin. We collect consent digitally through our secure portal." },
+      { q: "Are your services compliant with Sri Lankan law?", a: "Yes, all services are delivered in full compliance with the Sri Lanka Data Protection Act and relevant employment regulations." },
+      { q: "What happens if a discrepancy is found during verification?", a: "The discrepancy is documented in the report and the employer is notified. The candidate may be given an opportunity to clarify. The final decision rests with the employer." }
     ]
   },
   {
-    category: "Client Support",
+    category: "Getting Started",
     items: [
-      { q: "How can I track the status of a verification?", a: "Clients can track reports via our secure online portal or by contacting our support team." },
-      { q: "What if I need an urgent verification?", a: "Expedited services are available for an additional fee, depending on the checks required." }
+      { q: "How can I get a quote from Ontriq?", a: "Visit our contact page or reach us at info@ontriq.com. We'll understand your requirements and provide a tailored proposal within 24 hours." },
+      { q: "Do you offer customised service packages?", a: "Yes, we tailor all our services — verification, HR, recruitment, and payroll — according to your industry, company size, and specific requirements." },
+      { q: "How can I track the status of ongoing work?", a: "Clients can track verification reports and project status via our secure online portal or by contacting their dedicated account manager." }
     ]
   }
 ];

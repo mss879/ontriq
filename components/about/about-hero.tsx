@@ -2,12 +2,13 @@
 
 import React, { memo } from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle2 } from 'lucide-react';
+import { Building2, Users, Globe, Award } from 'lucide-react';
 
-const jobPoints = [
-  'Check the details you provide in your job application.',
-  'Make sure the information is correct and genuine.',
-  'Give employers the confidence to hire the right people.'
+const highlights = [
+  { icon: Building2, label: 'Division of Konnect BPO Technologies' },
+  { icon: Users, label: 'Full-Spectrum Workforce Solutions' },
+  { icon: Globe, label: 'Operating Across Sri Lanka' },
+  { icon: Award, label: 'Trusted by Leading Enterprises' },
 ];
 
 export const AboutHero = memo(function AboutHero() {
@@ -29,7 +30,7 @@ export const AboutHero = memo(function AboutHero() {
               <span>Who We Are</span>
             </div>
             <h1 id="about-hero-heading" className="text-[44px] font-semibold tracking-tight text-slate-900 md:text-6xl lg:text-7xl leading-[1.1]">
-              Background Verification <span className="text-slate-400">(BGV) Made Simple.</span>
+              Sri Lanka&apos;s Trusted <span className="text-slate-400">Workforce Solutions Partner.</span>
             </h1>
           </motion.div>
 
@@ -47,34 +48,37 @@ export const AboutHero = memo(function AboutHero() {
               <div className="space-y-6 text-base text-slate-500 md:text-lg leading-relaxed">
                 <h2 className="text-3xl font-semibold text-slate-900">Who is Ontriq?</h2>
                 <p>
-                  Ontriq is a trusted company in Sri Lanka that specializes in Background Verification (BGV). We are part of <strong className="text-slate-900">Konnect BPO Technologies (Pvt) Ltd</strong>, one of the leading BPOs in the country.
+                  Ontriq is a trusted workforce solutions provider in Sri Lanka, offering end-to-end services in verification, HR management, recruitment, payroll processing, and company formation. We are part of <strong className="text-slate-900">Konnect BPO Technologies (Pvt) Ltd</strong>, one of the leading BPOs in the country.
+                </p>
+                <p>
+                  From pre-employment screening to full-cycle HR operations, we help businesses of every size build confident, compliant, and high-performing teams.
                 </p>
                 <blockquote className="p-6 bg-orange-50 border border-orange-100 rounded-2xl">
                   <p className="text-orange-900 font-medium">
-                    "We are not here to reject you, we are here to make sure everything is clear, legal, and safe for both you and the company."
+                    &ldquo;We exist to help organisations hire with confidence, operate compliantly, and grow sustainably.&rdquo;
                   </p>
                 </blockquote>
               </div>
             </motion.div>
 
-            {/* Right Column: Job List */}
+            {/* Right Column: Highlights */}
             <motion.aside 
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="lg:col-span-5"
-              aria-label="Our job responsibilities"
+              aria-label="Company highlights"
             >
               <div className="bg-slate-50 rounded-3xl p-8 md:p-10 border border-slate-100 h-full">
-                <h3 className="text-xl font-semibold text-slate-900 mb-6">Our Job is Simple:</h3>
+                <h3 className="text-xl font-semibold text-slate-900 mb-6">At a Glance</h3>
                 <ul className="space-y-6" role="list">
-                  {jobPoints.map((point, index) => (
+                  {highlights.map((item, index) => (
                     <li key={index} className="flex items-start gap-4">
                       <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#F75834]" aria-hidden="true">
-                        <CheckCircle2 className="h-4 w-4 text-white" />
+                        <item.icon className="h-4 w-4 text-white" />
                       </div>
-                      <span className="text-slate-700 font-medium leading-relaxed">{point}</span>
+                      <span className="text-slate-700 font-medium leading-relaxed">{item.label}</span>
                     </li>
                   ))}
                 </ul>

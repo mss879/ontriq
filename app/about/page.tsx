@@ -13,9 +13,19 @@ const WhatWeCheck = dynamic(
   { loading: () => <div className="min-h-[600px]" aria-label="Loading content..." /> }
 );
 
+const VisionMission = dynamic(
+  () => import('@/components/about/vision-mission').then((mod) => ({ default: mod.VisionMission })),
+  { loading: () => <div className="min-h-[400px]" aria-label="Loading content..." /> }
+);
+
+const ValuesSection = dynamic(
+  () => import('@/components/about/values-section').then((mod) => ({ default: mod.ValuesSection })),
+  { loading: () => <div className="min-h-[400px]" aria-label="Loading content..." /> }
+);
+
 export const metadata: Metadata = {
   title: 'About Ontriq | Sri Lanka\'s Trusted Workforce Solutions Partner',
-  description: 'Ontriq is a division of Konnect BPO Technologies delivering verification, HR, recruitment, and business formation solutions across Sri Lanka.',
+  description: 'Ontriq is a division of Konnect BPO Technologies delivering verification, HR, recruitment, payroll, and business formation solutions across Sri Lanka.',
   keywords: [
     'about Ontriq',
     'Ontriq company',
@@ -79,37 +89,6 @@ const aboutPageJsonLd = {
   },
 };
 
-const faqJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Is background verification legal?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. BGV is a standard, legal process followed worldwide.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Why should I give my consent for background verification?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Because it protects your privacy. Ontriq will only check information with your permission.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Will background verification affect my job chances?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No, unless the information given is false.',
-      },
-    },
-  ],
-};
-
 export default function AboutPage() {
   return (
     <>
@@ -117,14 +96,12 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageJsonLd) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
       <main id="main-content" className="min-h-screen bg-white" role="main">
         <AboutHero />
         <BgvExplanation />
+        <VisionMission />
         <WhatWeCheck />
+        <ValuesSection />
       </main>
     </>
   );

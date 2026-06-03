@@ -46,8 +46,8 @@ export default function ProcessPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
-    name: 'Background Verification Process',
-    description: 'Step-by-step guide to Ontriq\'s background verification process.',
+    name: 'Ontriq Verification Workflow',
+    description: 'Step-by-step guide to how Ontriq conducts verifications for clients.',
     step: [
       {
         '@type': 'HowToStep',
@@ -67,7 +67,7 @@ export default function ProcessPage() {
       {
         '@type': 'HowToStep',
         name: 'Final Reporting',
-        text: 'Delivering the final background verification report to the client.'
+        text: 'Delivering the final verification report to the client.'
       }
     ]
   };
