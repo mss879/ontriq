@@ -114,7 +114,7 @@ export default function DirectorServicesPage() {
               <h3 className="font-bold text-slate-900 mb-2">Startup Support</h3>
               <p className="text-sm text-slate-500">Launch your business</p>
             </Link>
-            <Link href="/services/background-verification-services" className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <Link href="/services/bgv" className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
               <h3 className="font-bold text-slate-900 mb-2">Background Verification</h3>
               <p className="text-sm text-slate-500">Verify directors & staff</p>
             </Link>

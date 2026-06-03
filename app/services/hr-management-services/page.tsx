@@ -83,7 +83,7 @@ export default function HrManagementServicesPage() {
           <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-slate-900 mb-8">HR Services in Sri Lanka</h2>
           <p className="text-lg text-slate-600 leading-relaxed mb-6">Managing human resources in Sri Lanka involves navigating complex labor regulations, maintaining employee engagement, ensuring statutory compliance with EPF/ETF and labor laws, and building HR systems that scale with your business. Many companies, especially startups and SMEs, lack the in-house expertise or capacity to handle all of this effectively.</p>
           <p className="text-lg text-slate-600 leading-relaxed mb-6">Ontriq provides HR management solutions ranging from specific consulting engagements to full HR outsourcing. Whether you need help developing HR policies, setting up performance management systems, or need a dedicated HR partner to manage your entire people function, our team delivers solutions tailored to your industry, size, and goals.</p>
-          <p className="text-lg text-slate-600 leading-relaxed">Our HR services integrate seamlessly with our <Link href="/services/payroll-processing-services" className="text-[#0098F3] font-semibold hover:underline">payroll processing</Link>, <Link href="/services/recruitment-services" className="text-[#0098F3] font-semibold hover:underline">recruitment</Link>, and <Link href="/services/background-verification-services" className="text-[#0098F3] font-semibold hover:underline">background verification</Link> services, giving you a single partner for all workforce needs.</p>
+          <p className="text-lg text-slate-600 leading-relaxed">Our HR services integrate seamlessly with our <Link href="/services/payroll-processing-services" className="text-[#0098F3] font-semibold hover:underline">payroll processing</Link>, <Link href="/services/recruitment-services" className="text-[#0098F3] font-semibold hover:underline">recruitment</Link>, and <Link href="/services/bgv" className="text-[#0098F3] font-semibold hover:underline">background verification</Link> services, giving you a single partner for all workforce needs.</p>
         </div>
       </section>
 
@@ -113,7 +113,7 @@ export default function HrManagementServicesPage() {
               <h3 className="font-bold text-slate-900 mb-2">Recruitment</h3>
               <p className="text-sm text-slate-500">Find top talent</p>
             </Link>
-            <Link href="/services/background-verification-services" className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <Link href="/services/bgv" className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
               <h3 className="font-bold text-slate-900 mb-2">Background Verification</h3>
               <p className="text-sm text-slate-500">Verify employees</p>
             </Link>
