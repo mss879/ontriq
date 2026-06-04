@@ -42,7 +42,7 @@ export default function Hero() {
 
             <div className="mb-10 max-w-3xl animate-fade-in" style={{ animationDelay: '1s', animationFillMode: 'forwards' }}>
               <p className="text-lg leading-relaxed text-white/80 md:text-xl lg:text-2xl">
-                Streamline operations with expert HR, Recruitment, Payroll, Verification, and Business Setup solutions.
+                Streamline operations with expert Background Verification, HR, Recruitment, Payroll, and Business Setup solutions.
               </p>
             </div>
 
