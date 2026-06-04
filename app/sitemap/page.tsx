@@ -4,6 +4,9 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Sitemap | Ontriq',
   description: 'Navigate through all pages on Ontriq website. Find services, technology, and company information easily.',
+  alternates: {
+    canonical: 'https://www.ontriq.com/sitemap',
+  },
 }
 
 export default function SitemapPage() {

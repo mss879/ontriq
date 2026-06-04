@@ -41,6 +41,9 @@ export const metadata: Metadata = {
     description: 'Sri Lanka\'s leading workforce solutions provider.',
     images: ['https://www.ontriq.com/share-img.png'],
   },
+  alternates: {
+    canonical: 'https://www.ontriq.com',
+  },
 };
 
 // JSON-LD for homepage
