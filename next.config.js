@@ -41,6 +41,11 @@ const nextConfig = {
         destination: '/services/bgv/:slug*',
         permanent: true,
       },
+      {
+        source: '/process',
+        destination: '/services/bgv',
+        permanent: true,
+      },
     ];
   },
 };
