@@ -27,17 +27,17 @@ const FaqSection = dynamic(
 );
 
 export const metadata: Metadata = {
-  title: 'Ontriq | HR, Recruitment, Payroll & BGV Services Sri Lanka',
-  description: 'Sri Lanka\'s leading BGV, HR, Recruitment, Payroll, and Company Formation provider. Expert workforce solutions delivering results in 7 days.',
+  title: 'Ontriq | Workforce & Business Solutions Sri Lanka',
+  description: 'Sri Lanka\'s leading workforce solutions provider. Expert HR, Recruitment, Payroll, and Company Formation services delivering results fast.',
   openGraph: {
-    title: 'Ontriq | HR, Recruitment, Payroll & BGV Services Sri Lanka',
-    description: 'Sri Lanka\'s leading workforce solutions provider. Expert BGV, HR, Recruitment, Payroll, and Company Formation services.',
+    title: 'Ontriq | Workforce & Business Solutions Sri Lanka',
+    description: 'Sri Lanka\'s leading workforce solutions provider. Expert HR, Recruitment, Payroll, and Company Formation services.',
     url: 'https://www.ontriq.com',
     images: [{ url: 'https://www.ontriq.com/share-img.png', width: 1200, height: 630, alt: 'Ontriq - Workforce & Business Solutions Sri Lanka' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ontriq | HR, Recruitment, Payroll & BGV Services Sri Lanka',
+    title: 'Ontriq | Workforce & Business Solutions Sri Lanka',
     description: 'Sri Lanka\'s leading workforce solutions provider.',
     images: ['https://www.ontriq.com/share-img.png'],
   },

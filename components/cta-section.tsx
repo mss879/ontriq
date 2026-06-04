@@ -49,7 +49,7 @@ export const CTASection = memo(function CTASection() {
               </h2>
 
               <p className="mx-auto max-w-2xl text-lg text-gray-300 md:text-xl animate-in fade-in slide-in-from-bottom-4 duration-700 fill-mode-forwards" style={{ animationDelay: '0.8s' }}>
-                Ensure workplace safety and reduce hiring risks with our comprehensive background verification services.
+                Ensure workplace safety and reduce hiring risks with our comprehensive workforce verification and HR solutions.
               </p>
 
               <div className="flex flex-col items-center justify-center gap-4 pt-4 sm:flex-row animate-in fade-in slide-in-from-bottom-4 duration-700 fill-mode-forwards" style={{ animationDelay: '1s' }}>
