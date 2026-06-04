@@ -24,7 +24,6 @@ export default function SitemapPage() {
       links: [
         { name: 'Home', href: '/' },
         { name: 'About Us', href: '/about' },
-        { name: 'Process', href: '/process' },
         { name: 'Contact Us', href: '/contact' },
         { name: 'FAQ', href: '/faq' },
         { name: 'Privacy Policy', href: '/privacy' },

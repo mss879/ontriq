@@ -41,9 +41,9 @@ export const metadata: Metadata = {
 // FAQ items for JSON-LD structured data (diversified across all services)
 const faqItems = [
   // Verification Services
-  { question: "What verification services does Ontriq offer?", answer: "We offer employment history verification, educational qualification verification, criminal record checks, identity and address verification, professional reference checks, global sanction screening, and drug testing." },
-  { question: "How long does a verification take?", answer: "We complete comprehensive verification cases within 7 working days — the fastest turnaround in Sri Lanka. Timelines may vary based on check complexity and third-party responsiveness." },
-  { question: "Do you verify candidates with international backgrounds?", answer: "Yes, we conduct international verifications depending on the country and available data sources, leveraging our network of global verification partners." },
+  { question: "What verification services does Ontriq offer?", answer: "We offer comprehensive pre-employment checks including employment, education, criminal record, identity, address, and reference checks. For detailed information, see our Background Verification Services page (https://www.ontriq.com/services/bgv)." },
+  { question: "How long does a verification take?", answer: "We complete comprehensive background checks within 7 working days — the fastest turnaround in Sri Lanka. Learn more about our timeline and process on our BGV services page (https://www.ontriq.com/services/bgv)." },
+  { question: "Do you verify candidates with international backgrounds?", answer: "Yes, we conduct global verifications using international networks and databases. Find out more about our global verification scope on our BGV services page (https://www.ontriq.com/services/bgv)." },
   // HR Management
   { question: "What HR management services do you provide?", answer: "We offer end-to-end HR solutions including employee onboarding and offboarding, HR policy development, performance management systems, employee relations, leave and attendance management, and HR compliance advisory." },
   { question: "Can you manage HR for a small or mid-sized company?", answer: "Absolutely. Our HR solutions are designed to scale — from startups needing foundational HR support to large enterprises requiring full-cycle HR operations management." },
@@ -57,9 +57,9 @@ const faqItems = [
   { question: "Can you help register a new company in Sri Lanka?", answer: "Yes, we provide end-to-end company formation services including private limited company registration, partnership registration, foreign company registration, tax registration, and ongoing annual returns filing." },
   { question: "Do you offer director services for foreign companies?", answer: "Yes, we provide nominee director and corporate secretary services to help foreign-owned entities meet Sri Lankan legal requirements." },
   // Process & Compliance
-  { question: "Is candidate consent required before verification?", answer: "Yes, candidate consent is legally required before any verification can begin. We collect consent digitally through our secure portal." },
+  { question: "Is candidate consent required before verification?", answer: "Yes, candidate consent is legally required under the Personal Data Protection Act. See how we handle compliance and data privacy on our BGV services page (https://www.ontriq.com/services/bgv)." },
   { question: "Are your services compliant with Sri Lankan law?", answer: "Yes, all services are delivered in full compliance with the Sri Lanka Data Protection Act and relevant employment regulations." },
-  { question: "What happens if a discrepancy is found during verification?", answer: "The discrepancy is documented in the report and the employer is notified. The candidate may be given an opportunity to clarify. The final decision rests with the employer." },
+  { question: "What happens if a discrepancy is found during verification?", answer: "Discrepancies are documented in detail and shared securely with the employer. For a step-by-step breakdown of how we manage findings, visit our BGV services page (https://www.ontriq.com/services/bgv)." },
   // Getting Started
   { question: "How can I get a quote from Ontriq?", answer: "Visit our contact page or reach us at info@ontriq.com. We'll understand your requirements and provide a tailored proposal within 24 hours." },
   { question: "Do you offer customised service packages?", answer: "Yes, we tailor all our services — verification, HR, recruitment, and payroll — according to your industry, company size, and specific requirements." },

@@ -36,6 +36,14 @@ const bgvFaqs = [
     question: 'What is included in a standard background verification package?',
     answer: 'A standard BGV package at Ontriq includes employment history verification, educational qualification checks, criminal record screening, identity and address verification, and professional reference checks. We also offer customized packages that can include global sanction screening, drug testing, and industry-specific checks based on your requirements.',
   },
+  {
+    question: 'Can we customize BGV packages for different roles?',
+    answer: 'Yes, Ontriq offers customizable background verification packages. We understand that entry-level, mid-management, and executive roles require different levels of screening. You can select specific checks—such as adding global sanction screening, drug testing, or reference checks—to create a tailored package that aligns with your regulatory framework and budget.',
+  },
+  {
+    question: 'How does Ontriq ensure the accuracy of background check reports?',
+    answer: 'We maintain a 98%+ accuracy rate by implementing a strict, multi-level Quality Control (QC) process. Every verification undergoes primary-source validation and is checked by at least two senior compliance analysts before a final report is compiled. This ensures all findings are accurate, verifiable, and compliant with audit standards.',
+  },
 ];
 
 export function BgvFaq() {

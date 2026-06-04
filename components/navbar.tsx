@@ -41,7 +41,6 @@ const menuItems = [
     ariaLabel: 'Technology',
     link: '/technology'
   },
-  { label: 'BGV Process', ariaLabel: 'View our process', link: '/process' },
   { label: 'FAQ', ariaLabel: 'View FAQ', link: '/faq' },
   { label: 'Contact', ariaLabel: 'Get in touch', link: '/contact' }
 ];

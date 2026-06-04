@@ -23,10 +23,13 @@ export function BgvIntro() {
               Background verification services are a systematic process of validating the personal, educational, professional, and legal history of an individual&mdash;most commonly conducted before employment. These services protect employers from the risks of hiring unverified candidates by confirming that the information a candidate provides is accurate, complete, and truthful.
             </p>
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed text-justify">
-              In Sri Lanka, background verification has become an essential part of the hiring process for organizations of all sizes&mdash;from multinational corporations to fast-growing startups. Employers who invest in thorough pre-employment screening significantly reduce hiring risks, protect their workplace culture, and ensure compliance with local regulations including the Sri Lanka Data Protection Act.
+              In Sri Lanka, background verification has become an essential part of the hiring process for organizations of all sizes&mdash;from multinational corporations to fast-growing startups. Industry studies show that a single bad hire can cost a company up to 30% of that employee's first-year potential earnings, which accounts for recruiting expenses, lost productivity, and retraining. Employers who invest in thorough pre-employment screening significantly reduce these hiring risks, protect their workplace culture, and ensure compliance with local regulations including the Sri Lanka Data Protection Act.
             </p>
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed text-justify">
-              A comprehensive background check goes far beyond a simple resume review. It involves verifying employment history, educational qualifications, criminal records, identity documents, residential addresses, and professional references through trusted, verified sources.
+              With estimates indicating that nearly 40% to 50% of all resumes contain some form of inaccuracy or exaggeration, conducting robust checks is no longer optional. A comprehensive background check goes far beyond a simple resume review. It involves verifying employment history, educational qualifications, criminal records, identity documents, residential addresses, and professional references through trusted, verified sources.
+            </p>
+            <p className="text-lg md:text-xl text-slate-600 leading-relaxed text-justify">
+              This is particularly true for Sri Lanka's rapidly growing Knowledge Services and BPO sectors. As local firms serve global clients across North America, Europe, and Australia, meeting stringent compliance frameworks (like ISO 27001 or SOC 2) requires verified personnel. Ontriq serves as the trusted regional gatekeeper, allowing local enterprises and global teams to scale safely without compromising on credentials.
             </p>
 
             <div className="grid sm:grid-cols-3 gap-6 mt-4">
