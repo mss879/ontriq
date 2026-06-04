@@ -1,4 +1,5 @@
 import { BgvHero } from '@/components/services/bgv/bgv-hero';
+import { BgvTableOfContents } from '@/components/services/bgv/bgv-table-of-contents';
 import { BgvIntro } from '@/components/services/bgv/bgv-intro';
 import { BgvWhyMatters } from '@/components/services/bgv/bgv-why-matters';
 import { BgvTypes } from '@/components/services/bgv/bgv-types';
@@ -148,6 +149,7 @@ export default function BackgroundVerificationServicesPage() {
         subtitle="Services in Sri Lanka"
         description={`At Ontriq, Background Verification (BGV) is at the core of our operations and remains our primary service. We take immense pride in being Sri Lanka's most trusted and fastest-growing BGV provider, known for our speed, accuracy, and reliability.\n\nWe are the only Background Verification company in Sri Lanka capable of completing full BGV cases within 7 working days\u2014a benchmark unmatched in the local market.`}
       />
+      <BgvTableOfContents />
       <BgvIntro />
       <BgvWhyMatters />
       <BgvTypes />

@@ -28,7 +28,7 @@ const corePoints = [
 
 export function BgvWhyMatters() {
   return (
-    <section className="py-24 bg-slate-50 border-t border-slate-200">
+    <section id="why-it-matters" className="py-24 bg-slate-50 border-t border-slate-200">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-12 gap-12 mb-16 items-center">
           <div className="lg:col-span-6">

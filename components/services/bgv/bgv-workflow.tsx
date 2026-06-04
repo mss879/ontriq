@@ -31,7 +31,7 @@ const workflowSteps = [
 
 export function BgvWorkflow() {
   return (
-    <section className="py-20 bg-slate-900 text-white">
+    <section id="workflow" className="py-20 bg-slate-900 text-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-16 text-center max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl mb-6">

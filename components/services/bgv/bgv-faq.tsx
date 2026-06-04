@@ -48,7 +48,7 @@ const bgvFaqs = [
 
 export function BgvFaq() {
   return (
-    <section className="py-24 bg-white">
+    <section id="faq" className="py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-12 gap-12">
           <ScrollAnimate className="lg:col-span-4">

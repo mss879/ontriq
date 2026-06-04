@@ -47,7 +47,7 @@ const industries = [
 
 export function BgvIndustries() {
   return (
-    <section className="py-24 bg-white">
+    <section id="industries" className="py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-16">
           <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.4em] text-slate-500 mb-6">

@@ -4,7 +4,7 @@ import { ScrollAnimate } from '@/components/scroll-animate';
 
 export function BgvIntro() {
   return (
-    <section className="py-24 bg-white">
+    <section id="overview" className="py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-12 gap-12">
           <ScrollAnimate className="lg:col-span-5">

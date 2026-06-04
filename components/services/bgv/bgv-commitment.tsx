@@ -19,7 +19,7 @@ const commitments = [
 
 export function BgvCommitment() {
   return (
-    <section className="py-20 bg-white">
+    <section id="commitment" className="py-20 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-16">
           
