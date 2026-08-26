@@ -2,8 +2,12 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
+import Script from 'next/script';
 import SiteChrome from '@/components/site-chrome';
-import { AiChatWidget } from '@/components/ai-chat-widget';
+import { AiChatWidgetLoader } from '@/components/ai-chat-widget-loader';
+
+const gaId = process.env.NEXT_PUBLIC_GA_ID;
+const gscVerification = process.env.NEXT_PUBLIC_GSC_VERIFICATION;
 
 const inter = Inter({
   subsets: ['latin'],
@@ -13,7 +17,7 @@ const inter = Inter({
 });
 
 const stackSans = localFont({
-  src: '../public/StackSansNotch-VariableFont_wght.ttf',
+  src: '../public/StackSansNotch-VariableFont_wght.woff2',
   variable: '--font-stack-sans',
   display: 'swap',
   preload: true,
@@ -91,12 +95,16 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
   category: 'business',
+  // Set NEXT_PUBLIC_GSC_VERIFICATION in the Netlify environment to emit the
+  // Google Search Console verification meta tag.
+  ...(gscVerification ? { verification: { google: gscVerification } } : {}),
 };
 
 // JSON-LD structured data for organization
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
+  '@id': `${siteUrl}/#organization`,
   name: 'Ontriq',
   alternateName: 'Ontriq (PVT) LTD',
   url: siteUrl,
@@ -158,7 +166,22 @@ export default function RootLayout({
             {children}
           </div>
         </SiteChrome>
-        <AiChatWidget />
+        <AiChatWidgetLoader />
+        {/* GA4 — inactive until NEXT_PUBLIC_GA_ID is set in the Netlify environment */}
+        {gaId && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga4-init" strategy="afterInteractive">
+              {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${gaId}');`}
+            </Script>
+          </>
+        )}
       </body>
     </html>
   );
