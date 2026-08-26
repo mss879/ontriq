@@ -4,14 +4,14 @@ import { ScrollAnimate } from '@/components/scroll-animate';
 
 export function BgvLegal() {
   return (
-    <section id="legal-compliance" className="py-24 bg-slate-50">
+    <section id="legal-compliance" className="py-24 bg-slate-50 scroll-mt-24">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-12 gap-12">
           <ScrollAnimate className="lg:col-span-5">
             <div className="lg:sticky lg:top-48">
               <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.4em] text-slate-500 mb-6">
                 <span className="h-1 w-8 rounded-full bg-[#F75834]" />
-                <span className="text-slate-900">06</span>
+                <span className="text-slate-900">09</span>
                 <span>Legal</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-semibold tracking-tighter text-slate-900 leading-tight">

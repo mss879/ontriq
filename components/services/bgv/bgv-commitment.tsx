@@ -19,8 +19,13 @@ const commitments = [
 
 export function BgvCommitment() {
   return (
-    <section id="commitment" className="py-20 bg-white">
+    <section id="commitment" className="py-20 bg-white scroll-mt-24">
       <div className="container mx-auto px-4 md:px-6">
+        <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.4em] text-slate-500 mb-12">
+          <span className="h-1 w-8 rounded-full bg-[#F75834]" />
+          <span className="text-slate-900">10</span>
+          <span>Commitment</span>
+        </div>
         <div className="grid lg:grid-cols-2 gap-16">
           
           {/* Why Our Workflow Works */}

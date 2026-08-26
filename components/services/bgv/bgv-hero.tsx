@@ -13,7 +13,7 @@ interface BgvHeroProps {
 
 export function BgvHero({ serviceNumber, title, subtitle, description }: BgvHeroProps) {
   return (
-    <section className="relative bg-white pt-32 pb-20 md:pt-40 md:pb-32">
+    <section className="relative bg-white pt-8 pb-20 md:pt-10 md:pb-32">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col gap-16">
           
@@ -35,11 +35,11 @@ export function BgvHero({ serviceNumber, title, subtitle, description }: BgvHero
           {/* Bottom Row: Description & Stats/Tags */}
           <div className="grid md:grid-cols-12 gap-12">
             <div className="md:col-span-4 lg:col-span-5 overflow-hidden rounded-2xl">
-              <Image 
-                src="/bgv-service.png" 
-                alt="BGV Services"  
-                width={600}
-                height={400}
+              <Image
+                src="/bgv-service.jpg"
+                alt="Ontriq background verification analyst reviewing employee screening documents in Colombo, Sri Lanka"
+                width={800}
+                height={533}
                 className="w-full h-auto scale-105"
                 priority
                 quality={85}

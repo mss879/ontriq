@@ -1,32 +1,36 @@
 'use client';
 
-import { useEffect, useState, memo } from 'react';
+import { useEffect, useRef, useState, memo } from 'react';
 import { List, ChevronRight } from 'lucide-react';
 
 const tocItems = [
-  { id: 'overview', label: 'What Are BGV Services?' },
-  { id: 'why-it-matters', label: 'Why It Matters' },
-  { id: 'types-of-checks', label: 'Types of Checks' },
-  { id: 'why-choose-ontriq', label: 'Why Choose Ontriq' },
-  { id: 'packages', label: 'Verification Packages' },
-  { id: 'process', label: 'Verification Layers' },
-  { id: 'workflow', label: '7-Day Workflow' },
+  { id: 'overview', label: 'What Are Background Verification Services?' },
+  { id: 'why-it-matters', label: 'Why Background Verification Matters' },
+  { id: 'types-of-checks', label: 'Types of Background Checks' },
+  { id: 'why-choose-ontriq', label: 'Why Choose Ontriq?' },
+  { id: 'packages', label: 'Flexible Verification Packages' },
+  { id: 'process', label: 'Verification Process & Quality Control' },
+  { id: 'workflow', label: 'Verification Workflow' },
   { id: 'industries', label: 'Industries We Serve' },
-  { id: 'legal-compliance', label: 'Legal & Compliance' },
+  { id: 'legal-compliance', label: 'BGV Laws in Sri Lanka' },
+  { id: 'commitment', label: 'Our Commitment' },
   { id: 'faq', label: 'Frequently Asked Questions' },
 ];
 
 export const BgvTableOfContents = memo(function BgvTableOfContents() {
   const [activeId, setActiveId] = useState<string>('');
+  const visibleIds = useRef<Set<string>>(new Set());
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        // Find the first visible section
-        const visible = entries.filter(e => e.isIntersecting);
-        if (visible.length > 0) {
-          setActiveId(visible[0].target.id);
-        }
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) visibleIds.current.add(entry.target.id);
+          else visibleIds.current.delete(entry.target.id);
+        });
+        // Highlight the first visible section in document order
+        const first = tocItems.find((item) => visibleIds.current.has(item.id));
+        if (first) setActiveId(first.id);
       },
       { rootMargin: '-20% 0px -60% 0px', threshold: 0 }
     );
@@ -38,17 +42,6 @@ export const BgvTableOfContents = memo(function BgvTableOfContents() {
 
     return () => observer.disconnect();
   }, []);
-
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
-    e.preventDefault();
-    const el = document.getElementById(id);
-    if (el) {
-      const offset = 80; // navbar height
-      const top = el.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
-      setActiveId(id);
-    }
-  };
 
   return (
     <nav
@@ -71,7 +64,7 @@ export const BgvTableOfContents = memo(function BgvTableOfContents() {
               <li key={item.id}>
                 <a
                   href={`#${item.id}`}
-                  onClick={(e) => handleClick(e, item.id)}
+                  onClick={() => setActiveId(item.id)}
                   className={`group flex items-center gap-3 py-2.5 px-3 rounded-xl transition-all duration-200 ${
                     activeId === item.id
                       ? 'bg-orange-50 text-[#F75834] font-semibold'

@@ -4,7 +4,7 @@ import { ScrollAnimate } from '@/components/scroll-animate';
 
 export function BgvIntro() {
   return (
-    <section id="overview" className="py-24 bg-white">
+    <section id="overview" className="py-24 bg-white scroll-mt-24">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-12 gap-12">
           <ScrollAnimate className="lg:col-span-5">
@@ -20,10 +20,10 @@ export function BgvIntro() {
 
           <ScrollAnimate delay={0.1} className="lg:col-span-7 flex flex-col gap-6">
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed text-justify">
-              Background verification services are a systematic process of validating the personal, educational, professional, and legal history of an individual&mdash;most commonly conducted before employment. These services protect employers from the risks of hiring unverified candidates by confirming that the information a candidate provides is accurate, complete, and truthful.
+              Background verification services&mdash;also known as employee screening or pre-employment background checks&mdash;are the systematic process of validating the personal, educational, professional, and legal history of a candidate before employment. These services protect employers from the risks of hiring unverified candidates by confirming that the information a candidate provides is accurate, complete, and truthful.
             </p>
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed text-justify">
-              In Sri Lanka, background verification has become an essential part of the hiring process for organizations of all sizes&mdash;from multinational corporations to fast-growing startups. Industry studies show that a single bad hire can cost a company up to 30% of that employee's first-year potential earnings, which accounts for recruiting expenses, lost productivity, and retraining. Employers who invest in thorough pre-employment screening significantly reduce these hiring risks, protect their workplace culture, and ensure compliance with local regulations including the Sri Lanka Data Protection Act.
+              In Sri Lanka, background verification has become an essential part of the hiring process for organizations of all sizes&mdash;from multinational corporations to fast-growing startups. Ontriq delivers these employee screening services from our office in the Colombo district, supporting employers island-wide. Industry studies show that a single bad hire can cost a company up to 30% of that employee's first-year potential earnings, which accounts for recruiting expenses, lost productivity, and retraining. Employers who invest in thorough pre-employment screening significantly reduce these hiring risks, protect their workplace culture, and ensure compliance with local regulations including the Sri Lanka Data Protection Act.
             </p>
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed text-justify">
               With estimates indicating that nearly 40% to 50% of all resumes contain some form of inaccuracy or exaggeration, conducting robust checks is no longer optional. A comprehensive background check goes far beyond a simple resume review. It involves verifying employment history, educational qualifications, criminal records, identity documents, residential addresses, and professional references through trusted, verified sources.

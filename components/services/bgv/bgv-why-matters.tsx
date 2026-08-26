@@ -28,14 +28,14 @@ const corePoints = [
 
 export function BgvWhyMatters() {
   return (
-    <section id="why-it-matters" className="py-24 bg-slate-50 border-t border-slate-200">
+    <section id="why-it-matters" className="py-24 bg-slate-50 border-t border-slate-200 scroll-mt-24">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-12 gap-12 mb-16 items-center">
           <div className="lg:col-span-6">
             <ScrollAnimate className="max-w-2xl">
               <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.4em] text-slate-500 mb-6">
                 <span className="h-1 w-8 rounded-full bg-[#F75834]" />
-                <span className="text-slate-900">03</span>
+                <span className="text-slate-900">02</span>
                 <span>Risk Management</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-semibold tracking-tighter text-slate-900 mb-6">

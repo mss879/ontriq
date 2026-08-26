@@ -31,9 +31,14 @@ const workflowSteps = [
 
 export function BgvWorkflow() {
   return (
-    <section id="workflow" className="py-20 bg-slate-900 text-white">
+    <section id="workflow" className="py-20 bg-slate-900 text-white scroll-mt-24">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-16 text-center max-w-3xl mx-auto">
+          <div className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.4em] text-slate-400 mb-6">
+            <span className="h-1 w-8 rounded-full bg-[#F75834]" />
+            <span className="text-white">07</span>
+            <span>Workflow</span>
+          </div>
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl mb-6">
             Ontriq Background Verification Workflow
           </h2>
