@@ -41,7 +41,7 @@ const articles = [
   {
     slug: 'background-verification-cost-sri-lanka',
     title: 'How Much Does Background Verification Cost in Sri Lanka?',
-    description: 'What drives BGV pricing, how package tiers work, and how to budget screening for different roles and hiring volumes.',
+    description: 'What drives BGV pricing, how screening depth is matched to each role, and how to budget for different hiring volumes.',
     tag: 'Pricing',
   },
   {

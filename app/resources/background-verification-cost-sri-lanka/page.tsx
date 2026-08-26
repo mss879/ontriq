@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 const TITLE = 'How Much Does Background Verification Cost in Sri Lanka?';
 const META_DESC =
-  'Learn what drives background verification pricing in Sri Lanka, how tiered BGV packages work, and how to budget employee screening for every role level.';
+  'Learn what drives background verification pricing in Sri Lanka, how screening depth is matched to each role, and how to budget employee checks for your hiring plan.';
 const CANONICAL = 'https://www.ontriq.com/resources/background-verification-cost-sri-lanka';
 
 export const metadata: Metadata = {
@@ -73,22 +73,22 @@ export default function BgvCostGuidePage() {
       />
       <ArticleLayout
         title="How Much Does Background Verification Cost in Sri Lanka?"
-        lede="There is no one-size-fits-all price for a background check. This guide explains the six factors that drive verification pricing in Sri Lanka, how tiered packages keep costs predictable, and how to budget employee screening across your entire hiring plan."
+        lede="There is no one-size-fits-all price for a background check. This guide explains the six factors that drive verification pricing in Sri Lanka, how matching screening depth to each role keeps costs predictable, and how to budget employee screening across your entire hiring plan."
         publishedDisplay="August 26, 2026"
         breadcrumbLabel="BGV Cost Guide"
       >
         <p>
           The cost of background verification in Sri Lanka depends on the number and type of
           checks, the seniority of the role, your hiring volume, and how fast you need results.
-          Most providers, including Ontriq, price screening through tiered packages, so you pay
-          for the depth of verification each role actually requires.
+          Screening is priced per candidate based on the depth of verification each role
+          actually requires, so no two hiring plans cost quite the same.
         </p>
         <p>
-          That tiered structure exists for a good reason: not every hire carries the same risk.
-          An entry-level associate does not need executive-grade due diligence, and a CFO
-          candidate should never be screened with an entry-level package. Understanding what
-          actually moves the price lets you budget accurately and avoid paying for depth you do
-          not need&mdash;or skipping depth you do.
+          That is for a good reason: not every hire carries the same risk. An entry-level
+          associate does not need executive-grade due diligence, and a CFO candidate should
+          never be screened as lightly as a junior hire. Understanding what actually moves the
+          price lets you budget accurately and avoid paying for depth you do not
+          need&mdash;or skipping depth you do.
         </p>
 
         <h2>The 6 Factors That Drive Background Check Pricing</h2>
@@ -142,53 +142,53 @@ export default function BgvCostGuidePage() {
           </li>
         </ol>
 
-        <h2>How Tiered BGV Packages Work</h2>
+        <h2>Matching Verification Depth to the Role</h2>
         <p>
-          Rather than quoting every check individually, most employers choose from tiered{' '}
-          <Link href="/services/bgv">BGV packages in Sri Lanka</Link> matched to role level.
-          Packaging keeps budgeting predictable: you know in advance what each hire at each
-          level will cost to screen, and you avoid ad-hoc decisions about which checks to run.
-          Ontriq offers three tiers.
+          Rather than quoting every check individually, most employers agree a standard check
+          list per role level with their provider of{' '}
+          <Link href="/services/bgv">background verification services in Sri Lanka</Link>. That
+          keeps budgeting predictable: you know in advance what each hire at each level will
+          cost to screen, and you avoid ad-hoc decisions about which checks to run. A typical
+          mapping looks like this.
         </p>
         <div className="overflow-x-auto rounded-2xl border border-slate-200 my-6">
           <table>
             <thead>
               <tr>
-                <th>Package</th>
-                <th>What It Includes</th>
-                <th>Best For</th>
+                <th>Role Level</th>
+                <th>Checks Typically Run</th>
+                <th>Why This Depth</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>
-                  <strong>Essential</strong>
+                  <strong>Entry-level</strong>
                 </td>
                 <td>
-                  Identity and address verification, 1 professional reference, 7-working-day SLA
+                  Identity and address verification, 1 professional reference
                 </td>
-                <td>Entry-level roles and high-volume junior hiring</td>
+                <td>Confirms the person is who they say they are, at volume-friendly cost</td>
               </tr>
               <tr>
                 <td>
-                  <strong>Professional</strong>
+                  <strong>Mid-level &amp; specialists</strong>
                 </td>
                 <td>
                   Identity and address verification, employment history (last 2 employers),
                   education verification, 2 professional references, criminal record check
                 </td>
-                <td>Mid-level roles, specialists, and people managers</td>
+                <td>Validates the credentials and track record the hire was made on</td>
               </tr>
               <tr>
                 <td>
-                  <strong>Enterprise</strong>
+                  <strong>Executive &amp; compliance-sensitive</strong>
                 </td>
                 <td>
-                  Everything in Professional, plus employment history for the last 3 employers,
-                  global sanctions and watchlist screening, statutory and registry checks,
-                  dual-analyst quality assurance, and a dedicated account manager
+                  All of the above, plus employment history for the last 3 employers, global
+                  sanctions and watchlist screening, and statutory and registry checks
                 </td>
-                <td>Executives, finance and compliance-sensitive positions</td>
+                <td>Positions of trust justify the fullest available due diligence</td>
               </tr>
             </tbody>
           </table>
@@ -205,13 +205,13 @@ export default function BgvCostGuidePage() {
           .
         </p>
 
-        <h3>Why Packages Beat Itemized Pricing</h3>
+        <h3>Why Standardizing by Role Level Beats Ad-Hoc Ordering</h3>
         <p>
-          Itemized, check-by-check ordering sounds flexible, but it tends to produce two
-          expensive failure modes: over-screening junior staff out of caution, and
-          under-screening senior staff to save money. Tiered packages remove that guesswork.
-          They also make finance approvals simpler&mdash;one known cost per role band, rather
-          than a different invoice composition for every hire.
+          Deciding checks hire-by-hire sounds flexible, but it tends to produce two expensive
+          failure modes: over-screening junior staff out of caution, and under-screening senior
+          staff to save money. A standard check list per role level removes that guesswork. It
+          also makes finance approvals simpler&mdash;one known cost per role band, rather than
+          a different invoice composition for every hire.
         </p>
 
         <h2>The Real Comparison: What Not Screening Costs</h2>
@@ -260,12 +260,13 @@ export default function BgvCostGuidePage() {
             and senior or compliance-sensitive bands.
           </li>
           <li>
-            <strong>Assign a package tier to each band</strong>&mdash;for example, Essential for
-            entry-level, Professional for mid-level, Enterprise for executive and regulated
+            <strong>Agree a standard check list for each band</strong>&mdash;lighter identity
+            and reference checks for entry-level, fuller employment, education, and criminal
+            coverage for mid-level, and the deepest due diligence for executive and regulated
             roles.
           </li>
           <li>
-            <strong>Request per-package quotes</strong> from your provider and multiply each by
+            <strong>Request a per-band quote</strong> from your provider and multiply each by
             the projected hires in that band.
           </li>
           <li>
@@ -291,9 +292,9 @@ export default function BgvCostGuidePage() {
         <h2>4 Ways to Reduce Screening Costs Without Cutting Corners</h2>
         <ol>
           <li>
-            <strong>Match depth to risk, not habit.</strong> Running the deepest package on
-            every hire wastes money; running the lightest on every hire creates risk. Tier
-            deliberately and revisit the mapping once a year.
+            <strong>Match depth to risk, not habit.</strong> Running the deepest screening on
+            every hire wastes money; running the lightest on every hire creates risk. Map
+            checks to role levels deliberately and revisit the mapping once a year.
           </li>
           <li>
             <strong>Bundle checks into a single case.</strong> Ordering checks piecemeal across
@@ -325,8 +326,8 @@ export default function BgvCostGuidePage() {
           within 7 working days with 98%+ report accuracy through dual-analyst quality control,
           and real-time case tracking so you always know where each candidate stands.{' '}
           <Link href="/contact">Contact our team</Link> with your annual hiring plan, or call
-          +94 77 999 6940, and we will map your roles to the right package tiers and give you a
-          clear, per-band cost for the year.
+          +94 77 999 6940, and we will map your roles to the right level of screening and give
+          you a clear, per-band cost for the year.
         </p>
       </ArticleLayout>
     </>

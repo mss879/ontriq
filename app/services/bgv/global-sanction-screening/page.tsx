@@ -135,7 +135,7 @@ export default function GlobalSanctionScreeningPage() {
             Who Should Include This Check
           </h2>
           <p className="text-lg text-slate-600 leading-relaxed mb-6">
-            Sanction and watchlist screening is included in our Enterprise package &mdash; designed for executives and compliance-sensitive roles &mdash; and can be added to any other package as a standalone check. We recommend it for banks and finance companies, BPO and IT firms with international contracts, exporters and logistics businesses, and any role with authority over payments, treasury functions, or client funds. Because the screen completes in 1-2 working days and runs in parallel with your other checks, adding it does not delay your overall report.
+            Sanction and watchlist screening can be added to any background verification case as a standalone check, and it should be standard for executives and compliance-sensitive roles. We recommend it for banks and finance companies, BPO and IT firms with international contracts, exporters and logistics businesses, and any role with authority over payments, treasury functions, or client funds. Because the screen completes in 1-2 working days and runs in parallel with your other checks, adding it does not delay your overall report.
           </p>
 
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 mb-8 mt-16">

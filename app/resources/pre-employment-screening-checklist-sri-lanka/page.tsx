@@ -203,9 +203,8 @@ export default function PreEmploymentScreeningChecklistPage() {
         <h2>Which Checks for Which Role Level</h2>
         <p>
           Screening depth should match role risk. A junior retail assistant and a finance
-          director do not need the same package. The table below maps each check to a sensible
-          default by role level, consistent with how tiered screening packages are typically
-          structured for entry-level, mid-level, and executive hires.
+          director do not need the same level of screening. The table below maps each check to
+          a sensible default for entry-level, mid-level, and executive hires.
         </p>
         <div className="overflow-x-auto rounded-2xl border border-slate-200 my-6">
           <table>
@@ -220,45 +219,45 @@ export default function PreEmploymentScreeningChecklistPage() {
             <tbody>
               <tr>
                 <td>Identity &amp; address verification</td>
-                <td>Essential</td>
-                <td>Essential</td>
-                <td>Essential</td>
+                <td>Required</td>
+                <td>Required</td>
+                <td>Required</td>
               </tr>
               <tr>
                 <td>Professional references</td>
-                <td>Essential (1 referee)</td>
-                <td>Essential (2 referees)</td>
-                <td>Essential (2 referees)</td>
+                <td>Required (1 referee)</td>
+                <td>Required (2 referees)</td>
+                <td>Required (2 referees)</td>
               </tr>
               <tr>
                 <td>Employment history</td>
                 <td>Optional</td>
-                <td>Essential (last 2 employers)</td>
-                <td>Essential (last 3 employers)</td>
+                <td>Required (last 2 employers)</td>
+                <td>Required (last 3 employers)</td>
               </tr>
               <tr>
                 <td>Education verification</td>
                 <td>Optional</td>
-                <td>Essential</td>
-                <td>Essential</td>
+                <td>Required</td>
+                <td>Required</td>
               </tr>
               <tr>
                 <td>Criminal record &amp; legal check</td>
                 <td>Recommended</td>
-                <td>Essential</td>
-                <td>Essential</td>
+                <td>Required</td>
+                <td>Required</td>
               </tr>
               <tr>
                 <td>Global sanctions &amp; watchlist screening</td>
                 <td>Rarely needed</td>
                 <td>Recommended</td>
-                <td>Essential</td>
+                <td>Required</td>
               </tr>
               <tr>
                 <td>Statutory / registry checks</td>
                 <td>Rarely needed</td>
                 <td>Recommended</td>
-                <td>Essential</td>
+                <td>Required</td>
               </tr>
               <tr>
                 <td>Drug testing (certified laboratories)</td>
@@ -270,12 +269,11 @@ export default function PreEmploymentScreeningChecklistPage() {
           </table>
         </div>
         <p>
-          If your hiring volume is steady, standardize these combinations as named internal
-          packages so recruiters never have to decide check-by-check. Most{' '}
-          <Link href="/services/bgv">employee screening services</Link> in Sri Lanka offer
-          tiered packages along exactly these lines &mdash; an essential tier for entry-level
-          roles, a professional tier for mid-level hires, and an enterprise tier that adds
-          sanctions screening, statutory checks, and dual-analyst quality review for executives.
+          If your hiring volume is steady, standardize these combinations per role level so
+          recruiters never have to decide check-by-check. A good provider of{' '}
+          <Link href="/services/bgv">employee screening services</Link> will agree these
+          standard combinations with you up front and price them per candidate, so every hire
+          at a given level is screened the same way.
         </p>
 
         <h2>Step 4: Build In a Red-Flag Review Step</h2>
@@ -316,7 +314,7 @@ export default function PreEmploymentScreeningChecklistPage() {
         <ol>
           <li>Collect NIC/passport copy, proof of address, certificates, employment history, and referee details.</li>
           <li>Obtain signed, dated, check-specific written consent before anything else starts.</li>
-          <li>Choose the check package that matches the role level (see table above).</li>
+          <li>Choose the checks that match the role level (see table above).</li>
           <li>Before the offer: verify identity and address; complete reference checks.</li>
           <li>Issue the offer letter conditional on satisfactory verification.</li>
           <li>At offer stage: run employment, education, and (where warranted) criminal checks in parallel.</li>

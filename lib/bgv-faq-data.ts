@@ -19,7 +19,7 @@ export const bgvFaqData: BgvFaqItem[] = [
   },
   {
     question: 'How much does background verification cost in Sri Lanka?',
-    answer: 'The cost of background verification in Sri Lanka depends on the number and type of checks required for each role. Ontriq offers three tiers—Essential, Professional, and Enterprise packages—so you only pay for the level of screening a position actually needs, and per-candidate pricing improves with hiring volume. Contact us for a tailored quote based on your requirements.',
+    answer: 'The cost of background verification in Sri Lanka depends on the number and type of checks required for each role, the role\'s seniority, and your hiring volume. Screening is priced per candidate, so you only pay for the level of verification a position actually needs, and per-candidate pricing improves as hiring volume grows. Contact us for a tailored quote based on your requirements.',
   },
   {
     question: 'What documents are needed for background verification?',
