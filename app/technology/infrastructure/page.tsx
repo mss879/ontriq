@@ -7,14 +7,36 @@ export const metadata: Metadata = {
   title: 'Technology Infrastructure & Automated HR Platforms | Ontriq',
   description: 'Discover Ontriq\'s robust technology infrastructure. We leverage advanced ATS, automated BGV platforms, and secure systems for premium business operations.',
   keywords: ['technology infrastructure', 'applicant tracking systems', 'ATS software', 'automated BGV platform', 'secure HR database', 'system scaling'],
+  openGraph: {
+    title: 'Technology Infrastructure & Automated HR Platforms | Ontriq',
+    description: 'Discover Ontriq\'s robust technology infrastructure. We leverage advanced ATS, automated BGV platforms, and secure systems for premium business operations.',
+    url: 'https://www.ontriq.com/technology/infrastructure',
+    images: [{ url: 'https://www.ontriq.com/share-img.png', width: 1200, height: 630, alt: 'Technology Infrastructure & Automated HR Platforms | Ontriq' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Technology Infrastructure & Automated HR Platforms | Ontriq',
+    description: 'Discover Ontriq\'s robust technology infrastructure. We leverage advanced ATS, automated BGV platforms, and secure systems for premium business operations.',
+    images: ['https://www.ontriq.com/share-img.png'],
+  },
   alternates: {
     canonical: 'https://www.ontriq.com/technology/infrastructure',
   },
 };
 
 export default function InfrastructurePage() {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ontriq.com" },
+      { "@type": "ListItem", "position": 2, "name": "Technology", "item": "https://www.ontriq.com/technology" },
+      { "@type": "ListItem", "position": 3, "name": "Infrastructure", "item": "https://www.ontriq.com/technology/infrastructure" },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <TechHero 
         pageNumber="01"
         title="Technology &"

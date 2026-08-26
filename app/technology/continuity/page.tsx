@@ -7,14 +7,36 @@ export const metadata: Metadata = {
   title: 'Business Continuity Plan & Operational Resilience | Ontriq',
   description: 'Discover Ontriq\'s robust business continuity plan. Learn how we guarantee uninterrupted HR, payroll, BGV, and recruitment services during any disruption.',
   keywords: ['business continuity', 'operational resilience', 'disaster recovery', 'service redundancy', 'workforce contingency plan', 'risk mitigation'],
+  openGraph: {
+    title: 'Business Continuity Plan & Operational Resilience | Ontriq',
+    description: 'Discover Ontriq\'s robust business continuity plan. Learn how we guarantee uninterrupted HR, payroll, BGV, and recruitment services during any disruption.',
+    url: 'https://www.ontriq.com/technology/continuity',
+    images: [{ url: 'https://www.ontriq.com/share-img.png', width: 1200, height: 630, alt: 'Business Continuity Plan & Operational Resilience | Ontriq' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Business Continuity Plan & Operational Resilience | Ontriq',
+    description: 'Discover Ontriq\'s robust business continuity plan. Learn how we guarantee uninterrupted HR, payroll, BGV, and recruitment services during any disruption.',
+    images: ['https://www.ontriq.com/share-img.png'],
+  },
   alternates: {
     canonical: 'https://www.ontriq.com/technology/continuity',
   },
 };
 
 export default function ContinuityPage() {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ontriq.com" },
+      { "@type": "ListItem", "position": 2, "name": "Technology", "item": "https://www.ontriq.com/technology" },
+      { "@type": "ListItem", "position": 3, "name": "Continuity", "item": "https://www.ontriq.com/technology/continuity" },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <TechHero 
         pageNumber="04"
         title="Our Continuity"

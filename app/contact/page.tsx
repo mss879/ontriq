@@ -77,12 +77,26 @@ const contactPageJsonLd = {
   },
 };
 
+// JSON-LD breadcrumb structured data for Contact page
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.ontriq.com' },
+    { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://www.ontriq.com/contact' },
+  ],
+};
+
 export default function ContactPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <main className="min-h-screen bg-white" id="main-content">
         <ContactSection />

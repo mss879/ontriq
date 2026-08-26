@@ -14,6 +14,12 @@ export const metadata: Metadata = {
     url: 'https://www.ontriq.com/services/bgv/criminal-record-check',
     images: [{ url: 'https://www.ontriq.com/share-img.png', width: 1200, height: 630, alt: 'Ontriq Criminal Record Check' }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Criminal Record Check Services Sri Lanka',
+    description: 'Comprehensive criminal record checks and legal screening.',
+    images: ['https://www.ontriq.com/share-img.png'],
+  },
   alternates: { canonical: 'https://www.ontriq.com/services/bgv/criminal-record-check' },
 };
 

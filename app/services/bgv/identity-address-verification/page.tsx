@@ -14,6 +14,12 @@ export const metadata: Metadata = {
     url: 'https://www.ontriq.com/services/bgv/identity-address-verification',
     images: [{ url: 'https://www.ontriq.com/share-img.png', width: 1200, height: 630, alt: 'Ontriq Identity Verification' }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Identity & Address Verification Services',
+    description: 'Authenticate government IDs and verify residential addresses.',
+    images: ['https://www.ontriq.com/share-img.png'],
+  },
   alternates: { canonical: 'https://www.ontriq.com/services/bgv/identity-address-verification' },
 };
 

@@ -2,8 +2,20 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Sitemap | Ontriq',
+  title: 'Sitemap',
   description: 'Navigate through all pages on Ontriq website. Find services, technology, and company information easily.',
+  openGraph: {
+    title: 'Sitemap | Ontriq',
+    description: 'Navigate through all pages on Ontriq website. Find services, technology, and company information easily.',
+    url: 'https://www.ontriq.com/sitemap',
+    images: [{ url: 'https://www.ontriq.com/share-img.png', width: 1200, height: 630, alt: 'Sitemap | Ontriq' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sitemap | Ontriq',
+    description: 'Navigate through all pages on Ontriq website. Find services, technology, and company information easily.',
+    images: ['https://www.ontriq.com/share-img.png'],
+  },
   alternates: {
     canonical: 'https://www.ontriq.com/sitemap',
   },
@@ -45,6 +57,8 @@ export default function SitemapPage() {
             { name: 'Criminal Record & Legal', href: '/services/bgv/criminal-record-check' },
             { name: 'Identity & Address', href: '/services/bgv/identity-address-verification' },
             { name: 'Professional References', href: '/services/bgv/reference-checks' },
+            { name: 'Global Sanction Screening', href: '/services/bgv/global-sanction-screening' },
+            { name: 'Drug Testing', href: '/services/bgv/drug-testing' },
           ]
         },
         {
@@ -74,6 +88,18 @@ export default function SitemapPage() {
           ]
         },
         { name: 'Startup Support Services', href: '/services/startup-support-services' },
+      ],
+    },
+    {
+      title: 'Resources',
+      links: [
+        { name: 'Resources Hub', href: '/resources' },
+        { name: 'How to Do Background Checks on Employees', href: '/resources/how-to-do-background-checks-on-employees-in-sri-lanka' },
+        { name: 'Background Verification Cost Guide', href: '/resources/background-verification-cost-sri-lanka' },
+        { name: 'PDPA Guide for Employers', href: '/resources/personal-data-protection-act-guide-for-employers' },
+        { name: 'Pre-Employment Screening Checklist', href: '/resources/pre-employment-screening-checklist-sri-lanka' },
+        { name: 'How Long Does a Background Check Take?', href: '/resources/how-long-does-a-background-check-take-in-sri-lanka' },
+        { name: 'Background Check Red Flags Guide', href: '/resources/background-check-red-flags-employers-guide' },
       ],
     },
     {

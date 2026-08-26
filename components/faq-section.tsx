@@ -1,17 +1,19 @@
 'use client';
 
-import { memo } from 'react';
+import { memo, ReactNode } from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { ScrollAnimate } from "@/components/scroll-animate";
 
-const faqs = [
+const bgvLinkClass = "text-orange-600 underline underline-offset-4 hover:text-orange-700";
+
+const faqs: { category: string; items: { q: string; a: ReactNode }[] }[] = [
   {
     category: "Verification Services",
     items: [
-      { q: "What verification services does Ontriq offer?", a: "We offer employment history verification, educational qualification verification, criminal record checks, identity and address verification, professional reference checks, global sanction screening, and drug testing." },
-      { q: "How long does a verification take?", a: "We complete comprehensive verification cases within 7 working days — the fastest turnaround in Sri Lanka. Timelines may vary based on check complexity and third-party responsiveness." },
-      { q: "Do you verify candidates with international backgrounds?", a: "Yes, we conduct international verifications depending on the country and available data sources, leveraging our network of global verification partners." }
+      { q: "What verification services does Ontriq offer?", a: <>We offer a full suite of <Link href="/services/bgv" className={bgvLinkClass}>background verification services</Link> including employment history verification, educational qualification verification, criminal record checks, identity and address verification, professional reference checks, global sanction screening, and drug testing.</> },
+      { q: "How long does a verification take?", a: <>We complete comprehensive <Link href="/services/bgv" className={bgvLinkClass}>background verification</Link> cases within 7 working days — the fastest turnaround in Sri Lanka. Timelines may vary based on check complexity and third-party responsiveness.</> },
+      { q: "Do you verify candidates with international backgrounds?", a: <>Yes, we conduct international verifications depending on the country and available data sources, leveraging our network of global verification partners. Learn more on our <Link href="/services/bgv" className={bgvLinkClass}>background verification services</Link> page.</> }
     ]
   },
   {
@@ -26,7 +28,7 @@ const faqs = [
     category: "Recruitment",
     items: [
       { q: "What types of recruitment does Ontriq handle?", a: "We provide executive search, volume hiring, contract staffing, IT recruitment, candidate screening and assessment, and employer branding services across all industries." },
-      { q: "How is Ontriq different from other recruitment agencies?", a: "Our recruitment process integrates seamlessly with our in-house verification services, meaning every hire is both talent-matched and fully verified — reducing risk and time-to-hire significantly." },
+      { q: "How is Ontriq different from other recruitment agencies?", a: <>Our recruitment process integrates seamlessly with our <Link href="/services/bgv" className={bgvLinkClass}>in-house verification services</Link>, meaning every hire is both talent-matched and fully verified — reducing risk and time-to-hire significantly.</> },
       { q: "Do you recruit for international positions?", a: "Our primary focus is the Sri Lankan market, but we can support international hiring needs through our partner network depending on the role and region." }
     ]
   },
@@ -41,7 +43,7 @@ const faqs = [
   {
     category: "Process & Compliance",
     items: [
-      { q: "Is candidate consent required before verification?", a: "Yes, candidate consent is legally required before any verification can begin. We collect consent digitally through our secure portal." },
+      { q: "Is candidate consent required before verification?", a: <>Yes, candidate consent is legally required before any <Link href="/services/bgv" className={bgvLinkClass}>background verification</Link> can begin. We collect consent digitally through our secure portal.</> },
       { q: "Are your services compliant with Sri Lankan law?", a: "Yes, all services are delivered in full compliance with the Sri Lanka Data Protection Act and relevant employment regulations." },
       { q: "What happens if a discrepancy is found during verification?", a: "The discrepancy is documented in the report and the employer is notified. The candidate may be given an opportunity to clarify. The final decision rests with the employer." }
     ]
@@ -91,14 +93,7 @@ export const FaqSection = memo(function FaqSection({ titleAs = 'h2' }: { titleAs
           <div className="lg:col-span-2">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {faqs.map((category, catIndex) => (
-                <motion.div 
-                  key={catIndex} 
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: catIndex * 0.1 }}
-                  className="space-y-4"
-                >
+                <ScrollAnimate key={catIndex} delay={catIndex * 0.1} className="space-y-4">
                   <h3 className="text-xl font-semibold text-orange-600">{category.category}</h3>
                   <Accordion type="single" collapsible className="w-full">
                     {category.items.map((faq, index) => (
@@ -112,7 +107,7 @@ export const FaqSection = memo(function FaqSection({ titleAs = 'h2' }: { titleAs
                       </AccordionItem>
                     ))}
                   </Accordion>
-                </motion.div>
+                </ScrollAnimate>
               ))}
             </div>
           </div>

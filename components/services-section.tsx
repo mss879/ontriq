@@ -3,7 +3,7 @@
 import React, { memo } from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import { Plus, Minus, ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { ScrollAnimate } from '@/components/scroll-animate';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 
@@ -107,13 +107,7 @@ const ServicesSection = () => {
           {/* Accordion */}
           <AccordionPrimitive.Root type="single" collapsible className="flex flex-col">
             {services.map((service, index) => (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
+              <ScrollAnimate key={service.id} delay={index * 0.1}>
               <AccordionPrimitive.Item 
                 value={service.id}
                 className="group border-b border-white/10 last:border-0 scroll-mt-24"
@@ -207,7 +201,7 @@ const ServicesSection = () => {
                   </div>
                 </AccordionPrimitive.Content>
               </AccordionPrimitive.Item>
-              </motion.div>
+              </ScrollAnimate>
             ))}
           </AccordionPrimitive.Root>
 

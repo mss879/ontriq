@@ -8,6 +8,18 @@ export const metadata: Metadata = {
   title: 'Information Security Policy & ISO 27001 compliance | Ontriq',
   description: 'Ontriq is committed to high-grade information security. We operate under a robust ISMS framework aligned with ISO 27001:2013 standards to protect your data.',
   keywords: ['information security', 'ISO 27001:2013', 'data safety', 'ISMS framework', 'cybersecurity protocols', 'confidential client data'],
+  openGraph: {
+    title: 'Information Security Policy & ISO 27001 compliance | Ontriq',
+    description: 'Ontriq is committed to high-grade information security. We operate under a robust ISMS framework aligned with ISO 27001:2013 standards to protect your data.',
+    url: 'https://www.ontriq.com/technology/security',
+    images: [{ url: 'https://www.ontriq.com/share-img.png', width: 1200, height: 630, alt: 'Information Security Policy & ISO 27001 compliance | Ontriq' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Information Security Policy & ISO 27001 compliance | Ontriq',
+    description: 'Ontriq is committed to high-grade information security. We operate under a robust ISMS framework aligned with ISO 27001:2013 standards to protect your data.',
+    images: ['https://www.ontriq.com/share-img.png'],
+  },
   alternates: {
     canonical: 'https://www.ontriq.com/technology/security',
   },
@@ -22,8 +34,18 @@ const securityPoints = [
 ];
 
 export default function SecurityPage() {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ontriq.com" },
+      { "@type": "ListItem", "position": 2, "name": "Technology", "item": "https://www.ontriq.com/technology" },
+      { "@type": "ListItem", "position": 3, "name": "Security", "item": "https://www.ontriq.com/technology/security" },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <TechHero 
         pageNumber="03"
         title="Information Security"

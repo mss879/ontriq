@@ -63,11 +63,24 @@ export default function TechnologyPage() {
     }
   };
 
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.ontriq.com' },
+      { '@type': 'ListItem', position: 2, name: 'Technology', item: 'https://www.ontriq.com/technology' },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <TechnologyContent />
       <section className="py-16 bg-slate-50 border-t border-slate-200">

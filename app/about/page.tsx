@@ -89,12 +89,26 @@ const aboutPageJsonLd = {
   },
 };
 
+// JSON-LD breadcrumb structured data for About page
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.ontriq.com' },
+    { '@type': 'ListItem', position: 2, name: 'About Us', item: 'https://www.ontriq.com/about' },
+  ],
+};
+
 export default function AboutPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <main id="main-content" className="min-h-screen bg-white" role="main">
         <AboutHero />

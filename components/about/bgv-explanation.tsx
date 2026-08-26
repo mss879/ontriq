@@ -1,7 +1,7 @@
 'use client';
 
 import React, { memo } from 'react';
-import { motion } from 'framer-motion';
+import { ScrollAnimate } from '@/components/scroll-animate';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ShieldCheck, Users, Briefcase, FileText, CreditCard, Building2, ArrowRight } from 'lucide-react';
@@ -63,13 +63,7 @@ export const BgvExplanation = memo(function BgvExplanation() {
         
         <div className="relative z-10 flex flex-col gap-16 lg:gap-24">
           {/* Header */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col gap-6"
-          >
+          <ScrollAnimate className="flex flex-col gap-6">
             <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.4em] text-white/60">
               <span className="h-1 w-8 rounded-full bg-[#F75834]" aria-hidden="true"></span>
               <span className="text-white">002</span>
@@ -81,18 +75,12 @@ export const BgvExplanation = memo(function BgvExplanation() {
             <p className="text-xl text-zinc-400 max-w-3xl leading-relaxed">
               From verification to HR, recruitment to company setup&mdash;we provide the full spectrum of workforce and business solutions across Sri Lanka.
             </p>
-          </motion.div>
+          </ScrollAnimate>
 
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
+              <ScrollAnimate key={index} delay={index * 0.1}>
                 <Link 
                   href={service.href}
                   className="flex flex-col gap-4 p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#F75834]/30 transition-all duration-300 h-full group"
@@ -106,7 +94,7 @@ export const BgvExplanation = memo(function BgvExplanation() {
                     Learn more <ArrowRight className="ml-1 h-4 w-4" />
                   </span>
                 </Link>
-              </motion.div>
+              </ScrollAnimate>
             ))}
           </div>
         </div>

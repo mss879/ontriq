@@ -142,7 +142,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
       />
-      <main id="main-content" className="min-h-screen" role="main">
+      <main className="min-h-screen" role="main">
         <Hero />
         <BentoGrid />
         <ServicesSection />

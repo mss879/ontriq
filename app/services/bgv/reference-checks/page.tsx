@@ -14,6 +14,12 @@ export const metadata: Metadata = {
     url: 'https://www.ontriq.com/services/bgv/reference-checks',
     images: [{ url: 'https://www.ontriq.com/share-img.png', width: 1200, height: 630, alt: 'Ontriq Reference Checks' }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Professional Reference Check Services',
+    description: 'Professional reference verification for informed hiring decisions.',
+    images: ['https://www.ontriq.com/share-img.png'],
+  },
   alternates: { canonical: 'https://www.ontriq.com/services/bgv/reference-checks' },
 };
 
