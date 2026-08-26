@@ -44,12 +44,18 @@ const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
+  // forceMount keeps collapsed answers in the server-rendered HTML (crawlable);
+  // the grid-rows technique animates open/close without mount/unmount, and
+  // `invisible` removes closed content from the accessibility tree.
   <AccordionPrimitive.Content
     ref={ref}
-    className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+    forceMount
+    className="grid overflow-hidden text-sm transition-[grid-template-rows] duration-300 ease-out data-[state=open]:grid-rows-[1fr] data-[state=closed]:grid-rows-[0fr] data-[state=closed]:invisible"
     {...props}
   >
-    <div className={cn('pb-4 pt-0', className)}>{children}</div>
+    <div className="min-h-0 overflow-hidden">
+      <div className={cn('pb-4 pt-0', className)}>{children}</div>
+    </div>
   </AccordionPrimitive.Content>
 ));
 
