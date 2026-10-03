@@ -59,6 +59,8 @@ export default function SitemapPage() {
             { name: 'Professional References', href: '/services/bgv/reference-checks' },
             { name: 'Global Sanction Screening', href: '/services/bgv/global-sanction-screening' },
             { name: 'Drug Testing', href: '/services/bgv/drug-testing' },
+            { name: 'Credit History Check', href: '/services/bgv/credit-history-check' },
+            { name: 'Professional Licence Verification', href: '/services/bgv/professional-licence-verification' },
           ]
         },
         {

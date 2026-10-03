@@ -1,6 +1,8 @@
 import { ServiceHero } from '@/components/services/service-hero';
 import { CTASection } from '@/components/cta-section';
 import { BgvQuote } from '@/components/services/bgv/bgv-quote';
+import { BgvSubpageFaq, type SubpageFaqItem } from '@/components/services/bgv/bgv-subpage-faq';
+import { BgvSubpageLinks } from '@/components/services/bgv/bgv-subpage-links';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -22,6 +24,13 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: 'https://www.ontriq.com/services/bgv/global-sanction-screening' },
 };
+
+const faqs: SubpageFaqItem[] = [
+  { question: 'How long does sanction screening take?', answer: 'Typically 1-2 working days. It runs in parallel with other checks, so a complete multi-check case is still delivered within 7 working days.' },
+  { question: 'Is this screening legal in Sri Lanka?', answer: 'Yes. Background verification is lawful in Sri Lanka, and the handling of personal data is shaped by the Personal Data Protection Act, No. 9 of 2022. Candidate consent is obtained before any screening begins.' },
+  { question: 'What happens if a candidate matches a list?', answer: 'We verify whether the match is genuine before reporting it. Confirmed findings are documented factually in your report; the hiring decision always remains with you.' },
+  { question: 'Do I need this for every hire?', answer: 'Not necessarily. Many employers reserve it for senior, financial, and client-facing roles, while regulated institutions often screen all staff.' },
+];
 
 export default function GlobalSanctionScreeningPage() {
   const jsonLd = {
@@ -52,6 +61,12 @@ export default function GlobalSanctionScreeningPage() {
         title="Global Sanction & Watchlist"
         subtitle="Screening"
         description="Before a new hire touches client money, customer data, or international contracts, you need to know they do not appear on a sanction list or global watchlist. Our screening service checks every candidate against the databases that matter most."
+        breadcrumbs={[
+          { label: 'Home', href: '/' },
+          { label: 'Services', href: '/services' },
+          { label: 'Background Verification', href: '/services/bgv' },
+          { label: 'Sanction & Watchlist Screening' },
+        ]}
       />
 
       <section className="py-24 bg-white">
@@ -138,22 +153,7 @@ export default function GlobalSanctionScreeningPage() {
             Sanction and watchlist screening can be added to any background verification case as a standalone check, and it should be standard for executives and compliance-sensitive roles. We recommend it for banks and finance companies, BPO and IT firms with international contracts, exporters and logistics businesses, and any role with authority over payments, treasury functions, or client funds. Because the screen completes in 1-2 working days and runs in parallel with your other checks, adding it does not delay your overall report.
           </p>
 
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 mb-8 mt-16">
-            Common Questions
-          </h2>
-          <div className="space-y-6 mb-12">
-            {[
-              { q: 'How long does sanction screening take?', a: 'Typically 1-2 working days. It runs in parallel with other checks, so a complete multi-check case is still delivered within 7 working days.' },
-              { q: 'Is this screening legal in Sri Lanka?', a: 'Yes. Background verification is lawful in Sri Lanka and is governed primarily by the Personal Data Protection Act (No. 9 of 2022). Candidate consent is obtained before any screening begins.' },
-              { q: 'What happens if a candidate matches a list?', a: 'We verify whether the match is genuine before reporting it. Confirmed findings are documented factually in your report; the hiring decision always remains with you.' },
-              { q: 'Do I need this for every hire?', a: 'Not necessarily. Many employers reserve it for senior, financial, and client-facing roles, while regulated institutions often screen all staff.' },
-            ].map((item, i) => (
-              <div key={i} className="p-6 rounded-2xl border border-slate-200 bg-slate-50">
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">{item.q}</h3>
-                <p className="text-slate-600">{item.a}</p>
-              </div>
-            ))}
-          </div>
+          <BgvSubpageFaq heading="Common Questions" items={faqs} />
 
           <div className="mt-12 p-6 rounded-2xl bg-slate-50 border border-slate-200">
             <p className="text-slate-600 mb-4">
@@ -161,19 +161,13 @@ export default function GlobalSanctionScreeningPage() {
             </p>
           </div>
 
-          <div className="mt-12">
-            <h2 className="text-2xl font-semibold text-slate-900 mb-6">Other Verification Services</h2>
-            <div className="grid sm:grid-cols-2 gap-4">
-              <Link href="/services/bgv/criminal-record-check" className="p-5 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <h3 className="font-bold text-slate-900 mb-1">Criminal Record Check</h3>
-                <p className="text-xs text-slate-500">Police & court record screening</p>
-              </Link>
-              <Link href="/services/bgv/identity-address-verification" className="p-5 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <h3 className="font-bold text-slate-900 mb-1">Identity & Address Verification</h3>
-                <p className="text-xs text-slate-500">Authenticate IDs & addresses</p>
-              </Link>
-            </div>
-          </div>
+          <BgvSubpageLinks
+            current="global-sanction-screening"
+            guides={[
+              { href: '/resources/background-checks-for-foreign-companies-hiring-in-sri-lanka', title: 'Background Checks for Foreign Companies Hiring in Sri Lanka' },
+              { href: '/resources/pre-employment-screening-checklist-sri-lanka', title: 'Pre-Employment Screening Checklist for Sri Lankan Employers' },
+            ]}
+          />
         </div>
       </section>
 

@@ -5,6 +5,7 @@ const baseUrl = 'https://www.ontriq.com'
 // Dates reflect when each page's content last meaningfully changed.
 // Bump a page's date only when its content is genuinely updated —
 // a blanket "today" on every build teaches Google to ignore lastmod.
+const OCT_2026_REFRESH = '2026-10-03' // BGV cluster expansion
 const AUG_2026_REFRESH = '2026-08-26' // site-wide SEO/content overhaul
 const JUN_2026_BASELINE = '2026-06-04' // previous SEO pass
 const MAY_2026_BASELINE = '2026-05-25'
@@ -27,14 +28,16 @@ const entries: Entry[] = [
   { path: '/sitemap', lastModified: AUG_2026_REFRESH, changeFrequency: 'monthly', priority: 0.4 },
 
   // ===== BACKGROUND VERIFICATION SERVICES (Pillar + Cluster) =====
-  { path: '/services/bgv', lastModified: AUG_2026_REFRESH, changeFrequency: 'weekly', priority: 0.95 },
-  { path: '/services/bgv/employment-verification', lastModified: JUN_2026_BASELINE, changeFrequency: 'monthly', priority: 0.85 },
-  { path: '/services/bgv/education-verification', lastModified: JUN_2026_BASELINE, changeFrequency: 'monthly', priority: 0.85 },
-  { path: '/services/bgv/criminal-record-check', lastModified: AUG_2026_REFRESH, changeFrequency: 'monthly', priority: 0.85 },
-  { path: '/services/bgv/identity-address-verification', lastModified: AUG_2026_REFRESH, changeFrequency: 'monthly', priority: 0.85 },
-  { path: '/services/bgv/reference-checks', lastModified: AUG_2026_REFRESH, changeFrequency: 'monthly', priority: 0.85 },
-  { path: '/services/bgv/global-sanction-screening', lastModified: AUG_2026_REFRESH, changeFrequency: 'monthly', priority: 0.85 },
-  { path: '/services/bgv/drug-testing', lastModified: AUG_2026_REFRESH, changeFrequency: 'monthly', priority: 0.85 },
+  { path: '/services/bgv', lastModified: OCT_2026_REFRESH, changeFrequency: 'weekly', priority: 0.95 },
+  { path: '/services/bgv/employment-verification', lastModified: OCT_2026_REFRESH, changeFrequency: 'monthly', priority: 0.85 },
+  { path: '/services/bgv/education-verification', lastModified: OCT_2026_REFRESH, changeFrequency: 'monthly', priority: 0.85 },
+  { path: '/services/bgv/criminal-record-check', lastModified: OCT_2026_REFRESH, changeFrequency: 'monthly', priority: 0.85 },
+  { path: '/services/bgv/identity-address-verification', lastModified: OCT_2026_REFRESH, changeFrequency: 'monthly', priority: 0.85 },
+  { path: '/services/bgv/reference-checks', lastModified: OCT_2026_REFRESH, changeFrequency: 'monthly', priority: 0.85 },
+  { path: '/services/bgv/global-sanction-screening', lastModified: OCT_2026_REFRESH, changeFrequency: 'monthly', priority: 0.85 },
+  { path: '/services/bgv/drug-testing', lastModified: OCT_2026_REFRESH, changeFrequency: 'monthly', priority: 0.85 },
+  { path: '/services/bgv/credit-history-check', lastModified: OCT_2026_REFRESH, changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/services/bgv/professional-licence-verification', lastModified: OCT_2026_REFRESH, changeFrequency: 'monthly', priority: 0.8 },
 
   // ===== RESOURCES (Content hub) =====
   { path: '/resources', lastModified: AUG_2026_REFRESH, changeFrequency: 'weekly', priority: 0.7 },

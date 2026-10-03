@@ -1,6 +1,7 @@
 import { ServiceHero } from '@/components/services/service-hero';
 import { CTASection } from '@/components/cta-section';
 import { BgvQuote } from '@/components/services/bgv/bgv-quote';
+import { BgvSubpageLinks } from '@/components/services/bgv/bgv-subpage-links';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -48,10 +49,16 @@ export default function DrugTestingPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
       <ServiceHero
-        serviceNumber="001-F"
+        serviceNumber="001-G"
         title="Pre-Employment Drug Testing"
         subtitle="Services in Sri Lanka"
         description="Substance misuse in the workplace puts safety, productivity, and reputation at risk. Our drug testing services, coordinated through certified laboratories, help Sri Lankan employers confirm that candidates are ready for safety-critical and trust-sensitive roles."
+        breadcrumbs={[
+          { label: 'Home', href: '/' },
+          { label: 'Services', href: '/services' },
+          { label: 'Background Verification', href: '/services/bgv' },
+          { label: 'Drug Testing' },
+        ]}
       />
 
       <section className="py-24 bg-white">
@@ -111,7 +118,7 @@ export default function DrugTestingPage() {
             Consent, Dignity, and Privacy
           </h2>
           <p className="text-lg text-slate-600 leading-relaxed mb-6">
-            Drug testing involves sensitive personal information, so we hold it to the same standards as every other check we run. Candidate consent is mandatory before any testing takes place, and the handling of personal data in Sri Lanka is governed primarily by the Personal Data Protection Act (No. 9 of 2022). Candidates submit their authorization and documents through our secure candidate document portal, samples are collected respectfully by trained laboratory staff, and results are shared only with the personnel your organization has authorized to receive them.
+            Drug testing involves sensitive personal information, so we hold it to the same standards as every other check we run. Candidate consent is mandatory before any testing takes place, and the handling of personal data in Sri Lanka is shaped by the Personal Data Protection Act, No. 9 of 2022. Candidates submit their authorization and documents through our secure candidate document portal, samples are collected respectfully by trained laboratory staff, and results are shared only with the personnel your organization has authorized to receive them.
           </p>
           <p className="text-lg text-slate-600 leading-relaxed mb-6">
             A well-run testing program should never feel punitive. Clear communication with candidates about what is being tested, why, and how their information will be used protects their dignity &mdash; and protects your employer brand at the same time.
@@ -147,27 +154,13 @@ export default function DrugTestingPage() {
             </Link>
           </div>
 
-          <div className="mt-12">
-            <h2 className="text-2xl font-semibold text-slate-900 mb-6">Other Verification Services</h2>
-            <div className="grid sm:grid-cols-2 gap-4">
-              <Link href="/services/bgv/criminal-record-check" className="p-5 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <h3 className="font-bold text-slate-900 mb-1">Criminal Record Check</h3>
-                <p className="text-xs text-slate-500">Police & court record screening</p>
-              </Link>
-              <Link href="/services/bgv/identity-address-verification" className="p-5 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <h3 className="font-bold text-slate-900 mb-1">Identity & Address Verification</h3>
-                <p className="text-xs text-slate-500">Authenticate IDs & addresses</p>
-              </Link>
-              <Link href="/services/bgv/employment-verification" className="p-5 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <h3 className="font-bold text-slate-900 mb-1">Employment Verification</h3>
-                <p className="text-xs text-slate-500">Verify past job roles & tenure</p>
-              </Link>
-              <Link href="/services/bgv/reference-checks" className="p-5 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <h3 className="font-bold text-slate-900 mb-1">Reference Checks</h3>
-                <p className="text-xs text-slate-500">Professional reference insights</p>
-              </Link>
-            </div>
-          </div>
+          <BgvSubpageLinks
+            current="drug-testing"
+            guides={[
+              { href: '/resources/pre-employment-screening-checklist-sri-lanka', title: 'Pre-Employment Screening Checklist for Sri Lankan Employers' },
+              { href: '/resources/how-long-does-a-background-check-take-in-sri-lanka', title: 'How Long Does a Background Check Take in Sri Lanka?' },
+            ]}
+          />
         </div>
       </section>
 

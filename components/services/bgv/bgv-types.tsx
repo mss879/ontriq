@@ -48,6 +48,18 @@ const checkTypes = [
     link: '/services/bgv/drug-testing',
     linkLabel: 'Pre-employment drug testing',
   },
+  {
+    title: 'Credit History Checks',
+    description: 'For finance-sensitive roles, we coordinate the candidate\'s CRIB self-inquiry credit report with their written consent and review it against the responsibilities of the role, so you see material findings without handling raw financial data.',
+    link: '/services/bgv/credit-history-check',
+    linkLabel: 'Credit history checks for employers',
+  },
+  {
+    title: 'Professional Licence Verification',
+    description: 'We confirm that doctors, accountants, engineers, lawyers and other regulated professionals hold a current registration in good standing with their professional body, such as the Sri Lanka Medical Council.',
+    link: '/services/bgv/professional-licence-verification',
+    linkLabel: 'Professional licence verification',
+  },
 ];
 
 export function BgvTypes() {

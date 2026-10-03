@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { ScrollAnimate } from '@/components/scroll-animate';
+import { Breadcrumbs, type BreadcrumbItem } from '@/components/breadcrumbs';
 
 interface ServiceHeroProps {
   serviceNumber: string;
@@ -10,9 +11,11 @@ interface ServiceHeroProps {
   subtitle?: string;
   description: string;
   imageSrc?: string;
+  /** Optional visible breadcrumb trail rendered above the heading (text-only layout). */
+  breadcrumbs?: BreadcrumbItem[];
 }
 
-export function ServiceHero({ serviceNumber, title, subtitle, description, imageSrc }: ServiceHeroProps) {
+export function ServiceHero({ serviceNumber, title, subtitle, description, imageSrc, breadcrumbs }: ServiceHeroProps) {
   if (imageSrc) {
     return (
       <section className="relative bg-white pt-32 pb-20 md:pt-40 md:pb-32">
@@ -63,6 +66,7 @@ export function ServiceHero({ serviceNumber, title, subtitle, description, image
   return (
     <section className="relative overflow-hidden bg-white pt-32 pb-20 md:pt-40 md:pb-28">
       <div className="container mx-auto px-4 md:px-6">
+        {breadcrumbs && <Breadcrumbs items={breadcrumbs} className="mb-10 md:-mt-6" />}
         <div className="flex flex-col gap-8 lg:gap-12">
           
           {/* Header */}

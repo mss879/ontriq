@@ -6,6 +6,7 @@ import { BgvWhyMatters } from '@/components/services/bgv/bgv-why-matters';
 import { BgvTypes } from '@/components/services/bgv/bgv-types';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { bgvFaqData } from '@/lib/bgv-faq-data';
+import { bgvSubpages, BGV_BASE_URL } from '@/lib/bgv-subpages';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -161,19 +162,14 @@ export default function BackgroundVerificationServicesPage() {
       "@type": "Country",
       "name": "Sri Lanka"
     },
-    "description": "Comprehensive background verification services in Sri Lanka including employment history, education, criminal record, identity, address verification, and reference checks with a 7-day turnaround.",
+    "description": "Background verification services in Sri Lanka including employment history, education, criminal record, identity and address, reference, sanction, drug testing, credit history and professional licence checks, with complete cases delivered within 7 working days.",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Background Verification Checks",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Employment History Verification", "url": "https://www.ontriq.com/services/bgv/employment-verification" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Educational Background Verification", "url": "https://www.ontriq.com/services/bgv/education-verification" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Criminal Record & Legal Checks", "url": "https://www.ontriq.com/services/bgv/criminal-record-check" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Identity & Address Verification", "url": "https://www.ontriq.com/services/bgv/identity-address-verification" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Professional Reference Checks", "url": "https://www.ontriq.com/services/bgv/reference-checks" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Global Sanction Screening", "url": "https://www.ontriq.com/services/bgv/global-sanction-screening" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drug Testing", "url": "https://www.ontriq.com/services/bgv/drug-testing" } },
-      ]
+      "itemListElement": bgvSubpages.map((page) => ({
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": page.name, "url": `${BGV_BASE_URL}/${page.slug}` },
+      }))
     }
   };
 
