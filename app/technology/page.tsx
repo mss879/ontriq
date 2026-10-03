@@ -3,7 +3,7 @@ import { TechnologyContent } from './technology-content';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Technology & Infrastructure | Ontriq',
+  title: 'Technology & Infrastructure',
   description: 'Ontriq\'s technology stack: ATS, automated verification platforms, and secure HR systems aligned with ISO 27001:2013 standards.',
   keywords: [
     'technology infrastructure',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: 'Discover Ontriq\'s advanced technology infrastructure, including ATS, automated verification platforms, and secure HR management systems.',
     url: 'https://www.ontriq.com/technology',
     siteName: 'Ontriq',
-    locale: 'en_US',
+    locale: 'en_LK',
     type: 'website',
     images: [
       {

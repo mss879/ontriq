@@ -27,7 +27,7 @@ export default function IdentityAddressVerificationPage() {
   const jsonLd = {
     "@context": "https://schema.org", "@type": "Service",
     "name": "Identity & Address Verification", "serviceType": "Identity Verification",
-    "provider": { "@type": "Organization", "name": "Ontriq", "url": "https://www.ontriq.com" },
+    "provider": { "@type": "Organization", "@id": "https://www.ontriq.com/#organization", "name": "Ontriq", "url": "https://www.ontriq.com" },
     "areaServed": { "@type": "Country", "name": "Sri Lanka" },
     "description": "Identity and address verification services in Sri Lanka.",
   };

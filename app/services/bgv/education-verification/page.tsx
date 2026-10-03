@@ -27,9 +27,9 @@ export default function EducationVerificationPage() {
   const jsonLd = {
     "@context": "https://schema.org", "@type": "Service",
     "name": "Educational Background Verification", "serviceType": "Education Verification",
-    "provider": { "@type": "Organization", "name": "Ontriq", "url": "https://www.ontriq.com" },
+    "provider": { "@type": "Organization", "@id": "https://www.ontriq.com/#organization", "name": "Ontriq", "url": "https://www.ontriq.com" },
     "areaServed": { "@type": "Country", "name": "Sri Lanka" },
-    "description": "Educational background verification services in Sri Lanka &mdash; confirming degrees, diplomas, and certifications.",
+    "description": "Educational background verification services in Sri Lanka — confirming degrees, diplomas, and certifications.",
   };
 
   const breadcrumbJsonLd = {

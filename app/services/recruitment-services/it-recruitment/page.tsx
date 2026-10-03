@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'IT Recruitment & Technology Hiring Services Sri Lanka | Ontriq',
+  title: 'IT Recruitment & Technology Hiring Services Sri Lanka',
   description: 'Specialized IT recruitment services in Sri Lanka. Hire software developers, DevOps engineers, data scientists, cybersecurity specialists, and tech talent with Ontriq.',
   keywords: ['IT recruitment Sri Lanka', 'tech hiring Sri Lanka', 'software developer recruitment', 'DevOps hiring', 'IT staffing Sri Lanka', 'technology recruitment'],
   openGraph: {

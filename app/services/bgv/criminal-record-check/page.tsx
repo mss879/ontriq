@@ -27,7 +27,7 @@ export default function CriminalRecordCheckPage() {
   const jsonLd = {
     "@context": "https://schema.org", "@type": "Service",
     "name": "Criminal Record Check Services", "serviceType": "Criminal Background Check",
-    "provider": { "@type": "Organization", "name": "Ontriq", "url": "https://www.ontriq.com" },
+    "provider": { "@type": "Organization", "@id": "https://www.ontriq.com/#organization", "name": "Ontriq", "url": "https://www.ontriq.com" },
     "areaServed": { "@type": "Country", "name": "Sri Lanka" },
     "description": "Criminal record check and legal screening services in Sri Lanka.",
   };

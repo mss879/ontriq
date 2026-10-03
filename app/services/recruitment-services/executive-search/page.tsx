@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Executive Search & Headhunting Services Sri Lanka | Ontriq',
+  title: 'Executive Search & Headhunting Services Sri Lanka',
   description: 'Find senior leaders and C-suite executives in Sri Lanka with Ontriq\'s executive search service. Confidential headhunting for board-level, director, and specialist roles.',
   keywords: ['executive search Sri Lanka', 'headhunting Sri Lanka', 'C-suite recruitment', 'senior executive hiring', 'leadership recruitment Sri Lanka'],
   openGraph: {

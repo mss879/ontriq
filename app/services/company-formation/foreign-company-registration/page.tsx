@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Foreign Company Registration in Sri Lanka | BOI Setup | Ontriq',
+  title: 'Foreign Company Registration in Sri Lanka | BOI Setup',
   description: 'Register a foreign company in Sri Lanka with Ontriq. Branch office, subsidiary setup, BOI registration, and full compliance for international businesses entering the Sri Lankan market.',
   keywords: ['foreign company registration Sri Lanka', 'BOI registration Sri Lanka', 'branch office Sri Lanka', 'subsidiary registration', 'foreign investment Sri Lanka'],
   openGraph: {

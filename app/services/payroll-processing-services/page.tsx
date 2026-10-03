@@ -14,7 +14,7 @@ const payrollFaqItems = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Payroll Processing & Outsourcing Services Sri Lanka | Ontriq',
+  title: 'Payroll Processing & Outsourcing Services Sri Lanka',
   description: 'Accurate payroll services in Sri Lanka. EPF/ETF management, PAYE tax, payslip generation, and full statutory compliance from Ontriq.',
   keywords: [
     'payroll services Sri Lanka', 'payroll outsourcing Sri Lanka', 'payroll processing',

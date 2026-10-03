@@ -17,7 +17,7 @@ const recruitmentFaqItems = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Recruitment & Talent Acquisition Services Sri Lanka | Ontriq',
+  title: 'Recruitment & Talent Acquisition Services Sri Lanka',
   description: 'Top recruitment agency in Sri Lanka. Ontriq offers executive search, volume hiring, IT recruitment, contract staffing & employer branding. Find top talent fast.',
   keywords: [
     'recruitment services Sri Lanka',

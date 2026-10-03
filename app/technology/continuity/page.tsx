@@ -4,7 +4,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Business Continuity Plan & Operational Resilience | Ontriq',
+  title: 'Business Continuity Plan & Operational Resilience',
   description: 'Discover Ontriq\'s robust business continuity plan. Learn how we guarantee uninterrupted HR, payroll, BGV, and recruitment services during any disruption.',
   keywords: ['business continuity', 'operational resilience', 'disaster recovery', 'service redundancy', 'workforce contingency plan', 'risk mitigation'],
   openGraph: {

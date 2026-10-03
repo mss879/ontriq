@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Volume Hiring & Mass Recruitment Services Sri Lanka | Ontriq',
+  title: 'Volume Hiring & Mass Recruitment Services Sri Lanka',
   description: 'Need to hire at scale? Ontriq delivers volume hiring and mass recruitment services in Sri Lanka for BPOs, factories, retail chains, and rapidly growing businesses.',
   keywords: ['volume hiring Sri Lanka', 'mass recruitment Sri Lanka', 'bulk hiring services', 'large scale recruitment', 'BPO recruitment Sri Lanka'],
   openGraph: {

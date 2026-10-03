@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Contract Staffing & Temporary Workforce Solutions Sri Lanka | Ontriq',
+  title: 'Contract Staffing & Temporary Workforce Solutions Sri Lanka',
   description: 'Flexible contract staffing and temporary workforce solutions in Sri Lanka. Project-based hiring, seasonal staffing, and interim management from Ontriq.',
   keywords: ['contract staffing Sri Lanka', 'temporary staffing', 'contract employees', 'project-based hiring', 'interim management Sri Lanka'],
   openGraph: {

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Information Security Policy & ISO 27001 compliance | Ontriq',
+  title: 'Information Security Policy & ISO 27001 compliance',
   description: 'Ontriq is committed to high-grade information security. We operate under a robust ISMS framework aligned with ISO 27001:2013 standards to protect your data.',
   keywords: ['information security', 'ISO 27001:2013', 'data safety', 'ISMS framework', 'cybersecurity protocols', 'confidential client data'],
   openGraph: {

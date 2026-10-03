@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Tax Registration Services Sri Lanka | TIN, VAT, SVAT | Ontriq',
+  title: 'Tax Registration Services Sri Lanka | TIN, VAT, SVAT',
   description: 'Expert tax registration services in Sri Lanka. TIN registration, VAT/SVAT registration, EPF/ETF employer registration, and Inland Revenue compliance with Ontriq.',
   keywords: ['tax registration Sri Lanka', 'TIN registration', 'VAT registration Sri Lanka', 'SVAT registration', 'EPF ETF registration', 'Inland Revenue Sri Lanka'],
   openGraph: {

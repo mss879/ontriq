@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Partnership Registration Sri Lanka | Business Partnership Setup | Ontriq',
+  title: 'Partnership Registration Sri Lanka | Business Partnership Setup',
   description: 'Register a partnership in Sri Lanka with Ontriq. General and limited partnership registration, partnership agreements, and regulatory compliance for business partners.',
   keywords: ['partnership registration Sri Lanka', 'register partnership', 'business partnership Sri Lanka', 'general partnership', 'limited partnership'],
   openGraph: {

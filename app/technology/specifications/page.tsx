@@ -5,7 +5,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Technology We Use & System Specifications | Ontriq',
+  title: 'Technology We Use & System Specifications',
   description: 'View our technology tools and system specifications. We leverage AI screening, automated BGV engines, and advanced payroll platforms for maximum efficiency.',
   keywords: ['automated BGV engines', 'AI screening tools', 'video interviewing', 'EPF ETF payroll software', 'digital compliance systems'],
   openGraph: {

@@ -14,7 +14,7 @@ const hrFaqItems = [
 ];
 
 export const metadata: Metadata = {
-  title: 'HR Management & Outsourcing Services Sri Lanka | Ontriq',
+  title: 'HR Management & Outsourcing Services Sri Lanka',
   description: 'HR management services in Sri Lanka. Policy development, onboarding, performance management, compliance, and full HR outsourcing.',
   keywords: [
     'HR management services Sri Lanka', 'HR outsourcing Sri Lanka', 'HR solutions Sri Lanka',

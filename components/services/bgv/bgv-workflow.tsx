@@ -13,7 +13,7 @@ const workflowSteps = [
   },
   {
     title: 'Verification Execution (Multi-Level Checks)',
-    description: 'Our verification team validates data through trusted sources&mdash;contacting past employers, educational institutions, and conducting criminal, address, and reference verifications.'
+    description: 'Our verification team validates data through trusted sources — contacting past employers, educational institutions, and conducting criminal, address, and reference verifications.'
   },
   {
     title: 'Quality Assurance & Escalation Management',

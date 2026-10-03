@@ -27,7 +27,7 @@ export default function DrugTestingPage() {
   const jsonLd = {
     "@context": "https://schema.org", "@type": "Service",
     "name": "Pre-Employment Drug Testing", "serviceType": "Drug Testing",
-    "provider": { "@type": "Organization", "name": "Ontriq", "url": "https://www.ontriq.com" },
+    "provider": { "@type": "Organization", "@id": "https://www.ontriq.com/#organization", "name": "Ontriq", "url": "https://www.ontriq.com" },
     "areaServed": { "@type": "Country", "name": "Sri Lanka" },
     "description": "Pre-employment and random drug testing services in Sri Lanka, coordinated through certified laboratories with documented chain of custody and confidential reporting.",
   };

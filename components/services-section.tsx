@@ -10,6 +10,8 @@ import Image from 'next/image';
 const services = [
   {
     id: '001',
+    href: '/services/bgv',
+    linkLabel: 'Explore Background Verification Services',
     title: 'Background Verification (BGV) Services',
     description: 'At Ontriq, Background Verification (BGV) is at the core of our operations and remains our primary source of revenue. We take immense pride in being Sri Lanka’s most trusted and fastest-growing BGV provider, known for our speed, accuracy, and reliability. We are the only Background Verification company in Sri Lanka capable of completing full BGV cases within 7 working days.',
     categories: ['Speed', 'Accuracy', 'Reliability', '7-day Turnaround', 'Compliance', 'Proprietary Workflows'],
@@ -22,6 +24,8 @@ const services = [
   },
   {
     id: '002',
+    href: '/services/hr-management-services',
+    linkLabel: 'Explore HR Management Services',
     title: 'Human Resource Solutions',
     description: 'At Ontriq, our Human Resource Management services are designed to support organizations in building and maintaining a productive, compliant, and engaged workforce. We provide end-to-end HR solutions that align with your business goals and ensure smooth workforce operations.',
     categories: ['HR Policy Development', 'Employee Onboarding & Offboarding', 'Performance Management', 'Employee Relations', 'Compliance & Documentation', 'HR Administration'],
@@ -34,6 +38,8 @@ const services = [
   },
   {
     id: '003',
+    href: '/services/recruitment-services',
+    linkLabel: 'Explore Recruitment Services',
     title: 'Talent Recruitment',
     description: 'At Ontriq, our Talent Acquisition and Recruitment Solutions are designed to help businesses attract, identify, and hire top-tier talent aligned with their organizational goals and culture. We deliver customized recruitment strategies that ensure the right candidates are placed in the right roles—efficiently and effectively.',
     categories: ['End-to-End Hiring Support', 'Executive Search', 'Volume Hiring', 'Candidate Screening', 'Employer Branding'],
@@ -46,6 +52,8 @@ const services = [
   },
   {
     id: '004',
+    href: '/services/payroll-processing-services',
+    linkLabel: 'Explore Payroll Services',
     title: 'Payroll Management',
     description: 'At Ontriq, we offer accurate, timely, and fully compliant Payroll Processing and Administration services that help businesses manage employee compensation with confidence and ease. Our payroll solutions are designed to reduce administrative burdens, eliminate errors, and ensure adherence to all regulatory requirements.',
     categories: ['Monthly Payroll Processing', 'Statutory Compliance', 'Payslip Generation', 'Tax Calculations', 'Leave Integration', 'Benefits Administration'],
@@ -58,6 +66,8 @@ const services = [
   },
   {
     id: '005',
+    href: '/services/company-formation',
+    linkLabel: 'Explore Company Formation Services',
     title: 'Business Formation and Setup',
     description: 'At Ontriq, we provide end-to-end support for entrepreneurs, startups, and established companies looking to legally establish and operate their businesses in Sri Lanka. Our Business Formation and Regulatory Setup services are designed to simplify the incorporation process, ensure full legal compliance, and position businesses for long-term success.',
     categories: ['Company Registration', 'Regulatory Compliance', 'Document Preparation', 'Legal Structures Advisory', 'Ongoing Compliance'],
@@ -164,7 +174,12 @@ const ServicesSection = () => {
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 
-                <AccordionPrimitive.Content className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
+                {/* forceMount keeps each service description and its link in the server-rendered HTML */}
+                <AccordionPrimitive.Content
+                  forceMount
+                  className="grid overflow-hidden transition-[grid-template-rows] duration-300 ease-out data-[state=open]:grid-rows-[1fr] data-[state=closed]:grid-rows-[0fr] data-[state=closed]:invisible"
+                >
+                  <div className="min-h-0 overflow-hidden">
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-10">
                       <div className="lg:col-span-3 hidden lg:block"></div>
                       <div className="lg:col-span-9">
@@ -181,8 +196,8 @@ const ServicesSection = () => {
                                   </span>
                                 ))}
                               </div>
-                              <a href={`/services/${service.id === '001' ? 'bgv' : service.id === '002' ? 'hr-management-services' : service.id === '003' ? 'recruitment-services' : service.id === '004' ? 'payroll-processing-services' : 'company-formation'}`} className="group/btn inline-flex items-center gap-2 text-sm font-semibold text-[#F75834] uppercase tracking-wider mt-2 w-max transition-all hover:text-[#ff7455]">
-                                Explore Service
+                              <a href={service.href} className="group/btn inline-flex items-center gap-2 text-sm font-semibold text-[#F75834] uppercase tracking-wider mt-2 w-max transition-all hover:text-[#ff7455]">
+                                {service.linkLabel}
                                 <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#F75834]/30 bg-[#F75834]/10 transition-all group-hover/btn:bg-[#F75834] group-hover/btn:text-white">
                                   <ArrowRight className="h-4 w-4" />
                                 </span>
@@ -198,6 +213,7 @@ const ServicesSection = () => {
                             </div>
                           </div>
                       </div>
+                  </div>
                   </div>
                 </AccordionPrimitive.Content>
               </AccordionPrimitive.Item>

@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Employer Branding Services Sri Lanka | Ontriq',
+  title: 'Employer Branding Services Sri Lanka',
   description: 'Build your employer brand in Sri Lanka with Ontriq. Attract top talent through employer value proposition development, recruitment marketing, and candidate experience optimization.',
   keywords: ['employer branding Sri Lanka', 'employer value proposition', 'recruitment marketing', 'talent attraction', 'employer brand strategy'],
   openGraph: {

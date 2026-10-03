@@ -13,7 +13,7 @@ const directorFaqItems = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Director Services & Nominee Director Sri Lanka | Ontriq',
+  title: 'Director Services & Nominee Director Sri Lanka',
   description: 'Director services in Sri Lanka. Nominee directors, corporate governance, board advisory, and company secretary for local and foreign businesses.',
   keywords: [
     'director services Sri Lanka', 'nominee director Sri Lanka', 'corporate governance Sri Lanka',

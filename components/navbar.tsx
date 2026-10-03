@@ -5,14 +5,6 @@ import Image from 'next/image';
 import { useRef, useState, useEffect, useCallback } from 'react';
 import { usePathname } from 'next/navigation';
 
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-
 import StaggeredMenu, { StaggeredMenuHandle } from './staggered-menu';
 
 const menuItems = [
@@ -41,6 +33,7 @@ const menuItems = [
     ariaLabel: 'Technology',
     link: '/technology'
   },
+  { label: 'Resources', ariaLabel: 'Employer guides and resources', link: '/resources' },
   { label: 'FAQ', ariaLabel: 'View FAQ', link: '/faq' },
   { label: 'Contact', ariaLabel: 'Get in touch', link: '/contact' }
 ];
@@ -57,11 +50,13 @@ export default function Navbar() {
   const pathname = usePathname();
   const isContactPage = pathname === '/contact';
   const [isScrolled, setIsScrolled] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const servicesRef = useRef<HTMLDivElement>(null);
   const isHomePage = pathname === '/';
   const useWhiteLinks = isHomePage && !isScrolled;
 
   const servicesDropdownItems = [
-    { label: 'Background Verification', href: '/services/bgv', desc: 'Fastest BGV in Sri Lanka' },
+    { label: 'Background Verification', href: '/services/bgv', desc: 'Employee background checks in 7 working days' },
     { label: 'HR Management', href: '/services/hr-management-services', desc: 'End-to-end HR solutions' },
     { label: 'Recruitment', href: '/services/recruitment-services', desc: 'Talent acquisition & hiring' },
     { label: 'Payroll', href: '/services/payroll-processing-services', desc: 'Compliant payroll processing' },
@@ -87,6 +82,38 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // The services menu stays mounted (only visually hidden when closed) so its
+  // links are present in the server-rendered HTML for crawlers.
+  useEffect(() => {
+    setServicesOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!servicesOpen) return;
+    const handlePointer = (e: MouseEvent) => {
+      if (!servicesRef.current?.contains(e.target as Node)) setServicesOpen(false);
+    };
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setServicesOpen(false);
+    };
+    document.addEventListener('mousedown', handlePointer);
+    document.addEventListener('keydown', handleKey);
+    return () => {
+      document.removeEventListener('mousedown', handlePointer);
+      document.removeEventListener('keydown', handleKey);
+    };
+  }, [servicesOpen]);
+
+  const linkClass = (href: string) =>
+    `text-xl font-semibold uppercase tracking-tighter leading-none transition-colors ${useWhiteLinks
+      ? isNavActive(href)
+        ? 'text-white underline underline-offset-4'
+        : 'text-white/90 hover:text-white'
+      : isNavActive(href)
+        ? 'text-black underline underline-offset-4'
+        : 'text-gray-900/90 hover:text-black'
+    }`;
 
   const handleContainerClick = useCallback((e: React.MouseEvent) => {
     // Only trigger if clicking on the container itself, not the menu button
@@ -126,7 +153,7 @@ export default function Navbar() {
         </div>
 
         <div
-          className={`hidden lg:flex items-center gap-20 xl:gap-24 px-5 py-2 transition-all duration-300 ${useWhiteLinks
+          className={`hidden lg:flex items-center gap-12 xl:gap-16 px-5 py-2 transition-all duration-300 ${useWhiteLinks
               ? ''
               : isContactPage
                 ? ''
@@ -139,62 +166,53 @@ export default function Navbar() {
           <Link
             href="/about"
             aria-current={isNavActive('/about') ? 'page' : undefined}
-            className={`text-xl font-semibold uppercase tracking-tighter leading-none transition-colors ${useWhiteLinks
-                ? isNavActive('/about')
-                  ? 'text-white underline underline-offset-4'
-                  : 'text-white/90 hover:text-white'
-                : isNavActive('/about')
-                  ? 'text-black underline underline-offset-4'
-                  : 'text-gray-900/90 hover:text-black'
-              }`}
+            className={linkClass('/about')}
           >
             About
           </Link>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button
-                type="button"
-                className={`text-xl font-semibold uppercase tracking-tighter leading-none transition-colors ${useWhiteLinks
-                    ? isNavActive('/services')
-                      ? 'text-white underline underline-offset-4'
-                      : 'text-white/90 hover:text-white'
-                    : isNavActive('/services')
-                      ? 'text-black underline underline-offset-4'
-                      : 'text-gray-900/90 hover:text-black'
-                  }`}
-                aria-label="Services"
-              >
-                Services
-              </button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent
-              align="start"
-              sideOffset={12}
-              className="w-[300px] rounded-2xl border border-gray-200 bg-white/95 p-3 shadow-xl backdrop-blur-xl z-[100]"
+          <div ref={servicesRef} className="relative">
+            <button
+              type="button"
+              className={linkClass('/services')}
+              aria-expanded={servicesOpen}
+              aria-controls="nav-services-menu"
+              onClick={() => setServicesOpen((open) => !open)}
             >
-              <div className="flex flex-col gap-1">
+              Services
+            </button>
+            <div
+              id="nav-services-menu"
+              className={`absolute left-0 top-full z-[100] mt-3 w-[300px] rounded-2xl border border-gray-200 bg-white/95 p-3 shadow-xl backdrop-blur-xl transition duration-150 ${servicesOpen
+                  ? 'visible translate-y-0 opacity-100'
+                  : 'invisible pointer-events-none -translate-y-1 opacity-0'
+                }`}
+            >
+              <ul className="flex flex-col gap-1">
                 {servicesDropdownItems.map((item) => (
-                  <DropdownMenuItem asChild key={item.href} className="focus:bg-slate-50 focus:outline-none rounded-xl p-3 cursor-pointer transition-colors group">
-                    <Link href={item.href} className="flex flex-col gap-0.5 outline-none">
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="group flex flex-col gap-0.5 rounded-xl p-3 transition-colors hover:bg-slate-50 focus:bg-slate-50 focus:outline-none"
+                    >
                       <span className="text-sm font-semibold text-slate-900 group-hover:text-[#0098F3] transition-colors">{item.label}</span>
                       <span className="text-xs text-slate-500 font-medium">{item.desc}</span>
                     </Link>
-                  </DropdownMenuItem>
+                  </li>
                 ))}
-              </div>
-            </DropdownMenuContent>
-          </DropdownMenu>
+              </ul>
+            </div>
+          </div>
+          <Link
+            href="/resources"
+            aria-current={isNavActive('/resources') ? 'page' : undefined}
+            className={linkClass('/resources')}
+          >
+            Resources
+          </Link>
           <Link
             href="/contact"
             aria-current={isNavActive('/contact') ? 'page' : undefined}
-            className={`text-xl font-semibold uppercase tracking-tighter leading-none transition-colors ${useWhiteLinks
-                ? isNavActive('/contact')
-                  ? 'text-white underline underline-offset-4'
-                  : 'text-white/90 hover:text-white'
-                : isNavActive('/contact')
-                  ? 'text-black underline underline-offset-4'
-                  : 'text-gray-900/90 hover:text-black'
-              }`}
+            className={linkClass('/contact')}
           >
             Contact
           </Link>

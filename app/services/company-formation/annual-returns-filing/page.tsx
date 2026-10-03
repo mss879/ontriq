@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Annual Returns Filing Services Sri Lanka | ROC Compliance | Ontriq',
+  title: 'Annual Returns Filing Services Sri Lanka | ROC Compliance',
   description: 'Annual returns filing and ROC compliance services in Sri Lanka. Ontriq manages statutory filings, register maintenance, and Registrar of Companies compliance for your business.',
   keywords: ['annual returns filing Sri Lanka', 'ROC compliance', 'statutory filing', 'company annual returns', 'registrar of companies Sri Lanka'],
   openGraph: {

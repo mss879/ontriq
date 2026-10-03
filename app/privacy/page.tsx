@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: 'Learn how Ontriq collects, stores, and protects candidate and client data.',
     url: 'https://www.ontriq.com/privacy',
     siteName: 'Ontriq',
-    locale: 'en_US',
+    locale: 'en_LK',
     type: 'website',
     images: [
       {

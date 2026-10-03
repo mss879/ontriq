@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Register Private Limited Company in Sri Lanka | Ontriq',
+  title: 'Register Private Limited Company in Sri Lanka',
   description: 'Register a Private Limited Company (Pvt Ltd) in Sri Lanka with Ontriq. Fast 3-5 day incorporation, full document preparation, and post-registration compliance support.',
   keywords: ['private limited company Sri Lanka', 'register Pvt Ltd Sri Lanka', 'company incorporation', 'start a company Sri Lanka'],
   openGraph: {

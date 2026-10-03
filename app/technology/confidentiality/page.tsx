@@ -5,7 +5,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Confidentiality & Data Discretion Policy | Ontriq',
+  title: 'Confidentiality & Data Discretion Policy',
   description: 'Learn about Ontriq\'s strict confidentiality policy. Discover how we protect sensitive candidate, client, and company data with strict internal controls.',
   keywords: ['confidentiality policy', 'data discretion', 'information privacy', 'secure data systems', 'corporate compliance', 'data protection'],
   openGraph: {

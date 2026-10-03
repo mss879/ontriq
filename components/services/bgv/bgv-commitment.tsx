@@ -3,7 +3,7 @@
 import { ScrollAnimate } from '@/components/scroll-animate';
 
 const advantages = [
-  { core: 'SPEED', desc: 'Verified reports delivered within 7 working days\u0026mdash;the fastest in Sri Lanka.' },
+  { core: 'SPEED', desc: 'Verified reports delivered within 7 working days — the fastest in Sri Lanka.' },
   { core: 'ACCURACY', desc: 'Multi-level verification and QC to ensure 98%+ precision.' },
   { core: 'COMPLIANCE', desc: 'Full adherence to data protection and legal frameworks.' },
   { core: 'TRANSPARENCY', desc: 'Real-time tracking and status updates for clients.' },

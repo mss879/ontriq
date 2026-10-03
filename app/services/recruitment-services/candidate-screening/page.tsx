@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Candidate Screening & Assessment Services Sri Lanka | Ontriq',
+  title: 'Candidate Screening & Assessment Services Sri Lanka',
   description: 'Comprehensive candidate screening and pre-employment assessment in Sri Lanka. Psychometric testing, skills evaluation, reference checks, and background verification.',
   keywords: ['candidate screening Sri Lanka', 'pre-employment assessment', 'psychometric testing Sri Lanka', 'skills assessment', 'candidate evaluation'],
   openGraph: {

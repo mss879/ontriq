@@ -8,7 +8,7 @@ const CTASection = dynamic(() => import('@/components/cta-section').then(mod => 
 });
 
 export const metadata: Metadata = {
-  title: 'FAQ - Frequently Asked Questions | Ontriq',
+  title: 'FAQ - Frequently Asked Questions',
   description: 'Answers to common questions about Ontriq services including verification, HR management, recruitment, payroll, and company formation in Sri Lanka.',
   keywords: ['FAQ', 'Ontriq FAQ', 'Ontriq questions', 'workforce solutions FAQ', 'verification FAQ', 'HR services FAQ'],
   openGraph: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: 'Find answers to frequently asked questions about Ontriq services — verification, HR, recruitment, payroll, and company formation.',
     url: 'https://www.ontriq.com/faq',
     siteName: 'Ontriq',
-    locale: 'en_US',
+    locale: 'en_LK',
     type: 'website',
     images: [
       {

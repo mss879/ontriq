@@ -27,7 +27,7 @@ export default function ReferenceChecksPage() {
   const jsonLd = {
     "@context": "https://schema.org", "@type": "Service",
     "name": "Professional Reference Checks", "serviceType": "Reference Verification",
-    "provider": { "@type": "Organization", "name": "Ontriq", "url": "https://www.ontriq.com" },
+    "provider": { "@type": "Organization", "@id": "https://www.ontriq.com/#organization", "name": "Ontriq", "url": "https://www.ontriq.com" },
     "areaServed": { "@type": "Country", "name": "Sri Lanka" },
     "description": "Professional reference check services in Sri Lanka.",
   };

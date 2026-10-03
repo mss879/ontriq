@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Get in touch with Ontriq for background verification, HR services, payroll, and recruitment solutions.',
     url: 'https://www.ontriq.com/contact',
     siteName: 'Ontriq',
-    locale: 'en_US',
+    locale: 'en_LK',
     type: 'website',
     images: [
       {

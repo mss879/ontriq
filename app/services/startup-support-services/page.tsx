@@ -13,7 +13,7 @@ const startupFaqItems = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Startup Support & Business Launch Services Sri Lanka | Ontriq',
+  title: 'Startup Support & Business Launch Services Sri Lanka',
   description: 'Launch your startup in Sri Lanka with Ontriq. Business planning, company registration, market research, and end-to-end consulting.',
   keywords: [
     'startup support Sri Lanka', 'startup consulting', 'business launch services',

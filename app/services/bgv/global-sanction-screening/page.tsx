@@ -27,9 +27,9 @@ export default function GlobalSanctionScreeningPage() {
   const jsonLd = {
     "@context": "https://schema.org", "@type": "Service",
     "name": "Global Sanction & Watchlist Screening", "serviceType": "Sanction and Watchlist Screening",
-    "provider": { "@type": "Organization", "name": "Ontriq", "url": "https://www.ontriq.com" },
+    "provider": { "@type": "Organization", "@id": "https://www.ontriq.com/#organization", "name": "Ontriq", "url": "https://www.ontriq.com" },
     "areaServed": { "@type": "Country", "name": "Sri Lanka" },
-    "description": "Global sanction and watchlist screening services in Sri Lanka &mdash; checking candidates against international sanction lists, watchlists, and PEP databases.",
+    "description": "Global sanction and watchlist screening services in Sri Lanka — checking candidates against international sanction lists, watchlists, and PEP databases.",
   };
 
   const breadcrumbJsonLd = {

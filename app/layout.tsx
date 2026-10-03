@@ -76,7 +76,7 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
   openGraph: {
     type: 'website',
-    locale: 'en_US',
+    locale: 'en_LK',
     url: siteUrl,
     siteName: siteName,
     title: 'Ontriq | Your Complete Workforce and Business Partner',
@@ -127,6 +127,13 @@ const jsonLd = {
     email: 'info@ontriq.com',
     availableLanguage: ['English'],
   },
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '107 Colombo - Galle Main Rd',
+    addressLocality: 'Dehiwala-Mount Lavinia',
+    addressRegion: 'Western Province',
+    addressCountry: 'LK',
+  },
   areaServed: {
     '@type': 'Country',
     name: 'Sri Lanka',
@@ -140,13 +147,23 @@ const jsonLd = {
   ],
 };
 
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${siteUrl}/#website`,
+  url: siteUrl,
+  name: siteName,
+  inLanguage: 'en-LK',
+  publisher: { '@id': `${siteUrl}/#organization` },
+};
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" dir="ltr">
+    <html lang="en-LK" dir="ltr">
       <head>
         <meta name="theme-color" content="#000000" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -155,6 +172,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
       </head>
       <body className={`${inter.className} ${stackSans.variable} antialiased`}>

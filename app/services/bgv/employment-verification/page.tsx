@@ -31,7 +31,7 @@ export default function EmploymentVerificationPage() {
     "@type": "Service",
     "name": "Employment History Verification",
     "serviceType": "Employment Verification",
-    "provider": { "@type": "Organization", "name": "Ontriq", "url": "https://www.ontriq.com" },
+    "provider": { "@type": "Organization", "@id": "https://www.ontriq.com/#organization", "name": "Ontriq", "url": "https://www.ontriq.com" },
     "areaServed": { "@type": "Country", "name": "Sri Lanka" },
     "description": "Comprehensive employment history verification services in Sri Lanka.",
   };
