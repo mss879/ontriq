@@ -12,6 +12,7 @@ const tocItems = [
   { id: 'process', label: 'Verification Process & Quality Control' },
   { id: 'workflow', label: 'Verification Workflow' },
   { id: 'industries', label: 'Industries We Serve' },
+  { id: 'overseas-employers', label: 'Checks for Overseas Employers' },
   { id: 'legal-compliance', label: 'BGV Laws in Sri Lanka' },
   { id: 'commitment', label: 'Our Commitment' },
   { id: 'faq', label: 'Frequently Asked Questions' },

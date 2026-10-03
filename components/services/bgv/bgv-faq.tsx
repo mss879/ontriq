@@ -13,7 +13,7 @@ export function BgvFaq() {
             <div className="lg:sticky lg:top-24">
               <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.4em] text-slate-500 mb-6">
                 <span className="h-1 w-8 rounded-full bg-[#F75834]" />
-                <span className="text-slate-900">11</span>
+                <span className="text-slate-900">12</span>
                 <span>FAQ</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-semibold tracking-tighter text-slate-900 leading-tight mb-4">

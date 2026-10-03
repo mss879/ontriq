@@ -27,7 +27,7 @@ export const bgvFaqData: BgvFaqItem[] = [
   },
   {
     question: 'Is background verification legal in Sri Lanka?',
-    answer: 'Yes, background verification is a lawful and widely accepted practice in Sri Lanka. The process is governed by the Personal Data Protection Act and other relevant employment regulations. Candidate consent must be obtained before initiating any checks, and data must be handled in compliance with privacy requirements.',
+    answer: 'Yes, background verification is a lawful and widely accepted practice in Sri Lanka. Employee screening is shaped by the Personal Data Protection Act, No. 9 of 2022 and the rules of the institutions that hold each record. Candidate consent must be obtained before initiating any checks, and data must be handled in compliance with privacy requirements.',
   },
   {
     question: 'Do you provide employee screening services in Colombo?',
@@ -56,5 +56,21 @@ export const bgvFaqData: BgvFaqItem[] = [
   {
     question: 'How does Ontriq ensure the accuracy of background check reports?',
     answer: 'We maintain a 98%+ accuracy rate by implementing a strict, multi-level Quality Control (QC) process. Every verification undergoes primary-source validation and is checked by at least two senior compliance analysts before a final report is compiled. This ensures all findings are accurate, verifiable, and compliant with audit standards.',
+  },
+  {
+    question: 'Can an employer get a police clearance certificate for a candidate in Sri Lanka?',
+    answer: 'No. A Police Clearance Certificate is issued by Sri Lanka Police to the individual, who applies for it personally online or at Police Headquarters, so employers ask the candidate to obtain it. Many employers instead rely on a professional criminal record and legal check, and some also request a Grama Niladhari character and residence certificate from the candidate\'s local division.',
+  },
+  {
+    question: 'Do you run background checks for overseas companies hiring in Sri Lanka?',
+    answer: 'Yes. We screen Sri Lankan candidates for companies based abroad and for Employer of Record providers. We contact Sri Lankan employers, universities and institutions directly, collect consent through our secure portal, and deliver English-language reports that explain each local document and what was verified.',
+  },
+  {
+    question: 'Is a credit check part of background verification in Sri Lanka?',
+    answer: 'Only for roles where it is relevant, such as positions handling cash, accounts or financial approvals. Credit records are held by the Credit Information Bureau of Sri Lanka (CRIB). For employment purposes the candidate obtains their own self-inquiry credit report and shares it with written consent; we coordinate this and review the report against the role\'s requirements.',
+  },
+  {
+    question: 'Can you screen existing employees, not only new hires?',
+    answer: 'Yes. Employers re-screen existing staff before a promotion into a sensitive role, when a client contract requires it, or on a periodic cycle. The same checks and the same 7-working-day turnaround apply, and fresh written consent is collected from each employee before verification starts.',
   },
 ];

@@ -10,36 +10,43 @@ const checkTypes = [
     title: 'Employment History Verification',
     description: 'We verify past job roles, tenure, reporting structures, designations, and reasons for leaving by directly contacting previous employers. This confirms a candidate\'s professional track record and identifies any inconsistencies in their stated work experience.',
     link: '/services/bgv/employment-verification',
+    linkLabel: 'Employment verification in Sri Lanka',
   },
   {
     title: 'Educational Background Verification',
     description: 'Our team validates academic credentials including degrees, diplomas, certifications, and the authenticity of educational institutions attended. We contact universities and certification bodies directly to confirm qualifications.',
     link: '/services/bgv/education-verification',
+    linkLabel: 'Education verification in Sri Lanka',
   },
   {
     title: 'Criminal Record & Legal Checks',
     description: 'We examine an individual\'s criminal history and legal standing through police databases, court records, and legal registries. These checks are essential for creating a secure workplace and fulfilling regulatory obligations.',
     link: '/services/bgv/criminal-record-check',
+    linkLabel: 'Criminal record checks in Sri Lanka',
   },
   {
     title: 'Identity & Address Verification',
     description: 'We authenticate government-issued identification documents such as NICs, passports, and driving licenses, and verify current and past residential addresses through field visits and database cross-referencing.',
     link: '/services/bgv/identity-address-verification',
+    linkLabel: 'Identity and address verification',
   },
   {
     title: 'Professional Reference Checks',
     description: 'We contact previous supervisors, colleagues, and professional contacts provided by the candidate to gather insights into their work ethic, performance, interpersonal skills, and overall professional conduct.',
     link: '/services/bgv/reference-checks',
+    linkLabel: 'Professional reference checks',
   },
   {
     title: 'Global Sanction & Watchlist Screening',
     description: 'We screen candidates against international sanction lists, global watchlists, and anti-money laundering (AML) databases to ensure your organization does not inadvertently engage with sanctioned individuals.',
     link: '/services/bgv/global-sanction-screening',
+    linkLabel: 'Sanction and watchlist screening',
   },
   {
     title: 'Drug Testing & Screening',
     description: 'We coordinate pre-employment and random drug screenings through certified laboratories, ensuring compliance with industry standards and workplace safety requirements.',
     link: '/services/bgv/drug-testing',
+    linkLabel: 'Pre-employment drug testing',
   },
 ];
 
@@ -82,7 +89,7 @@ export function BgvTypes() {
                   href={check.link}
                   className="inline-flex items-center text-sm font-semibold text-[#0098F3] hover:text-[#F75834] transition-colors"
                 >
-                  Learn More <ArrowRight className="ml-1 h-4 w-4" />
+                  {check.linkLabel} <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               )}
             </ScrollAnimate>

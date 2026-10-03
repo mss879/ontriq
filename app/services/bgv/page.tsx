@@ -31,6 +31,10 @@ const BgvIndustries = dynamic(
   () => import('@/components/services/bgv/bgv-industries').then((mod) => ({ default: mod.BgvIndustries })),
   { loading: () => <div className="min-h-[600px]" aria-label="Loading industries..." /> }
 );
+const BgvOverseas = dynamic(
+  () => import('@/components/services/bgv/bgv-overseas').then((mod) => ({ default: mod.BgvOverseas })),
+  { loading: () => <div className="min-h-[500px]" aria-label="Loading content..." /> }
+);
 const BgvLegal = dynamic(
   () => import('@/components/services/bgv/bgv-legal').then((mod) => ({ default: mod.BgvLegal })),
   { loading: () => <div className="min-h-[500px]" aria-label="Loading content..." /> }
@@ -74,20 +78,11 @@ export const metadata: Metadata = {
     title: 'Background Verification Services in Sri Lanka',
     description: 'Sri Lanka\'s fastest BGV provider. Employment, education, criminal & identity checks in 7 working days.',
     url: 'https://www.ontriq.com/services/bgv',
-    images: [
-      {
-        url: 'https://www.ontriq.com/share-img.png',
-        width: 1200,
-        height: 630,
-        alt: 'Ontriq Background Verification Services',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Background Verification Services in Sri Lanka',
     description: 'Sri Lanka\'s fastest BGV provider. Employment, education, criminal & identity checks in 7 working days.',
-    images: ['https://www.ontriq.com/share-img.png'],
   },
   alternates: {
     canonical: 'https://www.ontriq.com/services/bgv',
@@ -99,6 +94,10 @@ const breadcrumbItems = [
   { label: 'Services', href: '/services' },
   { label: 'Background Verification Services' },
 ];
+
+// Last substantive content update; shown on the page and used as WebPage dateModified
+const LAST_UPDATED = '2026-10-03';
+const LAST_UPDATED_DISPLAY = '3 October 2026';
 
 const resourceGuides = [
   {
@@ -112,9 +111,24 @@ const resourceGuides = [
     href: '/resources/background-verification-cost-sri-lanka',
   },
   {
+    title: 'How Long Does a Background Check Take?',
+    description: 'Realistic turnaround times for each type of check',
+    href: '/resources/how-long-does-a-background-check-take-in-sri-lanka',
+  },
+  {
     title: 'PDPA Guide for Employers',
     description: 'Screening under the Personal Data Protection Act',
     href: '/resources/personal-data-protection-act-guide-for-employers',
+  },
+  {
+    title: 'Pre-Employment Screening Checklist',
+    description: 'Which checks to run for each type of role',
+    href: '/resources/pre-employment-screening-checklist-sri-lanka',
+  },
+  {
+    title: 'Background Check Red Flags',
+    description: 'Common discrepancies and what to do next',
+    href: '/resources/background-check-red-flags-employers-guide',
   },
 ];
 
@@ -123,8 +137,12 @@ export default function BackgroundVerificationServicesPage() {
   const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Background Verification Services",
+    "@id": "https://www.ontriq.com/services/bgv#service",
+    "name": "Background Verification Services in Sri Lanka",
+    "alternateName": ["Employee Background Checks", "Pre-Employment Screening", "Employee Screening Services"],
     "serviceType": "Background Verification",
+    "url": "https://www.ontriq.com/services/bgv",
+    "image": "https://www.ontriq.com/bgv-service.jpg",
     "provider": {
       "@type": "Organization",
       "@id": "https://www.ontriq.com/#organization",
@@ -157,6 +175,19 @@ export default function BackgroundVerificationServicesPage() {
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drug Testing", "url": "https://www.ontriq.com/services/bgv/drug-testing" } },
       ]
     }
+  };
+
+  const webPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.ontriq.com/services/bgv#webpage",
+    "url": "https://www.ontriq.com/services/bgv",
+    "name": "Background Verification Services in Sri Lanka",
+    "inLanguage": "en-LK",
+    "dateModified": LAST_UPDATED,
+    "isPartOf": { "@id": "https://www.ontriq.com/#website" },
+    "about": { "@id": "https://www.ontriq.com/services/bgv#service" },
+    "primaryImageOfPage": "https://www.ontriq.com/bgv-service.jpg",
   };
 
   // FAQ JSON-LD — built from the same data module that renders the visible accordion
@@ -192,6 +223,10 @@ export default function BackgroundVerificationServicesPage() {
       />
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <script
@@ -202,6 +237,9 @@ export default function BackgroundVerificationServicesPage() {
         items={breadcrumbItems}
         className="container mx-auto px-4 md:px-6 pt-28 md:pt-32"
       />
+      <p className="container mx-auto px-4 md:px-6 mt-2 text-xs text-slate-500">
+        Last updated <time dateTime={LAST_UPDATED}>{LAST_UPDATED_DISPLAY}</time>
+      </p>
       <BgvHero
         serviceNumber="001"
         title="Background Verification"
@@ -217,12 +255,13 @@ export default function BackgroundVerificationServicesPage() {
       <BgvProcess />
       <BgvWorkflow />
       <BgvIndustries />
+      <BgvOverseas />
       <BgvLegal />
       <BgvCommitment />
       <BgvFaq />
       <BgvQuote />
       <section className="py-16 bg-slate-50">
-        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+        <div className="container mx-auto px-4 md:px-6 max-w-5xl">
           <h2 className="text-2xl font-semibold text-slate-900 mb-6">Related Services</h2>
           <div className="grid sm:grid-cols-3 gap-4">
             <Link href="/services/recruitment-services" className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
@@ -239,8 +278,8 @@ export default function BackgroundVerificationServicesPage() {
             </Link>
           </div>
 
-          <h2 className="text-2xl font-semibold text-slate-900 mb-6 mt-14">Guides &amp; Resources</h2>
-          <div className="grid sm:grid-cols-3 gap-4">
+          <h2 className="text-2xl font-semibold text-slate-900 mb-6 mt-14">Background Check Guides for Sri Lankan Employers</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {resourceGuides.map((guide) => (
               <Link key={guide.href} href={guide.href} className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                 <h3 className="font-bold text-slate-900 mb-2">{guide.title}</h3>

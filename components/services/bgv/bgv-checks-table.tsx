@@ -38,6 +38,16 @@ const checkRows = [
     verifies: 'Laboratory-certified pre-employment and random drug screening',
     turnaround: '2–3 working days',
   },
+  {
+    check: 'Credit History Check',
+    verifies: 'CRIB self-inquiry credit report shared by the candidate with consent, for finance-sensitive roles',
+    turnaround: 'Within the 7-day case',
+  },
+  {
+    check: 'Professional Licence Verification',
+    verifies: 'Current registration with the relevant professional body, such as the Sri Lanka Medical Council',
+    turnaround: 'Within the 7-day case',
+  },
 ];
 
 export function BgvChecksTable() {
