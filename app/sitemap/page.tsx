@@ -102,6 +102,9 @@ export default function SitemapPage() {
         { name: 'Pre-Employment Screening Checklist', href: '/resources/pre-employment-screening-checklist-sri-lanka' },
         { name: 'How Long Does a Background Check Take?', href: '/resources/how-long-does-a-background-check-take-in-sri-lanka' },
         { name: 'Background Check Red Flags Guide', href: '/resources/background-check-red-flags-employers-guide' },
+        { name: 'Police Clearance Guide', href: '/resources/police-clearance-certificate-sri-lanka-employer-guide' },
+        { name: 'Background Checks for Foreign Companies', href: '/resources/background-checks-for-foreign-companies-hiring-in-sri-lanka' },
+        { name: 'How to Verify Educational Certificates', href: '/resources/how-to-verify-educational-certificates-in-sri-lanka' },
       ],
     },
     {

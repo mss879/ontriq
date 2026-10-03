@@ -68,6 +68,24 @@ const articles = [
     description: 'How to read a verification report, which discrepancies matter, and how to respond fairly and legally when one appears.',
     tag: 'Guide',
   },
+  {
+    slug: 'police-clearance-certificate-sri-lanka-employer-guide',
+    title: "Police Clearance Certificates in Sri Lanka: An Employer's Guide",
+    description: 'Who can apply, how long it takes, and how it differs from Grama Niladhari certificates and employer criminal record checks.',
+    tag: 'Compliance',
+  },
+  {
+    slug: 'background-checks-for-foreign-companies-hiring-in-sri-lanka',
+    title: 'Background Checks for Foreign Companies Hiring in Sri Lanka',
+    description: 'For overseas employers and EOR clients: which checks are possible, where the records sit, consent, and realistic timelines.',
+    tag: 'Guide',
+  },
+  {
+    slug: 'how-to-verify-educational-certificates-in-sri-lanka',
+    title: 'How to Verify Educational Certificates in Sri Lanka',
+    description: 'Step-by-step verification of degrees, O/L and A/L results, foreign-awarded degrees and professional qualifications.',
+    tag: 'Guide',
+  },
 ];
 
 export default function ResourcesPage() {

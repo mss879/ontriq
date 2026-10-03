@@ -41,7 +41,7 @@ export default function PdpaGuideForEmployersPage() {
     headline: TITLE,
     description: META_DESC,
     datePublished: '2026-08-26',
-    dateModified: '2026-08-26',
+    dateModified: '2026-10-03',
     author: {
       '@type': 'Organization',
       name: 'Ontriq',
@@ -83,6 +83,7 @@ export default function PdpaGuideForEmployersPage() {
         title={TITLE}
         lede="The Personal Data Protection Act changed how Sri Lankan employers can collect, store, and use candidate and employee data. Here is what it means for hiring, screening, and everyday HR work — in plain English."
         publishedDisplay="August 26, 2026"
+        updatedDisplay="October 3, 2026"
         breadcrumbLabel="PDPA Guide for Employers"
       >
         <p>
@@ -113,6 +114,18 @@ export default function PdpaGuideForEmployersPage() {
           primary legal framework that governs how it must be done. This guide explains the
           practical implications in general terms; for decisions specific to your organization,
           always consult qualified legal counsel.
+        </p>
+        <p>
+          The Act is being brought into force in stages. The provisions establishing the Data
+          Protection Authority already operate, and the Personal Data Protection (Amendment) Act,
+          No. 22 of 2025 provides for the remaining parts to commence on dates set by Gazette
+          notice. Check the{' '}
+          <a href="https://www.dpa.gov.lk/" target="_blank" rel="noopener noreferrer">
+            Data Protection Authority of Sri Lanka
+          </a>{' '}
+          for the current position. The practical advice in this guide does not change either way:
+          consent-based, proportionate screening is good practice now and keeps you ready for full
+          enforcement.
         </p>
 
         <h2>Why the PDPA Matters for Hiring and Screening</h2>

@@ -131,6 +131,21 @@ const resourceGuides = [
     description: 'Common discrepancies and what to do next',
     href: '/resources/background-check-red-flags-employers-guide',
   },
+  {
+    title: 'Police Clearance Certificates',
+    description: 'How police clearance certificates work for hiring',
+    href: '/resources/police-clearance-certificate-sri-lanka-employer-guide',
+  },
+  {
+    title: 'Screening for Overseas Employers',
+    description: 'Screening Sri Lankan hires from abroad',
+    href: '/resources/background-checks-for-foreign-companies-hiring-in-sri-lanka',
+  },
+  {
+    title: 'How to Verify Educational Certificates',
+    description: 'Degrees, O/L and A/L results and professional awards',
+    href: '/resources/how-to-verify-educational-certificates-in-sri-lanka',
+  },
 ];
 
 export default function BackgroundVerificationServicesPage() {

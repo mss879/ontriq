@@ -1,5 +1,11 @@
+import Link from 'next/link';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { CTASection } from '@/components/cta-section';
+
+export interface RelatedLink {
+  href: string;
+  title: string;
+}
 
 interface ArticleLayoutProps {
   /** H1 of the article */
@@ -10,6 +16,10 @@ interface ArticleLayoutProps {
   publishedDisplay: string;
   /** Short label for the breadcrumb trail (current page) */
   breadcrumbLabel: string;
+  /** Human-readable last-updated date, shown when the article has been revised */
+  updatedDisplay?: string;
+  /** Further reading shown after the article body */
+  related?: RelatedLink[];
   children: React.ReactNode;
 }
 
@@ -21,6 +31,8 @@ export function ArticleLayout({
   lede,
   publishedDisplay,
   breadcrumbLabel,
+  updatedDisplay,
+  related,
   children,
 }: ArticleLayoutProps) {
   return (
@@ -37,6 +49,7 @@ export function ArticleLayout({
         <header className="max-w-3xl mx-auto mb-12">
           <p className="text-sm font-medium uppercase tracking-widest text-slate-500 mb-4">
             Ontriq Insights &middot; {publishedDisplay}
+            {updatedDisplay && <> &middot; Updated {updatedDisplay}</>}
           </p>
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tighter text-slate-900 leading-tight mb-6">
             {title}
@@ -44,6 +57,23 @@ export function ArticleLayout({
           <p className="text-xl text-slate-600 leading-relaxed">{lede}</p>
         </header>
         <div className="max-w-3xl mx-auto article-prose">{children}</div>
+        {related && related.length > 0 && (
+          <aside className="max-w-3xl mx-auto mt-16 pt-10 border-t border-slate-200" aria-labelledby="related-guides">
+            <h2 id="related-guides" className="text-2xl font-semibold text-slate-900 mb-6">Related guides and services</h2>
+            <ul className="grid sm:grid-cols-2 gap-4">
+              {related.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="block h-full p-5 rounded-2xl border border-slate-200 bg-white font-semibold text-slate-900 hover:border-[#0098F3] hover:text-[#0098F3] transition-colors"
+                  >
+                    {link.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </aside>
+        )}
       </article>
       <CTASection />
     </main>

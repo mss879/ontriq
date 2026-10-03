@@ -40,13 +40,16 @@ const entries: Entry[] = [
   { path: '/services/bgv/professional-licence-verification', lastModified: OCT_2026_REFRESH, changeFrequency: 'monthly', priority: 0.8 },
 
   // ===== RESOURCES (Content hub) =====
-  { path: '/resources', lastModified: AUG_2026_REFRESH, changeFrequency: 'weekly', priority: 0.7 },
+  { path: '/resources', lastModified: OCT_2026_REFRESH, changeFrequency: 'weekly', priority: 0.7 },
   { path: '/resources/how-to-do-background-checks-on-employees-in-sri-lanka', lastModified: AUG_2026_REFRESH, changeFrequency: 'monthly', priority: 0.65 },
   { path: '/resources/background-verification-cost-sri-lanka', lastModified: AUG_2026_REFRESH, changeFrequency: 'monthly', priority: 0.65 },
-  { path: '/resources/personal-data-protection-act-guide-for-employers', lastModified: AUG_2026_REFRESH, changeFrequency: 'monthly', priority: 0.65 },
+  { path: '/resources/personal-data-protection-act-guide-for-employers', lastModified: OCT_2026_REFRESH, changeFrequency: 'monthly', priority: 0.65 },
   { path: '/resources/pre-employment-screening-checklist-sri-lanka', lastModified: AUG_2026_REFRESH, changeFrequency: 'monthly', priority: 0.65 },
   { path: '/resources/how-long-does-a-background-check-take-in-sri-lanka', lastModified: AUG_2026_REFRESH, changeFrequency: 'monthly', priority: 0.65 },
   { path: '/resources/background-check-red-flags-employers-guide', lastModified: AUG_2026_REFRESH, changeFrequency: 'monthly', priority: 0.65 },
+  { path: '/resources/police-clearance-certificate-sri-lanka-employer-guide', lastModified: OCT_2026_REFRESH, changeFrequency: 'monthly', priority: 0.65 },
+  { path: '/resources/background-checks-for-foreign-companies-hiring-in-sri-lanka', lastModified: OCT_2026_REFRESH, changeFrequency: 'monthly', priority: 0.65 },
+  { path: '/resources/how-to-verify-educational-certificates-in-sri-lanka', lastModified: OCT_2026_REFRESH, changeFrequency: 'monthly', priority: 0.65 },
 
   // ===== RECRUITMENT SERVICES (Pillar + Cluster) =====
   { path: '/services/recruitment-services', lastModified: JUN_2026_BASELINE, changeFrequency: 'weekly', priority: 0.9 },
